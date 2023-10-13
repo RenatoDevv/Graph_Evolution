@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -144,7 +144,7 @@
                     <h3 class="m-0">Admin</h3>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a href="{{ route('admin.dashboard')}}">
                         <svg>
                             <use xlink:href="#collection"></use>
                         </svg>
@@ -152,7 +152,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a href="{{ route('admin.pages')}}">
                         <svg>
                             <use xlink:href="#pages"></use>
                         </svg>
@@ -160,7 +160,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#0">
+                    <a href="{{ route('admin.users')}}">
                         <svg>
                             <use xlink:href="#admin"></use>
                         </svg>
@@ -239,7 +239,7 @@
     <section class="page-content">
         <section class="search-and-user">
             <form>
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="text" class="form-control form-control-lg" placeholder="Search" >
                 <button type="submit" aria-label="submit form">
                     <svg aria-hidden="true">
                         <use xlink:href="#buscar" />
@@ -271,7 +271,9 @@
             </a>
         </footer>
     </section>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @yield('scripts')
     <script>
         var perfilL = document.getElementById('PerfilClick');
         perfilL.addEventListener('click', function(event) {
@@ -294,6 +296,9 @@
                 }
             })
         })
+
+
+        
         const html = document.documentElement;
         const body = document.body;
         const menuLinks = document.querySelectorAll(".admin-menu a");

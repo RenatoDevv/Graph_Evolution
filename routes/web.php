@@ -25,7 +25,7 @@ use App\Http\Controllers\admin\AdminController;
 
 
 Route::controller(AdminController::class)->group(function () {
-  Route::get('/admin', 'dashboard');
-  Route::get('/admin/pages', 'pages');
-  Route::get('/admin/users', 'users');
+  Route::get('/admin', 'dashboard')->name('admin.dashboard');
+  Route::get('/admin/pages', 'pages')->name('admin.pages');
+  Route::get('/admin/users', 'users')->name('admin.users');
 });
