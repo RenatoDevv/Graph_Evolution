@@ -28,4 +28,15 @@ Route::controller(AdminController::class)->group(function () {
   Route::get('/admin', 'dashboard')->name('admin.dashboard');
   Route::get('/admin/pages', 'pages')->name('admin.pages');
   Route::get('/admin/users', 'users')->name('admin.users');
+  Route::get('/admin/profile', 'profile')->name('admin.profile');
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });

@@ -169,7 +169,7 @@
             </div>
         </div>
         <div class="" style="width: 40%">
-            <img src="{{ asset('img/about/logoHead.png') }}" alt="" width="100%">
+            <img src="{{ asset('img/about/galactic.jpg') }}" alt="" width="100%">
         </div>
     </section>
     <div class="about-biografi d-flex">

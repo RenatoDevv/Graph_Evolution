@@ -8,7 +8,7 @@
         }
 
         .buttonEdit {
-            background: #EEE5FF;
+            background: #e3d6fc;
             color: #8950FC;
         }
 
@@ -29,8 +29,8 @@
 
         .updateUser {
             background: #8950FC;
-            color: #EEE5FF;
-
+            color: #ffffff;
+            
         }
 
         .updateUser:hover {
@@ -40,7 +40,8 @@
 
         .cancelUser {
             background: #F64E60;
-            color: #FFE2E5;
+            color: #ffffff;
+            
 
         }
 
@@ -50,7 +51,7 @@
         }
 
         .buttonShow {
-            background: #E1F0FF;
+            background: #d2e6fa;
             color: #3699FF;
         }
 
@@ -70,7 +71,7 @@
     <section class="container-info d-flex flex-column">
         <h2 class="mb-5">Bienvenido a la seccion de Usuarios</h2>
         <table class=" table  table-hover">
-            <thead class="table-info">
+            <thead class="table-secondary">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">NOMBRES</th>
@@ -332,10 +333,6 @@
         <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque, ab quisquam assumenda
             nobis quasi id
             ducimus debitis, pariatur sunt hic dolor suscipit cum culpa iste voluptatem rerum aliquid quidem?</p>
-        <div class="d-flex font-size-sm flex-wrap">
-            <button type="button" class="btn btn-primary font-weight-bolder" onclick="window.print();"><i
-                    class="bi bi-printer fs-1"></i></button>
-        </div>
     </section>
 @endsection
 @section('scripts')

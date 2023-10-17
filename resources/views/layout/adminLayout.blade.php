@@ -167,22 +167,22 @@
                         <span>Usuarios</span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="#0">
                         <svg>
                             <use xlink:href="#trends"></use>
                         </svg>
                         <span>Trends</span>
                     </a>
-                </li>
-                <li>
+                </li> --}}
+                {{-- <li>
                     <a href="#0">
                         <svg>
                             <use xlink:href="#comments"></use>
                         </svg>
                         <span>Comentarios</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="#0">
                         <svg>
@@ -192,7 +192,7 @@
                     </a>
                 </li>
                 <li class="menu-heading">
-                    <h3>Settings</h3>
+                    <h3>Configuracion</h3>
                 </li>
                 <li>
                     <a href="#0">
@@ -202,22 +202,22 @@
                         <span>Settings</span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="#0">
                         <svg>
                             <use xlink:href="#options"></use>
                         </svg>
                         <span>Options</span>
                     </a>
-                </li>
-                <li>
+                </li> --}}
+                {{-- <li>
                     <a href="#0">
                         <svg>
                             <use xlink:href="#charts"></use>
                         </svg>
                         <span>Charts</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <div class="switch">
                         <input type="checkbox" id="mode" checked>
