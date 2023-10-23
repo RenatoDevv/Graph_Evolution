@@ -1,385 +1,212 @@
-@extends('layout.adminLayout')
-@section('title')
-@section('css')
-    <style>
-        .container-info {
-            grid-column: 1/3;
-
-        }
-
-        .buttonEdit {
-            background: #e3d6fc;
-            color: #8950FC;
-        }
-
-        .buttonEdit:hover {
-            background: #8950FC;
-            color: #EEE5FF;
-        }
-
-        .buttonDelete {
-            background: #FFE2E5;
-            color: #F64E60;
-        }
-
-        .buttonDelete:hover {
-            background: #F64E60;
-            color: #FFE2E5;
-        }
-
-        .updateUser {
-            background: #8950FC;
-            color: #ffffff;
-            
-        }
-
-        .updateUser:hover {
-            background: #8950fc7e;
-            color: #8950FC;
-        }
-
-        .cancelUser {
-            background: #F64E60;
-            color: #ffffff;
-            
-
-        }
-
-        .cancelUser:hover {
-            background: #f64e5f85;
-            color: #F64E60;
-        }
-
-        .buttonShow {
-            background: #d2e6fa;
-            color: #3699FF;
-        }
-
-        .buttonShow:hover {
-            background: #3699FF;
-            color: #E1F0FF;
-        }
-    </style>
-@endsection
-@section('content')
-    <div class="">
-        <h3>👋 Usuarios</h3>
-    </div>
-    <div class="">
-        <p class="">Empiece a explorar la interfaz como un super admin</p>
-    </div>
-    <section class="container-info d-flex flex-column">
-        <h2 class="mb-5">Bienvenido a la seccion de Usuarios</h2>
-        <table class=" table  table-hover">
-            <thead class="table-secondary">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">NOMBRES</th>
-                    <th scope="col">TELEFONO</th>
-                    <th scope="col">CORREO</th>
-                    <th scope="col" class="text-center">ESTADO</th>
-                    <th scope="col" class="text-center">ACCIONES</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="bg-transaparent">
-                    <th scope="row" class="bg-transparent">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#C9F7F5; color:#1BC5BD; padding: 4px 25px;" class="rounded"> activo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                <tr class="bg-transparent">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#C9F7F5; color:#1BC5BD; padding: 4px 25px;" class="rounded"> activo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td class="text-center"><span style="background:#FFE2E5; color:#F64E60; padding: 4px 25px;" class="rounded"> Inactivo </span></td>
-                    <td class="d-flex align-items-center justify-content-center gap-4 p-1">
-                        <a href="" class="btn buttonEdit " data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></a>
-                        <form action="" id="DeleteUser">
-                            <button type="button" class="buttonDelete btn pl-2 pr-2"><i
-                                    class="bi bi-trash3-fill"></i></button>
-                        </form>
-                        <a href="" class="btn buttonShow"><i class="bi bi-tencent-qq"></i></a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Actualizar Usuario</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<x-app-layout>
+    <div class="flex flex-col p-2 lg:p-8 dark:text-gray-800 dark:bg-gray-300 rounded-md dark:border-gray-700 gap-6">
+        <h1 class="text-3xl font-bold text-center">👋 Bienvenido al panel de Usuarios</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas ullam,
+            perferendis in enim at
+            quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
+            commodi
+            alias?</p>
+        <div class="bg-white p-8 rounded-md w-full">
+            <div class=" flex items-center justify-between pb-6 ">
+                <div>
+                    <h2 class="text-gray-600 font-semibold text-2xl">Usuarios</h2>
+                    <span class="text-sm">Todos los Usuarios</span>
                 </div>
-                <div class="modal-body">
-                    <form method="GET" id="">
-                        <div class="mb-3">
-                            <label for="emailUser" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="emailUser" value="Super Admin">
+                <div class="flex items-center justify-between ">
+                    <div>
+                        <div class="relative mt-2 rounded-md shadow-sm">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3">
+                                <span class="text-gray-500 sm:text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <style>
+                                            svg {
+                                                fill: #d1d1d1
+                                            }
+                                        </style>
+                                        <path
+                                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <input type="search" name="" id="search"
+                                class="block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 ring-1 ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 hover:ring-1 hover:ring-gray-300"
+                                placeholder="Buscar....">
                         </div>
-                        <div class="mb-3">
-                            <label for="phoneUser" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="phoneUser" value="999888777">
-                        </div>
-                        <div class="mb-3">
-                            <label for="emailUser" class="form-label">Correo Electronico</label>
-                            <input type="email" class="form-control" id="emailUser" aria-describedby="emailHelp"
-                                value="SuperAdmin@gmail.com">
-                            <div id="emailHelp" class="form-text text-danger">El correo es importante para ingresar al
-                                sistema</div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-evenly">
-                            <button type="submit" class="btn updateUser" id="updateUser">Actualizar Usuario</button>
-                            <button type="button" class="btn cancelUser" data-bs-dismiss="modal">Cancelar</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer m-auto border-none">
-                    <span class="form-text text-center">graph evolution prime</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- modal user info --}}
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content p-4">
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h4 class="title text-center">Informacion del usuario</h4>
-                    <div class="d-flex justify-content-center ">
-                        <img src="{{ asset('img/admin/superadmin.jpg')}}" alt="" width="100%" class="rounded pb-4">
                     </div>
-                    <p class="fs-6 p-2 rounded" style="background: #E1F0FF ; color: #3699FF ;"><span class="fw-bold">ID: </span> 2</p>
-                    <P class="fs-6 p-2 rounded" style="background: #E1F0FF ; color: #3699FF ;"><span class="fw-bold">Nombres: </span> Super Admin</P>
-                    <p class="fs-6 p-2 rounded" style="background: #E1F0FF ; color: #3699FF ;"><span class="fw-bold">Telefono: </span> 999888777</p>
-                    <p class="fs-6 p-2 rounded" style="background: #E1F0FF ; color: #3699FF ;"><span class="fw-bold">Correo: </span> SuperAdmin@gmail.com</p>
-                    <p class="fs-6 p-2 rounded" style="background: #E1F0FF ; color: #3699FF ;"><span class="fw-bold">Estado: </span> Activo</p>
+                    <div class="lg:ml-40 ml-10 space-x-8">
+                        <button
+                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">New
+                            Report</button>
+                        <button
+                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button>
+                    </div>
                 </div>
-                <div class="m-auto">
-                    <p class="form-text text-center">Grahp Evolution 2023</p>
+            </div>
+            <div>
+                <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                    <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                        <table class="min-w-full leading-normal">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        Name
+                                    </th>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        products
+                                    </th>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        Created at
+                                    </th>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        QRT
+                                    </th>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        Status
+                                    </th>
+                                    <th
+                                        class="pl-8 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        Options
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-3 py-3 border-b border-gray-200 bg-white text-sm">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 w-10 h-10">
+                                                <img class="w-full h-full rounded-full"
+                                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                                                    alt="" />
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-gray-900 whitespace-no-wrap">
+                                                    Vera Carpenter
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
+                                        <p class="text-gray-900 whitespace-no-wrap">Admin</p>
+                                    </td>
+                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <p class="text-gray-900 whitespace-no-wrap">
+                                            Jan 21, 2020
+                                        </p>
+                                    </td>
+                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <p class="text-gray-900 whitespace-no-wrap">
+                                            43
+                                        </p>
+                                    </td>
+                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
+                                        <span
+                                            class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                                            <span aria-hidden
+                                                class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                                            <span class="relative">Activo</span>
+                                        </span>
+                                    </td>
+                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
+                                        <div class="flex items-center space-x-4 text-white">
+                                            <button type="button"
+                                                class="py-1.5 px-3 bg-yellow-500 rounded-lg hover:bg-yellow-200 text-white hover:text-yellow-400 ">
+                                                <i class="bi bi-pencil-square text-lg"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="py-1.5 px-3 bg-blue-600 text-white rounded-lg hover:bg-blue-200 hover:text-blue-600 ">
+                                                <i class="bi bi-eye-fill text-lg"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="py-1.5 px-3 bg-red-500 rounded-lg hover:bg-red-200 fill-white hover:text-red-500">
+                                                <i class="bi bi-trash-fill text-lg"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-3 border-b border-gray-200 bg-white text-sm">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 w-10 h-10">
+                                                <img class="w-full h-full rounded-full"
+                                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                                                    alt="" />
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-gray-900 whitespace-no-wrap">
+                                                    Vera Carpenter
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
+                                        <p class="text-gray-900 whitespace-no-wrap">Admin</p>
+                                    </td>
+                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <p class="text-gray-900 whitespace-no-wrap">
+                                            Jan 21, 2020
+                                        </p>
+                                    </td>
+                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <p class="text-gray-900 whitespace-no-wrap">
+                                            43
+                                        </p>
+                                    </td>
+                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
+                                        <span
+                                            class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                                            <span aria-hidden
+                                                class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                                            <span class="relative">Activo</span>
+                                        </span>
+                                    </td>
+                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
+                                        <div class="flex items-center space-x-4 text-white">
+                                            <button type="button"
+                                                class="py-1.5 px-3 bg-yellow-500 rounded-lg hover:bg-yellow-200 text-white hover:text-yellow-400 ">
+                                                <i class="bi bi-pencil-square text-lg"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="py-1.5 px-3 bg-blue-600 text-white rounded-lg hover:bg-blue-200 hover:text-blue-600 ">
+                                                <i class="bi bi-eye-fill text-lg"></i>
+                                            </button>
+                                            <button type="button"
+                                                class="py-1.5 px-3 bg-red-500 rounded-lg hover:bg-red-200 fill-white hover:text-red-500">
+                                                <i class="bi bi-trash-fill text-lg"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div
+                            class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
+                            <span class="text-xs xs:text-sm text-gray-900">
+                                Showing 1 to 4 of 50 Entries
+                            </span>
+                            <div class="inline-flex mt-2 xs:mt-0">
+                                <button
+                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
+                                    Prev
+                                </button>
+                                &nbsp; &nbsp;
+                                <button
+                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
+                                    Next
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="bg-sky-500 flex justify-center pb-4 pt-2">
+            <span class="text-sm">Graph Evolution 2023</span>
+        </div>
     </div>
-    <section class="bg-info p-5 d-flex justify-content-center align-items-center">
-        <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum atque, ab quisquam assumenda
-            nobis quasi id
-            ducimus debitis, pariatur sunt hic dolor suscipit cum culpa iste voluptatem rerum aliquid quidem?</p>
-    </section>
-@endsection
-@section('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        var deleteUser = document.getElementById('DeleteUser');
-        deleteUser.addEventListener('click', function(event) {
-            event.preventDefault();
-            Swal.fire({
-                title: 'Alerta!',
-                text: "Estas seguro que desea eliminar el usuario Admin!",
-                icon: 'warning',
-                iconColor: '#F64E60',
-                showCancelButton: true,
-                confirmButtonColor: '#8950FC',
-                cancelButtonColor: '#F64E60',
-                confirmButtonText: 'Si, eliminar!',
-                denyButtonColor: '#282828'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire({
-                            title: 'Eliminado!',
-                            text: 'El usuario a sido eliminado correctamente',
-                            textColor: '#1BC5BD',
-                            icon: 'success',
-                            iconColor: '#1BC5BD ',
-                            confirmButtonText: 'Aceptar',
-                            confirmButtonColor: '#1BC5BD '
-
-                        }
-
-                    )
-                }
-            })
-        })
-        var actualizarUsuario = document.getElementById('updateUser');
-        actualizarUsuario.addEventListener('submit', function(event) {
-            event.preventDefault();
-            Swal.fire({
-                title: 'Eliminado!',
-                text: 'El usuario a sido eliminado correctamente',
-                textColor: '#1BC5BD',
-                icon: 'success',
-                iconColor: '#1BC5BD ',
-                confirmButtonText: 'Aceptar',
-                confirmButtonColor: '#1BC5BD '
-            })
-        })
-    </script>
-@endsection
+</x-app-layout>

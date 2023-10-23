@@ -16,7 +16,7 @@ use App\Http\Controllers\admin\AdminController;
 
 
 
-  Route::controller(PageController::class)->group(function () {
+Route::controller(PageController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::get('/services', 'services')->name('services');
     Route::get('/about', 'about')->name('about');
@@ -36,7 +36,13 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
+    Route::get('/admin', function () {
+        return view('admin.dashboard');
     })->name('dashboard');
+    // Route::get('/dashboard', function () {
+    //     return view('dashboard');
+    // })->name('dashboard');
 });
+Route::get('/prueba', function () {
+    return view('pruebas.pruebas');
+})->name('pruebas');
