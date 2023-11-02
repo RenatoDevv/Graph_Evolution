@@ -1,7 +1,9 @@
 <x-app-layout>
-    <div class="flex flex-col p-2 lg:p-8 dark:text-gray-800 dark:bg-gray-300  rounded-md dark:border-gray-700 gap-6">
-        <h1 class="text-3xl font-bold text-center">👋 Bienvenido al panel de Paginas</h1>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas ullam,
+    <div
+        class="flex  flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
+        <h1 class="text-3xl font-bold text-center text-gray-800">👋 Bienvenido al panel de Paginas</h1>
+        <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis
+            voluptas ullam,
             perferendis in enim at
             quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
             commodi
@@ -13,21 +15,30 @@
                     <span class="text-sm">Total de Paginas</span>
                 </div>
                 <div class="flex items-center justify-between ">
-                    <div
-                        class="flex bg-gray-50 items-center p-0 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 px-2 text-gray-400" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <input class="bg-gray-50 outline-none ml-4 block rounded border-none" type="text"
-                            name="" id="" placeholder="Buscar...">
+                    <div class="relative mt-2 rounded-md shadow-sm">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3">
+                            <span class="text-gray-500 sm:text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em"
+                                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <style>
+                                        svg {
+                                            fill: #d1d1d1
+                                        }
+                                    </style>
+                                    <path
+                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <input type="search" name="" id="search"
+                            class="block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 ring-1 ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 hover:ring-1 hover:ring-gray-300"
+                            placeholder="Buscar....">
                     </div>
                     <div class="lg:ml-40 ml-10 space-x-8">
-                        <button
-                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">New
-                            Report</button>
+                        <a href="{{ route('admin.pages.create') }}"
+                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
+                            Nueva Pagina
+                        </a>
                         <button
                             class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button>
                     </div>
@@ -36,7 +47,85 @@
             <div>
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                     <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
-                        <table class="min-w-full leading-normal">
+                        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        ID
+                                    </th>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        NOMBRE
+                                    </th>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        DESCRIPCION
+                                    </th>
+                                    <th
+                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        ESTADO
+                                    </th>
+                                    <th
+                                        class="pl-8 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        Options
+                                    </th>
+                                </tr>
+                            </thead>
+                            @foreach ($pages as $page)
+                                <tbody>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">
+                                            {{ $page->id }}
+                                        </td>
+                                        <td class="px-5 py-4 flex items-center gap-1">
+                                            <div class="relative h-10 w-10">
+                                                <img class="h-full w-full rounded-full object-cover object-center"
+                                                    src="https://www.comparapps.com/wp-content/uploads/2020/04/que-es-una-pagina-web.png"
+                                                    alt="" />
+                                                <span
+                                                    class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
+                                            </div>
+                                            <div class="text-sm">
+                                                <div class="font-medium ">{{ $page->title }}</div>
+                                            </div>
+                                        </td>
+
+                                        <td class="px-5 py-4">
+                                            <span
+                                                class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ">
+                                                {!! Str::limit($page->description, 30) !!}
+                                            </span>
+                                        </td>
+                                        <td class="px-5 py-4">
+                                            <div class="flex gap-2">
+                                                <span
+                                                    class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
+                                                    Activo
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="px-5 py-4">
+                                            <div class="flex justify-start gap-4">
+                                                <a href="{{ route('admin.pages.show', $page) }}"
+                                                    class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded-md flex items-center">
+                                                    <i class="material-icons-outlined text-base">visibility</i>
+                                                </a>
+                                                <a href="{{ route('admin.pages.edit', $page->id) }}"
+                                                    class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded-md flex items-center">
+                                                    <i class="material-icons-outlined text-base">edit</i>
+                                                </a>
+                                                <a href="#"
+                                                    class="bg-red-100 text-red-400 hover:text-red-600 hover:bg-red-100 px-2 py-1 rounded-md flex items-center">
+                                                    <i class="material-icons-round text-base">delete_outline</i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            @endforeach
+                        </table>
+                        {{-- <table class="min-w-full leading-normal">
                             <thead>
                                 <tr>
                                     <th
@@ -205,7 +294,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table> --}}
                         <div
                             class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
                             <span class="text-xs xs:text-sm text-gray-900">
@@ -227,67 +316,10 @@
                 </div>
             </div>
         </div>
-        <div class="bg-sky-500 flex justify-center pb-4 pt-2">
-            <span class="text-sm">Graph Evolution 2023</span>
-        </div>
-        <!-- component -->
-        <div class="w-1/2 mx-auto">
-            <div class="w-full shadow-2xl subpixel-antialiased rounded h-64 bg-black border-black mx-auto">
-                <div class="flex items-center h-6 rounded-t bg-gray-100 border-b border-gray-500 text-center text-black"
-                    id="headerTerminal">
-                    <div class="flex ml-2 items-center text-center border-red-900 bg-red-500 shadow-inner rounded-full w-3 h-3"
-                        id="closebtn">
-                    </div>
-                    <div class="ml-2 border-yellow-900 bg-yellow-500 shadow-inner rounded-full w-3 h-3"
-                        id="minbtn">
-                    </div>
-                    <div class="ml-2 border-green-900 bg-green-500 shadow-inner rounded-full w-3 h-3" id="maxbtn">
-                    </div>
-                    <div class="mx-auto pr-16" id="terminaltitle">
-                        <p class="text-center text-sm">Terminal</p>
-                    </div>
-
-                </div>
-                <div class="pl-1 pt-1 h-auto  text-green-200 font-mono text-xs bg-black" id="console">
-                    <p class="pb-1">Last login: Wed Sep 25 09:11:04 on ttys002</p>
-                    <p class="pb-1">Laraben:Devprojects laraben$</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- component -->
-        <div
-            class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
-            <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute">
-            </div>
-            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
-            <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
-            <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
-            <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-2-light.png"
-                    class="dark:hidden w-[272px] h-[572px]" alt="">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-2-dark.png"
-                    class="hidden dark:block w-[272px] h-[572px]" alt="">
-            </div>
-        </div>
-
-        <!-- component -->
-        <div
-            class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[16px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-            <div class="rounded-xl overflow-hidden h-[140px] md:h-[262px]">
-                <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/screen-image-imac.png"
-                    class="dark:hidden h-[140px] md:h-[262px] w-full rounded-xl" alt="">
-                <img src="https://flowbite.s3.amazonaws.com/docs/device-mockups/screen-image-imac-dark.png"
-                    class="hidden dark:block h-[140px] md:h-[262px] w-full rounded-xl" alt="">
-            </div>
-        </div>
-        <div
-            class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl h-[24px] max-w-[301px] md:h-[42px] md:max-w-[512px]">
-        </div>
-        <div class="relative mx-auto bg-gray-800 rounded-b-xl h-[55px] max-w-[83px] md:h-[95px] md:max-w-[142px]">
-        </div>
     </div>
 
-
+    <div class="bg-sky-500 flex justify-center pb-4 pt-2">
+        <span class="text-sm">Graph Evolution 2023</span>
+    </div>
 
 </x-app-layout>

@@ -14,15 +14,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@100;300;400;500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/css/main.d7f96858.css" />
     @yield('css')
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="">
     <header class="header">
         <nav class="navigation">
             <div class="logo">
-                <a href="{{ route('home') }}" class="text-decoration-none">Graph <br>Evolution</a>
+                <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
+                        alt="" width="100%"></a>
             </div>
             <ul>
                 <li><a href="{{ route('home') }}" class="navigation-links">Home</a></li>

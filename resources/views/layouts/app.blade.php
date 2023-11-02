@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -14,7 +14,9 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/css/main.d7f96858.css" />
     {{-- <style>
@@ -31,10 +33,10 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased bg-gray-100">
+<body class="font-sans antialiased bg-slate-100">
     <x-banner />
 
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-200 flex gap-5 dark:text-white">
+    <div class="min-h-screen flex gap-5 dark:bg-[#343a40]">
 
         @livewire('navigation-menu')
 
@@ -49,7 +51,7 @@
             @endif --}}
 
         <!-- Page Content -->
-        <main class=" w-full py-5 pr-5">
+        <main class="w-full py-5 ">
             {{ $slot }}
         </main>
     </div>

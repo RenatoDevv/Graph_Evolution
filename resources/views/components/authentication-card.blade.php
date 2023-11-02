@@ -6,7 +6,7 @@
         <p class="text-gray-500 font-medium">{{$info}}</p>
     </div>
 
-    <div class="w-full sm:max-w-md mt-6 px-6 py-6 bg-transparent  overflow-hidden sm:rounded-lg">
+    <div class="w-full sm:max-w-md mt-6 px-6 py-6 bg-transparent sm:shadow-md overflow-hidden sm:rounded-lg">
         {{ $slot }}
     </div>
 </div>

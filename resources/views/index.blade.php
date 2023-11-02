@@ -3,13 +3,15 @@
 @section('css')
     <style>
         .home-content {
-            margin-top: 200px;
+            margin-top: 150px;
             margin-bottom: 50px;
         }
 
         .home-content .home-text {
             align-items: flex-start;
+            justify-content: flex-end;
             width: 55%;
+            padding-bottom: 100px;
         }
 
         .home-content .home-text .home-title {
@@ -35,7 +37,7 @@
 
         .home-content .home-image {
             width: 45%;
-            margin-top: -170px;
+            margin-top: -140px;
             filter: drop-shadow(0 10px 50px rgba(202, 7, 143, 0.644));
         }
 
@@ -48,7 +50,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: -90px;
+            margin-top: -120px;
             margin-bottom: 100px;
             position: relative;
             width: 50px;
@@ -121,6 +123,7 @@
             }
 
             .home-content .home-text .home-title {
+
                 font-size: 2.9rem;
             }
 
@@ -182,9 +185,6 @@
                 padding: 0 1.25rem;
                 /*20px*/
             }
-
-
-
         }
 
         @media only screen and (max-width: 400px) {
@@ -210,11 +210,8 @@
 @section('content')
     <section class="home-content w-100 d-flex">
         <div class="home-text d-flex flex-column gap-2">
-            <h2 class="home-title fw-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, enim. Lorem ipsum
-                dolor sit
-                amet.</h2>
-            <p class="home-description">Graph Evolution is the modern web development platform for Enterprises to realize the
-                full potential of a scalable, customizable web architecture.
+            <h2 class="home-title fw-bold">Graph Evolution</h2>
+            <p class="home-description">La tecnología hace posible lo que antes era imposible. El diseño hace que sea real.
             </p>
             <a href="{{ route('services') }}" class="home-link text-start text-decoration-none fw-medium">CONOCER MÁS</a>
         </div>
@@ -225,81 +222,123 @@
 
     <section class="home-services d-flex flex-column align-items-center" id="services">
         <div class="ArrowFloat">
-            <a href="#services" id="#services"><i class="bi bi-arrow-down"></i></a>
+            <a href="#services"><i class="bi bi-arrow-down"></i></a>
         </div>
         <h2 class="services-title fw-bold">Servicios</h2>
         <p class="services-description text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. A nisi <br>
             sapiente autem natus amet
             commodi laboriosam fuga facere, ex doloribus.</p>
-        <div class="card-container d-flex flex-wrap justify-content-center gap-5">
-            <div class="card" style="width: 18rem;" data-bs-theme="light" > 
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Ver Ahora <i class="bi bi-arrow-right-short"></i></a>
+        <div class="grid justify-center w-auto gap-4 sm:flex-col md:grid-col-1 lg:grid-cols-4">
+            <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
+                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
+                        class="h-full w-full object-cover" />
+                </div>
+                <div class="p-6 ">
+                    <div class="mb-2 flex items-center justify-between">
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            Apple AirPods
+                        </p>
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            $95.00
+                        </p>
                     </div>
+                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                        With plenty of talk and listen time, voice-activated Siri access, and an
+                        available wireless charging case.
+                    </p>
+                </div>
+                <div class="p-6 pt-0 ">
+                    <button
+                        class="w-full rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
+                        type="button">
+                        Ver Ahora
+                    </button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;" data-bs-theme="light" >
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-right"></i></a>
+            <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
+                        class="h-full w-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <div class="mb-2 flex items-center justify-between">
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            Apple AirPods
+                        </p>
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            $95.00
+                        </p>
+                    </div>
+                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                        With plenty of talk and listen time, voice-activated Siri access, and an
+                        available wireless charging case.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <button
+                        class="w-full rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
+                        type="button">
+                        Ver Ahora
+                    </button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;" data-bs-theme="light">
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i></a>
+            <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
+                        class="h-full w-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <div class="mb-2 flex items-center justify-between">
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            Apple AirPods
+                        </p>
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            $95.00
+                        </p>
+                    </div>
+                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                        With plenty of talk and listen time, voice-activated Siri access, and an
+                        available wireless charging case.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <button
+                        class="w-full rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
+                        type="button">
+                        Ver Ahora
+                    </button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;" data-bs-theme="light">
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i></a>
+            <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
+                        class="h-full w-full object-cover" />
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-bs-theme="light">
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i></a>
+                <div class="p-6">
+                    <div class="mb-2 flex items-center justify-between">
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            Apple AirPods
+                        </p>
+                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+                            $95.00
+                        </p>
+                    </div>
+                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                        With plenty of talk and listen time, voice-activated Siri access, and an
+                        available wireless charging case.
+                    </p>
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-bs-theme="light">
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i></a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-bs-theme="light">
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i></a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;" data-bs-theme="light">
-                <img src="{{ asset('img/banner2.png') }}" class="card-img-top" alt="..." width="100%">
-                <div class="card-body">
-                    <h5 class="card-title fs-4">Card title</h5>
-                    <p class="card-text fs-5">Some quick example text to build on the card title.</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i></a>
+                <div class="p-6 pt-0">
+                    <button
+                        class="w-full rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
+                        type="button">
+                        Ver Ahora
+                    </button>
                 </div>
             </div>
         </div>
+        {{-- <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" /> --}}
     </section>
     <section class="home-preference  d-flex flex-column align-items-center">
         <h2 class="mb-5 fs-1 fw-bold mt-5" style="color: #cf00be">Porque elegirnos?</h2>
@@ -332,7 +371,8 @@
                     <h5 class="card-title text-center fs-3">Pasión</h5>
                     <p class="card-text text-center fs-4">Disfrutamos lo que hacemos Por ello, el tener la
                         <strong>pasión</strong> como uno de nuestro valor los resulatos de nuestro trabajo son
-                        satisfactorios para nuestros clientes.</p>
+                        satisfactorios para nuestros clientes.
+                    </p>
                 </div>
             </div>
         </div>
@@ -367,11 +407,11 @@
         </div>
     </section>
     <section>
-
+        <p>Hola Mundo</p>
     </section>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+        Abrir Modal
     </button>
 
     <!-- Modal -->

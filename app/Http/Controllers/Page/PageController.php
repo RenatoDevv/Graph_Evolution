@@ -4,19 +4,39 @@ namespace App\Http\Controllers\Page;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+use App\Models\Page;
 
 class PageController extends Controller
 {
     public function index () {
-        return view('index');
+        $pages = Page::all();
+        return view('admin.pages.index', compact('pages'));
     }
-    public function services () {
-        return view('pages.services');
+    public function create (): View
+    {
+        return view('admin.pages.create');
     }
-    public function about () {
-        return view('pages.about');
+    public function store (Request $request) {
+        $page = new Page;
+        $page->title = $request->title;
+        $page->description = $request->description;
+        $page->save();
+
+        return redirect()->route('admin.pages')->with('message','Guardado Satisfactoriamente !');
     }
-    public function contact () {
-        return view('pages.contact');
+    public function show ($id) {
+        $page = Page::find($id);
+        return view('admin.pages.show', compact('page'));
+    }
+    public function edit ($id) {
+        $page = Page::find($id);
+        return view('admin.pages.edit', compact('page'));
+    }
+    public function update(Request $request, $id) {
+        dd($request->all());
+    }
+    public function delete() {
+        //
     }
 }

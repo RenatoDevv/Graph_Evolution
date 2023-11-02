@@ -1,7 +1,8 @@
 <x-app-layout>
-    <div class="flex flex-col p-2 lg:p-8 dark:text-gray-800 dark:bg-gray-300 rounded-md dark:border-gray-700 gap-6">
-        <h1 class="text-3xl font-bold text-center">👋 Bienvenido al panel de Usuarios</h1>
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas ullam,
+    <div
+        class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
+        <h1 class="text-3xl font-bold text-center text-gray-800">👋 Bienvenido al panel de Usuarios</h1>
+        <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas ullam,
             perferendis in enim at
             quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
             commodi
@@ -35,154 +36,109 @@
                         </div>
                     </div>
                     <div class="lg:ml-40 ml-10 space-x-8">
+                        <a href="{{ route('admin.users.create') }}"
+                            class="bg-indigo-500 px-12 py-3 rounded-full text-white font-semibold tracking-wide cursor-pointer">
+                            Añadir
+                        </a>
                         <button
-                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">New
-                            Report</button>
-                        <button
-                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button>
+                            class="bg-indigo-500 px-12 py-3 rounded-full text-white font-semibold tracking-wide cursor-pointer border-none">Create</button>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                     <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
-                        <table class="min-w-full leading-normal">
+                        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                             <thead>
                                 <tr>
-                                    <th
+                                    <th scope="col"
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Name
+                                        ID
                                     </th>
-                                    <th
+                                    <th scope="col"
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        products
+                                        NOMBRES
                                     </th>
-                                    <th
+                                    <th scope="col"
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Created at
+                                        ESTADO
                                     </th>
-                                    <th
+                                    <th scope="col"
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        QRT
+                                        HABILIDADES
                                     </th>
-                                    <th
+                                    <th scope="col"
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Status
-                                    </th>
-                                    <th
-                                        class="pl-8 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Options
+                                        ACCIONES
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="px-3 py-3 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex items-center">
-                                            <div class="flex-shrink-0 w-10 h-10">
-                                                <img class="w-full h-full rounded-full"
-                                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                            @foreach ($users as $user)
+                                <tbody>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-6 py-4">
+                                            {{ $user->id }}
+
+                                        </td>
+                                        <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
+                                            <div class="relative h-10 w-10">
+                                                <img class="h-full w-full rounded-full object-cover object-center"
+                                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                                     alt="" />
+                                                <span
+                                                    class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
                                             </div>
-                                            <div class="ml-3">
-                                                <p class="text-gray-900 whitespace-no-wrap">
-                                                    Vera Carpenter
-                                                </p>
+                                            <div class="text-sm">
+                                                <div class="font-medium text-gray-700">{{ $user->name }}</div>
+                                                <div class="text-gray-400">{{ $user->email }}</div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">Admin</p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Jan 21, 2020
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            43
-                                        </p>
-                                    </td>
-                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
-                                        <span
-                                            class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                            <span aria-hidden
-                                                class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                            <span class="relative">Activo</span>
-                                        </span>
-                                    </td>
-                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex items-center space-x-4 text-white">
-                                            <button type="button"
-                                                class="py-1.5 px-3 bg-yellow-500 rounded-lg hover:bg-yellow-200 text-white hover:text-yellow-400 ">
-                                                <i class="bi bi-pencil-square text-lg"></i>
-                                            </button>
-                                            <button type="button"
-                                                class="py-1.5 px-3 bg-blue-600 text-white rounded-lg hover:bg-blue-200 hover:text-blue-600 ">
-                                                <i class="bi bi-eye-fill text-lg"></i>
-                                            </button>
-                                            <button type="button"
-                                                class="py-1.5 px-3 bg-red-500 rounded-lg hover:bg-red-200 fill-white hover:text-red-500">
-                                                <i class="bi bi-trash-fill text-lg"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="px-3 py-3 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex items-center">
-                                            <div class="flex-shrink-0 w-10 h-10">
-                                                <img class="w-full h-full rounded-full"
-                                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
-                                                    alt="" />
+                                        </th>
+                                        <td class="px-5 py-4">
+                                            <span
+                                                class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
+                                                <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
+                                                Active
+                                            </span>
+                                        </td>
+                                        <td class="px-5 py-4">
+                                            <div class="flex gap-2">
+                                                <span
+                                                    class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600">
+                                                    Design
+                                                </span>
+                                                <span
+                                                    class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600">
+                                                    Product
+                                                </span>
+                                                <span
+                                                    class="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-600">
+                                                    Develop
+                                                </span>
                                             </div>
-                                            <div class="ml-3">
-                                                <p class="text-gray-900 whitespace-no-wrap">
-                                                    Vera Carpenter
-                                                </p>
+                                        </td>
+                                        <td class="px-5 py-4">
+                                            <div class="flex justify-start gap-4">
+                                                <a href="{{ route('admin.users.show', $user) }}"
+                                                    class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-2 rounded-md flex items-center">
+                                                    <i class="material-icons-outlined text-base">visibility</i>
+                                                </a>
+                                                <a href="{{ route('admin.users.edit', $user->id) }}"
+                                                    class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-2 rounded-md flex items-center">
+                                                    <i class="material-icons-outlined text-base">edit</i>
+                                                </a>
+                                                <form action="{{ route('admin.users.eliminar', $user->id) }}"
+                                                    method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit"
+                                                        class="bg-red-100 text-red-400 hover:text-red-600 hover:bg-red-100 px-2 py-2 rounded-md flex items-center"><i
+                                                            class="material-icons-round text-base">delete_outline</i></button>
+                                                </form>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">Admin</p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Jan 21, 2020
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            43
-                                        </p>
-                                    </td>
-                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
-                                        <span
-                                            class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                            <span aria-hidden
-                                                class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                            <span class="relative">Activo</span>
-                                        </span>
-                                    </td>
-                                    <td class="px-2 py-2 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex items-center space-x-4 text-white">
-                                            <button type="button"
-                                                class="py-1.5 px-3 bg-yellow-500 rounded-lg hover:bg-yellow-200 text-white hover:text-yellow-400 ">
-                                                <i class="bi bi-pencil-square text-lg"></i>
-                                            </button>
-                                            <button type="button"
-                                                class="py-1.5 px-3 bg-blue-600 text-white rounded-lg hover:bg-blue-200 hover:text-blue-600 ">
-                                                <i class="bi bi-eye-fill text-lg"></i>
-                                            </button>
-                                            <button type="button"
-                                                class="py-1.5 px-3 bg-red-500 rounded-lg hover:bg-red-200 fill-white hover:text-red-500">
-                                                <i class="bi bi-trash-fill text-lg"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            @endforeach
                         </table>
                         <div
                             class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
@@ -191,12 +147,12 @@
                             </span>
                             <div class="inline-flex mt-2 xs:mt-0">
                                 <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
+                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-500 font-semibold py-2 px-4 rounded-l">
                                     Prev
                                 </button>
                                 &nbsp; &nbsp;
                                 <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
+                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-500 font-semibold py-2 px-4 rounded-r">
                                     Next
                                 </button>
                             </div>
@@ -205,8 +161,129 @@
                 </div>
             </div>
         </div>
-        <div class="bg-sky-500 flex justify-center pb-4 pt-2">
-            <span class="text-sm">Graph Evolution 2023</span>
-        </div>
     </div>
+
+    {{-- <div class="flex items-center justify-center min-h-screen bg-gray-900">
+        <div class="col-span-12">
+            <div class="overflow-auto lg:overflow-visible ">
+                <table class="table text-gray-400 border-separate space-y-6 text-sm">
+                    <thead class="bg-gray-800 text-gray-500">
+                        <tr>
+                            <th class="p-3">Brand</th>
+                            <th class="p-3 text-left">Category</th>
+                            <th class="p-3 text-left">Price</th>
+                            <th class="p-3 text-left">Status</th>
+                            <th class="p-3 text-left">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-gray-800">
+                            <td class="p-3">
+                                <div class="flex align-items-center">
+                                    <img class="rounded-full h-12 w-12  object-cover"
+                                        src="https://images.unsplash.com/photo-1613588718956-c2e80305bf61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"
+                                        alt="unsplash image">
+                                    <div class="ml-3">
+                                        <div class="">Appple</div>
+                                        <div class="text-gray-500">mail@rgmail.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="p-3">
+                                Technology
+                            </td>
+                            <td class="p-3 font-bold">
+                                200.00$
+                            </td>
+                            <td class="p-3">
+                                <span class="bg-green-400 text-gray-50 rounded-md px-2">available</span>
+                            </td>
+                            <td class="p-3 ">
+                                <a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
+                                    <i class="material-icons-outlined text-base">visibility</i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-gray-100  mx-2">
+                                    <i class="material-icons-outlined text-base">edit</i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-gray-100  ml-2">
+                                    <i class="material-icons-round text-base">delete_outline</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-800">
+                            <td class="p-3">
+                                <div class="flex align-items-center">
+                                    <img class="rounded-full h-12 w-12   object-cover"
+                                        src="https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                                        alt="unsplash image">
+                                    <div class="ml-3">
+                                        <div class="">Realme</div>
+                                        <div class="text-gray-500">mail@rgmail.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="p-3">
+                                Technology
+                            </td>
+                            <td class="p-3 font-bold">
+                                200.00$
+                            </td>
+                            <td class="p-3">
+                                <span class="bg-red-400 text-gray-50 rounded-md px-2">no stock</span>
+                            </td>
+                            <td class="p-3">
+                                <a href="#" class="text-gray-400 hover:text-gray-100  mr-2">
+                                    <i class="material-icons-outlined text-base">visibility</i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-gray-100 mx-2">
+                                    <i class="material-icons-outlined text-base">edit</i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-gray-100 ml-2">
+                                    <i class="material-icons-round text-base">delete_outline</i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-800">
+                            <td class="p-3">
+                                <div class="flex align-items-center">
+                                    <img class="rounded-full h-12 w-12   object-cover"
+                                        src="https://images.unsplash.com/photo-1600856209923-34372e319a5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2135&q=80"
+                                        alt="unsplash image">
+                                    <div class="ml-3">
+                                        <div class="">Samsung</div>
+                                        <div class="text-gray-500">mail@rgmail.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="p-3">
+                                Technology
+                            </td>
+                            <td class="p-3 font-bold">
+                                200.00$
+                            </td>
+                            <td class="p-3">
+                                <span class="bg-yellow-400 text-gray-50  rounded-md px-2">start sale</span>
+                            </td>
+                            <td class="p-3">
+                                <a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
+                                    <i class="material-icons-outlined text-base">visibility</i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-gray-100 mx-2">
+                                    <i class="material-icons-outlined text-base">edit</i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-gray-100 ml-2">
+                                    <i class="material-icons-round text-base">delete_outline</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> --}}
+
+    <div class="bg-sky-500 flex justify-center pb-4 pt-2">
+        <span class="text-sm">Graph Evolution 2023</span>
+    </div>
+
 </x-app-layout>

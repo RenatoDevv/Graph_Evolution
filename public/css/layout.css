@@ -46,11 +46,9 @@ body {
     align-items: center;
 }
 
-.header .navigation .logo a {
-    font-size: 30px;
-    color: var(--primary-color-text);
-    font-weight: bold;
-    line-height: 35px;
+
+.header .navigation .logo a img {
+    width: 150px;
 }
 
 .header .navigation ul {
@@ -68,11 +66,11 @@ body {
     font-size: var(--font-link-text);
     font-weight: 500;
     text-decoration: none;
-    color: var(--navlink-text-color);
+    color: #fff;
 }
 
 .header .navigation ul li .navigation-links:hover {
-    color: var(--navlink-text-hoverC);
+    color: var(--navlink-text-color);
 }
 
 .header .navigation .navigation-button {
@@ -176,7 +174,7 @@ body {
     .contact-content .contact-presentation .contactP-title {
         font-size: 50px;
     }
-    
+
     .footer {
         display: flex;
         flex-direction: column;
@@ -192,7 +190,7 @@ body {
     }
 
     .footer .footer-container .footer-container-box {
-    
+
     }
 
     .footer .footer-contanier .footer-container-box .footer-title {

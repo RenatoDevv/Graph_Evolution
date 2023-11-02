@@ -1,7 +1,8 @@
-<div
-    class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
-    <h1 class="text-3xl font-bold text-center">👋 Bienvenido al panel de Administrador</h1>
-    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas ullam,
+<div class="flex flex-col p-2 lg:p-8 dark:bg-[#313a46]  dark:via-transparent  gap-3">
+    <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-300">👋 Bienvenido al panel de Administrador
+    </h1>
+    <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas
+        ullam,
         perferendis in enim at
         quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam commodi
         alias?</p>
@@ -9,117 +10,98 @@
         <!-- end: Social Network notification:light -->
         <div class="w-auto h-auto relative">
             <div
-                class="bg-white  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear">
+                class="bg-white  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear dark:bg-[#ffffff12]  text-white">
                 <div class="w-full flex items-center justify-between">
-                    <span class="font-medium text-sm text-slate-400">New Notification</span>
-                    <button
-                        class="-mr-1 bg-slate-100 hover:bg-slate-200 text-slate-400 hover:text-slate-600 h-5 w-5 rounded-full flex justify-center items-center">
-                        <svg class="h-2 w-2 fill-current items-center" viewBox="0 0 20 20">
-                            <path
-                                d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                        </svg>
-                    </button>
+                    <span class="font-bold text-base text-slate-600 dark:text-gray-100">Usuarios</span>
                 </div>
                 <div class="flex items-center mt-2 rounded-lg px-1 py-1 cursor-pointer">
                     <div class="relative flex flex-shrink-0 items-end">
-                        <img class="h-16 w-16 rounded-full" src="https://i.pravatar.cc/300">
+                        <img class="h-24 w-24 rounded-full" src="{{ asset('img/admin/perfil.jpg') }}">
                         <span
                             class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
                     </div>
                     <div class="ml-3">
-                        <span class="font-semibold tracking-tight text-xs">John Doe</span>
-                        <span class="text-xs leading-none opacity-50">reacted to your comment:</span>
-                        <p class="text-xs leading-4 pt-2 italic opacity-70">"This is the comment..."</p>
-                        <span class="text-[10px] text-blue-500 font-medium leading-4 opacity-75">a few seconds
-                            ago</span>
+                        <span class="font-semibold text-sm text-slate-600 dark:text-gray-100">Administradores del sitio
+                            web</span>
+                        <span class="text-sm leading-none opacity-100"></span>
+
+                        <p class="font-semibold text-sm text-slate-600 dark:text-gray-100">total: 3</p>
+                        <span
+                            class="text-xs text-blue-500 font-bold leading-4 opacity-75 hover:text-sm hover:text-blue-700 dark:text-blue-400">
+                            <a href="{{ route('admin.pages') }}">Ver mas</a>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="w-auto h-auto relative">
             <div
-                class="bg-slate-900 text-slate-100 px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear">
+                class="bg-white  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear dark:bg-[#ffffff12] ">
                 <div class="w-full flex items-center justify-between">
-                    <span class="font-medium text-sm">New Notification</span>
-                    <button
-                        class="-mr-1 bg-slate-800 hover:bg-slate-700/70 text-slate-400 hover:text-slate-200 h-5 w-5 rounded-full flex justify-center items-center">
-                        <svg class="h-2 w-2 fill-current items-center" viewBox="0 0 20 20">
-                            <path
-                                d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                        </svg>
-                    </button>
+                    <span class="font-bold text-base text-slate-600 dark:text-white">Sitio web</span>
                 </div>
                 <div class="flex items-center mt-2 rounded-lg py-1 cursor-pointer">
                     <div class="relative flex flex-shrink-0 items-end">
-                        <img class="h-16 w-16 rounded-full" src="https://i.pravatar.cc/300">
+                        <img class="h-24 w-24 rounded-full"
+                            src="https://assets-blog.hostgator.mx/wp-content/uploads/2017/12/blog-7-coisas-para-comecar.webp">
                         <span
-                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-slate-900"></span>
+                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
                     </div>
                     <div class="ml-3.5">
-                        <span class="font-semibold tracking-tight text-xs">John Doe</span>
-                        <span class="text-xs leading-none opacity-50">reacted to your comment:</span>
-                        <p class="text-xs leading-4 pt-2 italic opacity-70">"This is the comment..."</p>
-                        <span class="text-[10px] text-blue-500 font-medium leading-4 opacity-75">a few seconds
-                            ago</span>
+                        <span class="font-semibold text-sm text-slate-600 dark:text-white">Paginas comformados del sitio
+                            web</span>
+                        <p class="font-semibold text-sm text-slate-600 dark:text-white">Total: 5</p>
+                        <span
+                            class="text-xs text-blue-500 font-bold leading-4 opacity-75 hover:text-sm hover:text-blue-700">
+                            <a href="{{ route('admin.pages') }}">Ver mas</a>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- start: Social Network notification:dark -->
-        <div class="w-auto h-auto relative">
+        <div class="w-auto h-auto relative  ">
             <div
-                class="bg-slate-700 text-slate-100 px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear">
+                class="bg-white  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear dark:bg-[#ffffff12]">
                 <div class="w-full flex items-center justify-between">
-                    <span class="font-medium text-sm">New Notification</span>
-                    <button
-                        class="-mr-1 bg-slate-800 hover:bg-slate-700/70 text-slate-400 hover:text-slate-200 h-5 w-5 rounded-full flex justify-center items-center">
-                        <svg class="h-2 w-2 fill-current items-center" viewBox="0 0 20 20">
-                            <path
-                                d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                        </svg>
-                    </button>
+                    <span class="font-bold text-base text-slate-600">New Notification</span>
                 </div>
                 <div class="flex items-center mt-2 rounded-lg py-1 cursor-pointer">
                     <div class="relative flex flex-shrink-0 items-end">
-                        <img class="h-16 w-16 rounded-full" src="https://i.pravatar.cc/300">
+                        <img class="h-24 w-24 rounded-full"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxwgv7JU0r9ZrBdHmNAKo5mYRH85xP7qtQA&usqp=CAU">
                         <span
-                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-slate-900"></span>
+                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
                     </div>
                     <div class="ml-3.5">
-                        <span class="font-semibold tracking-tight text-xs">John Doe</span>
-                        <span class="text-xs leading-none opacity-50">reacted to your comment:</span>
-                        <p class="text-xs leading-4 pt-2 italic opacity-70">"This is the comment..."</p>
-                        <span class="text-[10px] text-blue-500 font-medium leading-4 opacity-75">a few seconds
+                        <span class="font-semibold tracking-tight text-sm">John Doe</span>
+                        <span class="text-sm leading-none opacity-50">reacted to your comment:</span>
+                        <p class="text-sm leading-4 pt-2 italic opacity-70">"This is the comment..."</p>
+                        <span class="text-xs text-blue-500 font-medium leading-4 opacity-75">a few seconds
                             ago</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-auto h-auto relative">
+        <div class="w-auto h-auto relative ">
             <div
-                class="bg-slate-300  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear">
+                class="bg-white   px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear ">
                 <div class="w-full flex items-center justify-between">
-                    <span class="font-medium text-sm text-slate-400">New Notification</span>
-                    <button
-                        class="-mr-1 bg-slate-100 hover:bg-slate-200 text-slate-400 hover:text-slate-600 h-5 w-5 rounded-full flex justify-center items-center">
-                        <svg class="h-2 w-2 fill-current items-center" viewBox="0 0 20 20">
-                            <path
-                                d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                        </svg>
-                    </button>
+                    <span class="font-bold text-base text-slate-600">New Notification</span>
                 </div>
                 <div class="flex items-center mt-2 rounded-lg px-1 py-1 cursor-pointer">
                     <div class="relative flex flex-shrink-0 items-end">
-                        <img class="h-16 w-16 rounded-full" src="https://i.pravatar.cc/300">
+                        <img class="h-24 w-24 rounded-full"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_y0Sae7U8L5bC09KUISBwq-b6T5ZMgIEfr7K6WuymE4wwIAQ5Pu1vTPUNKJsw6FyuGQ4&usqp=CAU">
                         <span
                             class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
                     </div>
                     <div class="ml-3">
-                        <span class="font-semibold tracking-tight text-xs">John Doe</span>
-                        <span class="text-xs leading-none opacity-50">reacted to your comment:</span>
-                        <p class="text-xs leading-4 pt-2 italic opacity-70">"This is the comment..."</p>
-                        <span class="text-[10px] text-blue-500 font-medium leading-4 opacity-75">a few seconds
+                        <span class="font-semibold tracking-tight text-sm">John Doe</span>
+                        <span class="text-sm leading-none opacity-50">reacted to your comment:</span>
+                        <p class="text-sm leading-4 pt-2 italic opacity-70">"This is the comment..."</p>
+                        <span class="text-xs text-blue-500 font-medium leading-4 opacity-75">a few seconds
                             ago</span>
                     </div>
                 </div>
@@ -130,14 +112,14 @@
     <!-- component -->
     <div class="flex flex-col justify-center items-center h-auto mt-20">
         <div
-            class=" flex max-w-[auto] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
+            class=" flex max-w-[auto] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3]   dark:text-white dark:shadow-none dark:bg-gray-700">
             <div
-                class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
+                class="flex h-fit w-full items-center justify-between rounded-t-2xl  px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 bg-[#aab8c5] dark:shadow-none">
                 <h4 class="text-lg font-bold text-navy-700 dark:text-white">
                     Administradores
                 </h4>
                 <button
-                    class="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
+                    class="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200  dark:text-white">
                     Total
                 </button>
             </div>
@@ -165,8 +147,14 @@
                             </th>
                         </tr>
                     </thead>
+                    {{-- @foreach ($users as $user) --}}
                     <tbody role="rowgroup" class="px-4">
                         <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                                <p class="text-md font-medium text-gray-600 dark:text-white">
+                                    {{-- {{ $user->id }} --}}
+                                </p>
+                            </td>
                             <td class="py-3 text-sm" role="cell">
                                 <div class="flex items-center gap-2">
                                     <div class="h-[30px] w-[30px] rounded-full">
@@ -174,14 +162,9 @@
                                             class="h-full w-full rounded-full" alt="" />
                                     </div>
                                     <p class="text-sm font-medium text-navy-700 dark:text-white">
-                                        @maddison_c21
+                                        {{-- {{ $user->name }} --}}
                                     </p>
                                 </div>
-                            </td>
-                            <td class="py-3 text-sm" role="cell">
-                                <p class="text-md font-medium text-gray-600 dark:text-white">
-                                    9821
-                                </p>
                             </td>
                             <td class="py-3 text-sm" role="cell">
                                 <div class="mx-2 flex font-bold">
@@ -200,7 +183,7 @@
                                             class="h-full w-full rounded-full" alt="" />
                                     </div>
                                     <p class="text-sm font-medium text-navy-700 dark:text-white">
-                                        @karl.will02
+                                        {{-- {{ $user->email }} --}}
                                     </p>
                                 </div>
                             </td>
@@ -297,42 +280,12 @@
                             </td>
                         </tr>
                     </tbody>
+                    {{-- @endforeach --}}
+
                 </table>
             </div>
         </div>
-        <p class="font-normal text-navy-700 mt-20 mx-auto w-max">Creador para <a href="#"
-                class="text-brand-500 font-bold">Graph Evolution</a></p>
+
     </div>
-
-
-    <script>
-        let cardData = function() {
-            return {
-                countUp: function(target, startVal, endVal, decimals, duration) {
-                    const countUp = new CountUp(target, startVal || 0, endVal, decimals || 0, duration || 2);
-                    countUp.start();
-                },
-                sessions: [{
-                        "label": "Phone",
-                        "size": 60,
-                        "color": "indigo-600"
-                    },
-                    {
-                        "label": "Tablet",
-                        "size": 30,
-                        "color": "indigo-400"
-                    },
-                    {
-                        "label": "Desktop",
-                        "size": 10,
-                        "color": "indigo-200"
-                    }
-                ]
-            }
-        }
-    </script>
-</div>
-
-<div class="flex justify-center pb-4 pt-2">
-    <span class="text-sm">2023</span>
+    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
 </div>

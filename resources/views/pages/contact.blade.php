@@ -84,11 +84,16 @@
 
 
         .contact-map {
+            overflow: hidden;
             width: 100%;
             padding: 200px 0px;
         }
 
-        .contact-map iframe {}
+        .contact-map iframe {
+            background: #1076b9;
+            padding: 0 2px;
+            width: 100%;
+        }
 
         @media only screen and (max-width: 1200px) {
             .contact-content {
@@ -102,6 +107,11 @@
         }
 
         @media only screen and (max-width: 700px) {
+            body {
+                padding: 0 1.25rem;
+                /*20px*/
+            }
+
             .contact-content {
                 margin: 0 -50px;
 
@@ -130,40 +140,6 @@
 
         }
 
-        @media only screen and (max-width: 500px) {
-            body {
-                padding: 0 1.25rem;
-                /*20px*/
-            }
-
-            .contact-form {
-                flex-direction: column;
-            }
-        }
-
-        /*
-                                            @media only screen and (max-width: 400px) {
-                                                .home-content {
-                                                    gap: 20px;
-                                                    margin-top: 50px;
-                                                    margin-bottom: 100px;
-                                                }
-
-                                                .home-content .home-text {
-                                                    display: flex;
-                                                    align-items: center;
-                                                    width: 100%;
-                                                    gap: 20px;
-                                                }
-
-                                                .home-content .home-text .home-title {
-                                                    font-size: 2.6rem;
-                                                }
-
-                                                .contact-content .contact-form {
-                                                    padding: 0;
-                                                }
-                                            } */
     </style>
 @endsection
 @section('content')
@@ -203,8 +179,8 @@
         <div class="contact-form d-flex gap-5 w-75 justify-content-center align-items-center">
             <img src="{{ asset('img/robot.png') }}" class="img-fluid w-50" alt=""
                 style="background-size: cover; objetc-fit: contain;" class="w-50" width="">
-            <form class="row g-3 d-flex flex-column justify-content-center align-items-center"
-                id="explorationForm" method="GET" action="">
+            <form class="row g-3 d-flex flex-column justify-content-center align-items-center" id="explorationForm"
+                method="GET" action="">
                 <h2 class="text-center">Envie un mensaje</h2>
                 <div class="mb-3">
                     {{-- <label for="exampleFormControlInput1" class="form-label">Correo Electronico</label> --}}
@@ -252,20 +228,5 @@
                 showCloseButton: true
             })
         });
-
-        // saveForm.addEventListener('submit', function(event) {
-        //     event.preventDefault();
-        //     Swal.fire(
-        //     'The Internet?',
-        //     'That thing is still around?',
-        //     'question'
-        // )
-        // })
-
-        // Swal.fire(
-        //     'The Internet?',
-        //     'That thing is still around?',
-        //     'question'
-        // )
     </script>
 @endsection

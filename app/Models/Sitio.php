@@ -5,15 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Page extends Model
+class Sitio extends Model
 {
     use HasFactory;
-
-    protected $table = 'pages';
-
-    protected $fillable = [
-        'title',
-        'description',
-    ];
-
 }

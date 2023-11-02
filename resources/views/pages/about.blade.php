@@ -14,7 +14,7 @@
             width: 50%;
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 3.125em;
         }
 
         .content-about .content-description {
@@ -100,6 +100,10 @@
         }
 
         @media only screen and (max-width: 1200px) {
+            body {
+                font-size: 0.7em;
+            }
+
             .content-about {
                 background: transparent;
             }
@@ -120,11 +124,16 @@
 
         @media only screen and (max-width: 700px) {
             .content-about {
+                background: #000;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
                 margin-top: 100px;
                 justify-content: space-between;
             }
 
             .content-about .content-about-descripcion {
+                width: 100%;
                 margin-right: 0px;
                 gap: 10px;
             }
@@ -138,9 +147,11 @@
             .about-biografi {
                 gap: 50px;
             }
+
             .graph-about {
                 background: #a71582;
             }
+
             .graph-about .about-content .about-text {
                 background: #b44a4a;
                 flex-direction: column;
@@ -184,33 +195,31 @@
         <div class="about-content">
             <h2 class="about-title">Misión</h2>
             <div class="about-text d-flex">
-                <img src="{{ asset('img/about/mision.png') }}" alt="MISION Graph Evolition" width="100%">
-                <p class="about-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis ipsum
-                    recusandae soluta corporis
-                    voluptatibus voluptatum quis temporibus a dolor cumque possimus odit earum quas et sit, consequuntur
-                    eius, necessitatibus magni!</p>
+                <img src="{{ asset('img/about/mision.png') }}" alt="MISION Graph Evolition" width="100%"
+                    style="object-fit: cover; max-width: 100%;">
+                <p class="about-description">Somos una empresa que busca transformar ideas en soluciones visuales,
+                    fusionando la creatividad y el concepto de nuestros clientes. Nos esforzamos por cumplir con todas las
+                    necesidades y trabajos que nuestros clientes soliciten, nuestro objetivo es brindar productos y
+                    servicios de calidad que generen impacto en la comunicación. </p>
             </div>
         </div>
         <div class="about-content">
             <h2 class="about-title">Vision</h2>
             <div class="about-text d-flex">
                 <img src="{{ asset('img/about/vision.png') }}" alt="" title="VISION Graph Evolution" width="100%">
-                <p class="about-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione deserunt
-                    nostrum sed consequatur quod
-                    ipsum inventore est omnis error tempora, labore provident fuga dolor minima! Quo soluta nostrum numquam!
-                    Nam?
+                <p class="about-description">Ser una empresa líder que impacte, incursionando en más ramas de la
+                    comunicación publicitaria para el progreso de nuestra sociedad.
                 </p>
             </div>
         </div>
         <div class="about-content">
             <h2 class="about-title text-center">Valores</h2>
             <div class="about-text">
-                <p class="about-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione deserunt
-                    nostrum sed consequatur quod
-                    ipsum est omnis error tempora, labore provident fuga dolor minima! Quo soluta nostrum numquam! Nam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quidem accusamus quasi exercitationem
-                    dolorem maxime distinctio amet rem perferendis quaerat. Natus maxime ratione molestiae expedita
-                    distinctio eos illo vel neque!
+                <p class="about-description">
+                <ul>
+                    <li>Fidelidad</li>
+                    <li>Amabilidad</li>
+                </ul>
                 </p>
                 <img src="{{ asset('img/about/valores.png') }}" alt="" width="100%">
             </div>
@@ -219,10 +228,12 @@
             <h2 class="text-center">Objetivos</h2>
             <div class="about-text ">
                 <img src="{{ asset('img/about/objetivos.png') }}" alt="" width="100%">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione deserunt nostrum sed consequatur quod
-                    ipsum inventore est omnis error tempora, labore provident fuga dolor minima! Quo soluta nostrum numquam!
-                    Nam?
-                </p>
+                <ul>
+                    <li>Poder innovar visualmente todas aquellas ideas que nuestro público tenga.</li>
+                    <li>Ser reconocido como una empresa líder en diseño e imprenta a nivel de Arequipa.</li>
+                    <li>Abrir más sucursales para poder llegar a más clientes. </li>
+                    <li>Brindar trabajos de calidad.</li>
+                </ul>
             </div>
         </div>
     </section>
