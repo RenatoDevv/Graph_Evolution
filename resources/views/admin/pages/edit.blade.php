@@ -38,35 +38,37 @@
                                                     placeholder="Nombre">
                                             </div>
                                         </div>
-                                        <div class="w-full lg:w-6/12 px-4">
-                                            <div class="relative w-full mb-3">
-                                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                    htmlfor="grid-password">
-                                                    Descripcion
-                                                </label>
-                                                <input
-                                                    class="px-3 py-3 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="description" value="{{ $page->description }}"
-                                                    placeholder="Correo electronico">
-                                            </div>
-                                        </div>
                                     </div>
                                     <hr class="mt-6 border-b-1 border-blueGray-300">
 
                                     <h6 class="text-gray-400 text-sm mt-3 mb-6 font-bold uppercase">
-                                        Mas Informacion
+                                        {{-- Mas Informacion --}}
                                     </h6>
                                     <div class="flex flex-wrap">
                                         <div class="w-full lg:w-12/12 px-4">
                                             <div class="relative w-full mb-3">
                                                 <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                                                     htmlfor="grid-password">
-                                                    ACERCA DE
+                                                    Descripcion
                                                 </label>
-                                                <textarea type="text"
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                    rows="4" placeholder="En este campo se muestra los datos del administrador"></textarea>
+                                                <textarea type="text" name="description"
+                                                    class="border-0 px-3 text-gray-500 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    rows="4" placeholder="Descripcion de la pagina">{{ $page->description }}</textarea>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-full px-4">
+                                        <div class="flex flex-col items-center w-full m-auto">
+                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                                htmlfor="grid-password">
+                                                Suba una imagen
+                                            </label>
+                                            <span class="text-xs pb-3">La imagen debe ser de formato png o jpg de tamaño
+                                                1300 </span>
+                                            <input
+                                                class="px-3 py-3 rounded text-sm shadow ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
+                                                type="file" name="imagen_logo" value=""
+                                                placeholder="Descripcion">
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">

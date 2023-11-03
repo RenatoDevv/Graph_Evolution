@@ -8,7 +8,9 @@
     <title>Admin @yield('title')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{ asset('img/logo.png') }}">
     @yield('css')
 </head>
 
@@ -122,8 +124,7 @@
         <symbol id="search" viewBox="0 0 16 16">
             <path
                 d="M6.57,1A5.57,5.57,0,1,1,1,6.57,5.57,5.57,0,0,1,6.57,1m0-1a6.57,6.57,0,1,0,6.57,6.57A6.57,6.57,0,0,0,6.57,0Z" />
-            <rect x="11.84" y="9.87" width="2" height="5.93"
-                transform="translate(-5.32 12.84) rotate(-45)" />
+            <rect x="11.84" y="9.87" width="2" height="5.93" transform="translate(-5.32 12.84) rotate(-45)" />
         </symbol>
     </svg>
     <header class="page-header">
@@ -144,7 +145,7 @@
                     <h3 class="m-0">Admin</h3>
                 </li>
                 <li>
-                    <a href="{{ route('admin.dashboard')}}">
+                    <a href="{{ route('admin.dashboard') }}">
                         <svg>
                             <use xlink:href="#collection"></use>
                         </svg>
@@ -152,7 +153,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.pages')}}">
+                    <a href="{{ route('admin.pages') }}">
                         <svg>
                             <use xlink:href="#pages"></use>
                         </svg>
@@ -160,7 +161,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.users')}}">
+                    <a href="{{ route('admin.users') }}">
                         <svg>
                             <use xlink:href="#admin"></use>
                         </svg>
@@ -239,7 +240,7 @@
     <section class="page-content">
         <section class="search-and-user">
             <form>
-                <input type="text" class="form-control form-control-lg" placeholder="Search" >
+                <input type="text" class="form-control form-control-lg" placeholder="Search">
                 <button type="submit" aria-label="submit form">
                     <svg aria-hidden="true">
                         <use xlink:href="#buscar" />
@@ -298,7 +299,7 @@
         })
 
 
-        
+
         const html = document.documentElement;
         const body = document.body;
         const menuLinks = document.querySelectorAll(".admin-menu a");

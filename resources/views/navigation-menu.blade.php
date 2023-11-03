@@ -75,7 +75,7 @@
                                         <button
                                             class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
                                             <img class="h-8 w-8 rounded-full object-cover"
-                                                src="{{ Auth::user()->profile_photo_url }}"
+                                                src="{{ Auth::user()->profile_photo_path }}"
                                                 alt="{{ Auth::user()->name }}" />
                                         </button>
                                     @else
@@ -173,7 +173,7 @@
                             </h4>
                         </li>
                         <li class="mt-0.5 w-full">
-                            <x-nav-link href="" :active="request()->routeIs('')">
+                            <x-nav-link href="" :active="request()->routeIs('admin.home.index')">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-house-check-fill" viewBox="0 0 16 16">
                                     <path

@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     public function users() {
         $users = User::all();
-        return view('admin.users', compact('users'));
+        return view('admin.user.users', compact('users'));
     }
 
     public function create() {
@@ -34,16 +34,15 @@ class AdminController extends Controller
 
     public function show($id) {
         $user = User::find($id);
-        return view('admin.show', compact('user'));
+        return view('admin.user.show', compact('user'));
     }
 
     public function edit($id) {
         $user = User::find($id);
-        return view('admin.edit', compact('user'));
+        return view('admin.user.edit', compact('user'));
     }
 
     public function update(Request $request, $id) {
-
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
@@ -51,6 +50,8 @@ class AdminController extends Controller
 
         return redirect()->route('admin.users');
     }
+
+
     //ELIMINAR ADMINISTRADOR
     public function delete($id) {
         $user = User::find($id);
@@ -58,8 +59,4 @@ class AdminController extends Controller
         return redirect()->route('admin.users');
     }
 
-
-//     public function profile() {
-//         return view('admin.profile');
-//     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Page\PageController;
+use App\Http\Controllers\admin\SitioController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\HomeController;
 /*
@@ -14,8 +14,6 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
@@ -38,24 +36,25 @@ Route::middleware([
     Route::delete('/admin/users/delete/{id}', [AdminController::class, 'delete'])->name('admin.users.eliminar');
 
     // page routes
-    Route::get('/admin/paginas', [PageController::class, 'index'])->name('admin.pages');
-    Route::get('/admin/pages/create', [PageController::class, 'create'])->name('admin.pages.create');
-    Route::post('/admin/pages/store', [PageController::class, 'store'])->name('admin.pages.store');
-    Route::get('/admin/pages/show/{id}', [PageController::class, 'show'])->name('admin.pages.show');
-    Route::get('/admin/pages/edit/{id}', [PageController::class, 'edit'])->name('admin.pages.edit');
-    Route::post('/admin/pages/update/{id}', [PageController::class, 'update'])->name('admin.pages.update');
-    Route::delete('/admin/pages/delete/{id}', [PageController::class, 'delete'])->name('admin.pages.eliminar');
+    Route::get('/admin/paginas', [SitioController::class, 'index'])->name('admin.pages');
+    Route::get('/admin/pages/create', [SitioController::class, 'create'])->name('admin.pages.create');
+    Route::post('/admin/pages/store', [SitioController::class, 'store'])->name('admin.pages.store');
+    Route::get('/admin/pages/show/{id}', [SitioController::class, 'show'])->name('admin.pages.show');
+    Route::get('/admin/pages/edit/{id}', [SitioController::class, 'edit'])->name('admin.pages.edit');
+    Route::post('/admin/pages/update/{id}', [SitioController::class, 'update'])->name('admin.pages.update');
+    Route::delete('/admin/pages/delete/{id}', [SitioController::class, 'delete'])->name('admin.pages.eliminar');
 
     //home page controller CRUD
-    Route::get('/admin/hoem/create', [AdminController::class, 'create'])->name('admin.home.create');
-    Route::post('/admin/hoem/store', [AdminController::class, 'store'])->name('admin.home.store');
-    Route::get('/admin/hoem/show/{id}', [AdminController::class, 'show'])->name('admin.home.show');
-    Route::get('/admin/hoem/edit/{id}', [AdminController::class, 'edit'])->name('admin.home.edit');
-    Route::post('/admin/hoem/update/{id}', [AdminController::class, 'update'])->name('admin.home.update');
+    // Route::get('/admin/home/index', [AdminController::class, 'pageindex'])->name('admin.home.index');
+    // Route::get('/admin/home/create', [AdminController::class, 'pagecreate'])->name('admin.home.create');
+    // Route::post('/admin/home/store', [AdminController::class, 'pagestore'])->name('admin.home.store');
+    // Route::get('/admin/home/show/{id}', [AdminController::class, 'pageshow'])->name('admin.home.show');
+    Route::get('/admin/home/edit', [SitioController::class, 'homeEdit'])->name('admin.home.edit');
+    // Route::post('/admin/home/update/{id}', [AdminController::class, 'pageupdate'])->name('admin.home.update');
+
     // Route::get('/admin/pages/users', [PageController::class, 'users'])->name('admin.users');
-    Route::get('/admin/pages/profile', [PageController::class, 'profile'])->name('admin.profile');
+    // Route::get('/admin/pages/profile', [PageController::class, 'profile'])->name('admin.profile');
+
 
 });
-Route::get('/prueba', function () {
-    return view('pruebas.pruebas');
-})->name('pruebas');
+

@@ -1,0 +1,170 @@
+.content-about {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+}
+
+.content-about .content-about-descripcion {
+    margin-right: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.125em;
+}
+
+.content-about .content-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.content-about .content-title {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.content-about .content-icons {
+    margin-bottom: 30px;
+}
+
+.about-biografi {
+    margin: 150px 0;
+    gap: 200px;
+}
+
+section .wathc-video {
+    background: #a71582;
+    border-radius: 20px;
+    padding: 15px 60px;
+    border: none;
+    transition: .3s ease;
+    font-size: 20px;
+}
+
+section .wathc-video:hover {
+    background: transparent;
+    border: 1px solid #a71582;
+}
+
+.graph-about {
+    padding: 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 190px;
+    margin: 150px 0;
+}
+
+.graph-about .about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 280px;
+}
+
+.graph-about .about-content .about-text img {
+    background-position: center;
+    background-size: cover;
+}
+
+.graph-about .about-content .about-text {
+    display: flex;
+    gap: 50px;
+    margin-right: 70px;
+}
+
+.graph-about .about-content .about-text .about-title {
+    font-size: 30px;
+    font-weight: bold;
+    gap: 200px;
+}
+
+.graph-about .about-content .about-text .about-description {
+    /* font-size: 18px; */
+}
+
+.graph-about .about-content img {
+    height: auto;
+    background-size: cover;
+}
+
+.modal-content {
+    box-shadow: 0 1px 50px 1px #a715835e;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 0.7em;
+    }
+
+    .content-about {
+        background: transparent;
+    }
+
+    .about-content .about-text {
+        gap: 100px;
+    }
+
+    .graph-about .about-content {
+        gap: 140px;
+    }
+
+    .graph-about .about-content .about-text {
+        gap: 25px;
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .content-about {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        justify-content: space-between;
+    }
+
+    .content-about .content-about-descripcion {
+        width: 100%;
+        margin-right: 0px;
+        gap: 10px;
+    }
+    .content-about .content-title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .content-about .content-about .content-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    .about-biografi {
+        gap: 50px;
+    }
+
+    .graph-about {
+        margin: 50px 0;
+        gap: 20px;
+    }
+
+    .graph-about .about-content  {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    .graph-about .about-content .about-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .graph-about .about-content {
+        gap: 70px;
+    }
+
+    .graph-about .about-content .about-text {
+        gap: 25px;
+        margin-right: 0px;
+    }
+}

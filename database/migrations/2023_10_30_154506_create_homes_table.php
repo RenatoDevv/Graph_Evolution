@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('homes', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique('name');
-            $table->string('description');
+            $table->string('name')->unique();
+            $table->string('title')->require();
+            $table->string('description')->require();
             $table->string('image_file')->nullable();
             $table->timestamps();
         });

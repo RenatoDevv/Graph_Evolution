@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('title');
-            $table->string('description');
-            // $table->string('image_file');
+            $table->string('title')->unique();
+            $table->text('description');
             $table->timestamps();
         });
     }

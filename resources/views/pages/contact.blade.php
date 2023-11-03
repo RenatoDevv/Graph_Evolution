@@ -1,146 +1,6 @@
 @extends('layout.layout')
 @section('css')
-    <style>
-        .contact-content {
-            margin: 0 -150px;
-        }
-
-        .contact-presentation {
-            width: 70%;
-            margin: 100px 0 50px 0;
-        }
-
-        .contact-content .contact-presentation .contactP-title {
-            font-size: 70px;
-            color: var(--color-white);
-            width: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            margin: 0 auto;
-            border-right: 0.15em solid #1076b9;
-            animation: typing 1s steps(11) 1s 1 normal both, blink 1s steps(1) infinite;
-        }
-
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-
-        .contact-socials {
-            width: 100%;
-            height: 100vh;
-            margin: 50px;
-            padding: 150px 0 300px 0;
-            height: auto;
-            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 97%);
-            background: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C;
-        }
-
-        .contact-socials .card-socials {
-            width: 300px;
-            height: auto;
-            padding: 20px;
-            transition: .3s ease;
-        }
-
-        .contact-socials .card-socials:hover {
-            transform: scale(1.07);
-            cursor: pointer;
-            box-shadow: 0 0 .5px .5px #cf00be;
-            border-radius: 10px;
-        }
-
-        .contact-socials .card-socials i {
-            color: #cf00be;
-            font-size: 70px;
-            padding: 18px 30px;
-        }
-
-        .card-socials .button-message {
-            border: 1px solid #cf00be;
-            color: #cf00be;
-        }
-
-        .card-socials .button-message:hover {
-            background: #cf00be;
-            color: #ffffff
-        }
-
-        .contact-content .contact-form {
-            padding: 50px;
-            border-radius: 18px;
-        }
-
-
-        .contact-map {
-            overflow: hidden;
-            width: 100%;
-            padding: 200px 0px;
-        }
-
-        .contact-map iframe {
-            background: #1076b9;
-            padding: 0 2px;
-            width: 100%;
-        }
-
-        @media only screen and (max-width: 1200px) {
-            .contact-content {
-                margin: 0 -50px;
-            }
-
-            .contact-socials {
-                margin: 25px;
-                padding: 150px 0 300px 0;
-            }
-        }
-
-        @media only screen and (max-width: 700px) {
-            body {
-                padding: 0 1.25rem;
-                /*20px*/
-            }
-
-            .contact-content {
-                margin: 0 -50px;
-
-            }
-
-            .contact-form {
-                padding: 20px;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .contact-form form {
-                width: 100%;
-            }
-
-            .contact-socials {
-                margin: 1px;
-                padding: 150px 0 300px 0;
-            }
-
-            .contact-form .imageForm {
-                display: none;
-            }
-
-            .contact-form form {}
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/pages/contact.css') }}">
 @endsection
 @section('content')
     <div class="contact-content d-flex flex-column align-items-center">
@@ -184,19 +44,26 @@
                 <h2 class="text-center">Envie un mensaje</h2>
                 <div class="mb-3">
                     {{-- <label for="exampleFormControlInput1" class="form-label">Correo Electronico</label> --}}
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" required>
+                    <input type="text"
+                        class="bg-transparent w-full rounded-md border-0 py-1.8 text-gray-300 ring-1 ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                        placeholder="Ingrese su Nombre" required>
                 </div>
                 <div class="mb-3">
                     {{-- <label for="exampleFormControlInput2" class="form-label">Telefono</label> --}}
-                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Telefono"
-                        required>
+                    <input type="email"
+                        class="bg-transparent w-full rounded-md border-0 py-1.8 text-gray-300 ring-1 ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                        placeholder="Ingrese su correo" required>
                 </div>
                 <div class="mb-3">
                     {{-- <label for="validationTextarea" class="form-label">Mensaje</label> --}}
-                    <textarea class="form-control" placeholder="Escriba su mensaje" required></textarea>
+                    <textarea
+                        class="bg-transparent w-full rounded-md border-0 py-1.8 text-gray-300 ring-1 ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                        placeholder="Escriba su mensaje" required></textarea>
                 </div>
                 <div class="form-check form-switch d-flex gap-2">
-                    <input class="form-check-input fs-5" type="checkbox" id="flexSwitchCheckChecked" checked>
+                    <input type="checkbox"
+                        class="bg-transparent relative h-5 w-5 cursor-pointer rounded-md border border-blue-500 transition-all before:absolute before:-translate-x-2/4 before:rounded-full before:bg-blue-500 before:opacity-0 before:transition-opacity checked:border-indigo-500 checked:bg-indigo-500 hover:before:opacity-10 "
+                        id="checkbox" checked />
                     <label class="form-check-label fs-6" for="flexSwitchCheckChecked">Aceptar <a href="">Terminos y
                             condiciones</a></label>
                 </div>

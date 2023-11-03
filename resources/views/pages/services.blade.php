@@ -1,47 +1,11 @@
 @extends('layout.layout')
 @section('title', 'Servicios')
 @section('css')
-    <style>
-        .container {
-            max-width: 55rem;
-            width: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 100px;
-            margin-bottom: 50px;
-            gap: 20px;
-        }
-
-        .services-contaiener {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 100px;
-        }
-
-        .services-contaiener .container-items {
-            width: 350px;
-            /* background: #4948499f; */
-            filter: grayscale(0.1);
-            border-radius: 20px;
-            /* box-shadow: 0px 8px 24px #cf00be67; */
-            padding: 25px;
-            transition: .3 ease;
-        }
-
-        .services-contaiener .container-items:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-            box-shadow: 0px 8px 24px #13121367;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/pages/service.css') }}">
 @endsection
 @section('content')
     <section class="container services-contaiener w-full  lg:p-5 sm:p-1">
-        <h2 class="text-center font-bold lg:text-6xl sm:text-lg" >Explore nuestros servicios</h2>
+        <h2 class="text-center font-bold lg:text-6xl sm:text-lg">Explore nuestros servicios</h2>
         <div
             class="relative flex h-full w-full flex-col rounded-[20px]  bg-clip-border lg:p-4  shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none sm:p-0">
             <div class="mb-8 w-full">
@@ -100,7 +64,7 @@
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href=" ">
-                                    See product details
+                                    Contactar Ahora
                                 </a>
                             </p>
                         </div>
@@ -162,7 +126,7 @@
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href=" ">
-                                    See product details
+                                    Contactar Ahora
                                 </a>
                             </p>
                         </div>
@@ -193,7 +157,7 @@
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href=" ">
-                                    See product details
+                                    Contactar Ahora
                                 </a>
                             </p>
                         </div>
@@ -224,7 +188,7 @@
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href=" ">
-                                    See product details
+                                    Contactar Ahora
                                 </a>
                             </p>
                         </div>
@@ -255,7 +219,7 @@
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href=" ">
-                                    See product details
+                                    Contactar Ahora
                                 </a>
                             </p>
                         </div>
@@ -286,7 +250,7 @@
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href=" ">
-                                    See product details
+                                    Contactar Ahora
                                 </a>
                             </p>
                         </div>

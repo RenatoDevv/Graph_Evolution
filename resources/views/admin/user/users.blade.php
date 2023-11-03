@@ -2,7 +2,8 @@
     <div
         class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
         <h1 class="text-3xl font-bold text-center text-gray-800">👋 Bienvenido al panel de Usuarios</h1>
-        <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas ullam,
+        <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis
+            voluptas ullam,
             perferendis in enim at
             quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
             commodi

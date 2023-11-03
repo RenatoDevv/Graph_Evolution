@@ -2,8 +2,6 @@
     <div class="py-0 w-auto">
         <div class="w-auto mx-auto">
             <div class=overflow-hidden shadow-xl">
-                {{-- el contenido se mostrara dentro de este contenedor --}}
-
                 <section
                     class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
                     <h1 class="text-3xl font-bold text-center text-gray-800">Ver Detalles del Usuario 👤</h1>
@@ -16,11 +14,11 @@
                                     <h6 class="text-gray-700 text-xl font-bold">
                                         Informacion
                                     </h6>
-                                    <a href="{{ route('admin.pages') }}"
+                                    <a href="{{ route('admin.home.create') }}"
                                         class=" my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
                                         font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300"
                                         type="button">
-                                        Regresar
+                                        Crear
                                     </a>
                                 </div>
                             </div>
@@ -38,10 +36,10 @@
                                                 </label>
                                                 <p
                                                     class="border-0 px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear transition-all duration-150">
-                                                    {{ $page->title }}</p>
+                                                    nombre
                                             </div>
                                         </div>
-                                        {{-- <div class="w-full lg:w-6/12 px-4">
+                                        <div class="w-full lg:w-6/12 px-4">
                                             <div class="relative w-full mb-3">
                                                 <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                                                     htmlfor="grid-password">
@@ -49,9 +47,9 @@
                                                 </label>
                                                 <p
                                                     class="border-0 px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear transition-all duration-150">
-                                                    {{ $page->description }}</p>
+                                                    email
                                             </div>
-                                        </div> --}}
+                                        </div>
                                     </div>
 
                                     <hr class="mt-6 border-b-1 border-blueGray-300">
@@ -64,26 +62,12 @@
                                             <div class="relative w-full mb-3">
                                                 <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                                                     htmlfor="grid-password">
-                                                    Descripcion
+                                                    ACERCA DE
                                                 </label>
-                                                <p
-                                                    class="border-0 px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear transition-all duration-150">
-                                                    {{ $page->description }}</p>
+                                                <textarea type="text"
+                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    rows="4" placeholder="En este campo se muestra los datos del administrador"></textarea>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-full px-4">
-                                        <div class="flex flex-col items-center w-full m-auto">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                htmlfor="grid-password">
-                                                Suba una imagen
-                                            </label>
-                                            <span class="text-xs pb-3">La imagen debe ser de formato png o jpg de tamaño
-                                                1300 </span>
-                                            <input
-                                                class="px-3 py-3 rounded text-sm shadow ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                type="file" name="imagen_logo" value=""
-                                                placeholder="Descripcion">
                                         </div>
                                     </div>
                                 </form>

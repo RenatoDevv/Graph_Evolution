@@ -9,9 +9,10 @@ class Home extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable =[
         'title',
         'description',
-        'file_home',
+        'image_files',
     ];
 }
+

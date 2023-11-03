@@ -33,7 +33,7 @@
                                                 </label>
                                                 <input
                                                     class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="name" value="" placeholder="Nombre">
+                                                    type="text" name="name" value="" placeholder="Nombre" required>
                                             </div>
                                         </div>
                                         <div class="w-full lg:w-6/12 px-4">
@@ -45,7 +45,7 @@
                                                 <input
                                                     class="px-3 py-3 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="email" name="email" value=""
-                                                    placeholder="Correo electronico">
+                                                    placeholder="Correo electronico" required>
                                             </div>
                                         </div>
                                         <div class="w-full lg:w-6/12 px-4">
@@ -57,7 +57,7 @@
                                                 <input
                                                     class="px-3 py-3 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="password" name="password" value=""
-                                                    placeholder="Correo electronico">
+                                                    placeholder="Correo electronico" required>
                                             </div>
                                         </div>
 
