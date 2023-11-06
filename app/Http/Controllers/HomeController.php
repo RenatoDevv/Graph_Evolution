@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Models\Page;
+use App\Models\Home;
 
 class HomeController extends Controller
 {
     //
     public function index (): View
     {
-        $pages = Page::all();
-        return view('index', compact('pages'));
+        // Renderizando datos desde la base de datos
+        $homes = Home::all();
+        return view('index', compact('homes'));
     }
 
     public function services (): View

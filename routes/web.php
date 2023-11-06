@@ -45,12 +45,12 @@ Route::middleware([
     Route::delete('/admin/pages/delete/{id}', [SitioController::class, 'delete'])->name('admin.pages.eliminar');
 
     //home page controller CRUD
-    // Route::get('/admin/home/index', [AdminController::class, 'pageindex'])->name('admin.home.index');
+    Route::get('/admin/Phome/index', [SitioController::class, 'homeIndex'])->name('admin.home.index');
     // Route::get('/admin/home/create', [AdminController::class, 'pagecreate'])->name('admin.home.create');
     // Route::post('/admin/home/store', [AdminController::class, 'pagestore'])->name('admin.home.store');
-    // Route::get('/admin/home/show/{id}', [AdminController::class, 'pageshow'])->name('admin.home.show');
-    Route::get('/admin/home/edit', [SitioController::class, 'homeEdit'])->name('admin.home.edit');
-    // Route::post('/admin/home/update/{id}', [AdminController::class, 'pageupdate'])->name('admin.home.update');
+    // Route::get('/admin/Phome/show', [AdminController::class, 'pageshow'])->name('admin.home.show');
+    Route::get('/admin/Phome/edit/{id}', [SitioController::class, 'homeEdit'])->name('admin.home.edit');
+    Route::post('/admin/Phome/update/{id}', [SitioController::class, 'homeUpdate'])->name('admin.home.update');
 
     // Route::get('/admin/pages/users', [PageController::class, 'users'])->name('admin.users');
     // Route::get('/admin/pages/profile', [PageController::class, 'profile'])->name('admin.profile');

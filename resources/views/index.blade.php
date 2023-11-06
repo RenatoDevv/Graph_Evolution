@@ -1,15 +1,15 @@
 @extends('layout.layout')
-@section('title', 'index')
+@section('title', 'Inicio')
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
 @endsection
 @section('content')
     <section class="home-content w-100 d-flex">
-        @foreach ($pages as $page)
+        @foreach ($homes as $home)
             <div class="home-text d-flex flex-column gap-2">
-                <h2 class="home-title fw-bold">{{ $page->title }}</h2>
-                <p class="home-description">{{ $page->description }}
+                <h2 class="home-title fw-bold">{{ $home->title }}</h2>
+                <p class="home-description">{{ $home->description }}
                 </p>
                 <a href="{{ route('services') }}" class="home-link text-start text-decoration-none fw-medium">Conocer más</a>
             </div>

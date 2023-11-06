@@ -32,7 +32,7 @@
                                                 </label>
                                                 <input
                                                     class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="title" value=""
+                                                    type="text" name="name" value=""
                                                     placeholder="Titulo del Sitio" required>
                                             </div>
                                         </div>
@@ -68,7 +68,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="w-full px-4">
+                                    {{-- <div class="w-full px-4">
                                         <div class="flex flex-col items-center w-full m-auto">
                                             <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                                                 htmlfor="grid-password">
@@ -81,7 +81,7 @@
                                                 type="file" name="imagen_logo" value=""
                                                 placeholder="Descripcion">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="flex  gap-5 justify-center">
                                         <a href="{{ route('admin.pages') }}"
                                             class="my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20  rounded-full tracking-wide
@@ -101,7 +101,7 @@
                 </section>
 
                 <div class="flex justify-center pb-4 pt-2">
-                    <span class="text-sm">2023</span>
+                    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
                 </div>
             </div>
         </div>

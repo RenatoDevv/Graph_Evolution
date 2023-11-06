@@ -38,7 +38,7 @@
                                                 </label>
                                                 <p
                                                     class="border-0 px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear transition-all duration-150">
-                                                    {{ $page->title }}</p>
+                                                    {{ $page->name }}</p>
                                             </div>
                                         </div>
                                         {{-- <div class="w-full lg:w-6/12 px-4">
@@ -72,7 +72,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="w-full px-4">
+                                    {{-- <div class="w-full px-4">
                                         <div class="flex flex-col items-center w-full m-auto">
                                             <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                                                 htmlfor="grid-password">
@@ -85,7 +85,7 @@
                                                 type="file" name="imagen_logo" value=""
                                                 placeholder="Descripcion">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </form>
                             </div>
                         </div>
@@ -93,9 +93,7 @@
                             <div class="container mx-auto px-4">
                                 <div class="flex flex-wrap items-center md:justify-between justify-center">
                                     <div class="w-full md:w-6/12 px-4 mx-auto text-center">
-                                        <div class="text-sm text-blueGray-500 font-semibold py-1">
-                                            Graph Evolution
-                                        </div>
+                                        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
                                     </div>
                                 </div>
                             </div>

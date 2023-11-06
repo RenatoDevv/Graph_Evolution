@@ -19,11 +19,13 @@
                                 </div>
                             </div>
                             <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                                <form class="mt-8 space-y-3" action="" method="POST">
+                                <form class="mt-8 space-y-3" action="{{ route('admin.home.update', $home->id) }}"
+                                    method="POST">
                                     @csrf
                                     <h6 class="text-gray-400 text-sm mt-3 mb-6 font-bold uppercase">
                                         Informacion de la pagina
                                     </h6>
+
                                     <div class="flex flex-wrap">
                                         <div class="w-full lg:w-6/12 px-4">
                                             <div class="relative w-full mb-3">
@@ -33,7 +35,7 @@
                                                 </label>
                                                 <input
                                                     class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="title" value=""
+                                                    type="text" name="title" value="{{ $home->title }}"
                                                     placeholder="Titulo del Sitio" required>
                                             </div>
                                         </div>
@@ -47,7 +49,7 @@
                                                 </label>
                                                 <textarea type="text" name="description"
                                                     class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                    rows="4" placeholder="Descripcion de la pagina"></textarea>
+                                                    rows="4" placeholder="Descripcion de la pagina">{{ $home->description }}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -70,11 +72,12 @@
                                                     1300x800, formatos aceptados.
                                                     PNG, JPG. </p>
 
-                                                <input id="dropzone-file" type="file" class="" />
+                                                <input id="dropzone-file" name="image_file" type="file"
+                                                    class="" />
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">
-                                        <a href=""
+                                        <a href="{{ route('admin.home.index') }}"
                                             class="my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20  rounded-full tracking-wide
                                             font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
                                             Cancelar
@@ -82,7 +85,7 @@
                                         <button type="submit"
                                             class="my-5 w-auto flex justify-center bg-blue-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
                                             font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Registrar
+                                            Actualizar
                                         </button>
                                     </div>
                                 </form>
@@ -92,7 +95,7 @@
                 </section>
 
                 <div class="flex justify-center pb-4 pt-2">
-                    <span class="text-sm">2023</span>
+                    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
                 </div>
             </div>
         </div>

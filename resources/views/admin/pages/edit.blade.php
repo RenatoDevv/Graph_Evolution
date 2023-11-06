@@ -90,7 +90,7 @@
                     </div>
                 </section>
                 <div class="flex justify-center pb-4 pt-2">
-                    <span class="text-sm">2023</span>
+                    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
                 </div>
             </div>
         </div>

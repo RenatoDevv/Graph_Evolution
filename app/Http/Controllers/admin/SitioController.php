@@ -13,8 +13,9 @@ class SitioController extends Controller
 {
     public function index (): View
     {
+        $home = Home::all();
         $pages = Page::all();
-        return view('admin.pages.index', compact('pages'));
+        return view('admin.pages.index', compact('home', 'pages'));
     }
 
     public function create (): View
@@ -24,7 +25,7 @@ class SitioController extends Controller
 
     public function store (Request $request) {
         $page = new Page;
-        $page->title = $request->title;
+        $page->name = $request->name;
         $page->description = $request->description;
         $page->save();
         return redirect()->route('admin.pages')->with('message','Guardado Satisfactoriamente !');
@@ -42,8 +43,8 @@ class SitioController extends Controller
 
     public function update(Request $request, $id) {
         $page = Page::find($id);
-        $page->title = $request->name;
-        $page->description = $request->email;
+        $page->name = $request->name;
+        $page->description = $request->description;
         $page->update($request->all());
 
         return redirect()->route('admin.pages');
@@ -60,49 +61,47 @@ class SitioController extends Controller
     //-------------------------------------------------------------------------------------------
 
     //IDICION DE HOME
-    public function homeIndex() {
-        return "Hola Mundo";
+    // public function homeIndex() {
+    //     return "Hola Mundo";
+    // }
+
+    // public function homeStore(Request $request) {
+    //     $home = new Home;
+    //     $home->title = $request->title;
+    //     $home->description = $request->description;
+    //     $home->image_file = $request->image_file;
+    //     $home->save();
+    //     return redirect()->route('admin.users')->with('message','Guardado Satisfactoriamente !');
+    // }
+
+    public function homeIndex():View
+    {
+        $homes = Home::all();
+        return view('admin.home.index', compact('homes'));
     }
 
-    public function homeStore(Request $request) {
-        $home = new Home;
-        $home->title = $request->title;
-        $home->description = $request->description;
-        $home->image_file = bcrypt($request->image_file);
-        $home->save();
-        return redirect()->route('admin.users')->with('message','Guardado Satisfactoriamente !');
-    }
-
-    public function homeShow($id) {
+    public function homeEdit($id):View
+    {
         $home = Home::find($id);
-        return view('admin.user.show', compact('home'));
-    }
-
-    public function homeEdit() {
-
-        return view('admin.home.edit');
+        return view('admin.home.edit', compact('home'));
     }
 
     public function homeUpdate(Request $request, $id) {
         $home = Home::find($id);
         $home->title = $request->title;
         $home->description = $request->description;
-        $home->image_file = $request->image_file;
         $home->update($request->all());
 
-        return redirect()->route('admin.users');
+        return redirect()->route('admin.home.index');
     }
 
 
     //ELIMINAR ADMINISTRADOR
     public function homeDelete($id) {
-        $user = Home::find($id);
-        $user->delete();
+        $home = Home::find($id);
+        $home->delete();
 
-        return redirect()->route('admin.users');
+        return redirect()->route('admin.pages');
     }
-
-
-
 
 }

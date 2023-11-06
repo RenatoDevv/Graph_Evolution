@@ -85,66 +85,11 @@
                                     </div>
                                 </form>
                             </div>
-                            {{-- <form class="mt-8 space-y-3" action="{{ route('admin.dashboard.update', $user->id) }}"
-                                method="POST">
-                                @csrf
-                                <div class="grid grid-cols-1 space-y-2">
-                                    <label class="text-sm font-bold text-gray-500 tracking-wide">Nombre</label>
-                                    <input
-                                        class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear transition-all duration-150 p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                        type="text" name="name" value="{{ $user->name }}" placeholder="Nombre">
-                                </div>
-                                <div class="grid grid-cols-1 space-y-2">
-                                    <label class="text-sm font-bold text-gray-500 tracking-wide">Correo
-                                        Electronico</label>
-                                    <input
-                                        class="text-base p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                        type="email" name="email" value="{{ $user->email }}"
-                                        placeholder="Correo electronico">
-                                </div>
-                                <div class="grid grid-cols-1 space-y-2">
-                                    <label class="text-sm font-bold text-gray-500 tracking-wide">Subo su foto de
-                                        Perfil</label>
-                                    <div class="flex items-center justify-center w-full">
-                                        <label
-                                            class="flex flex-col rounded-lg border-4 border-dashed w-full h-40 p-10 group text-center">
-                                            <div
-                                                class="h-2/4 w-full text-center flex flex-col justify-center items-center  ">
-                                                <div class="flex flex-col max-h-48 w-2/5 mx-auto -mt-10 bg-sky-500">
-                                                    <img class="has-mask h-36 object-center"
-                                                        src="https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg"
-                                                        alt="freepik image">
-                                                    <p class="pointer-none text-gray-500 "><span
-                                                            class="text-sm">Selecciona
-                                                            una
-                                                            imagen</span> desde su escritorio</p>
-                                                </div>
-                                            </div>
-                                            <input type="file" class="hidden">
-                                        </label>
-                                    </div>
-                                </div>
-                                <p class="text-sm text-gray-300">
-                                    <span>Tipo de archivo: png,jpg.</span>
-                                </p>
-                                <div class="flex items-center gap-5">
-                                    <a href="{{ route('admin.users') }}"
-                                        class="my-5 w-full flex justify-center bg-indigo-500 text-gray-100 p-2  rounded-full tracking-wide
-                                        font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                        Cancelar
-                                    </a>
-                                    <button type="submit"
-                                        class="my-5 w-full flex justify-center bg-blue-500 text-gray-100 p-2  rounded-full tracking-wide
-                                        font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                        Actualizar
-                                    </button>
-                                </div>
-                            </form> --}}
                         </div>
                     </div>
                 </section>
                 <div class="flex justify-center pb-4 pt-2">
-                    <span class="text-sm">2023</span>
+                    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
                 </div>
             </div>
         </div>

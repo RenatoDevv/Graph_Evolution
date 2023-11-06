@@ -54,7 +54,7 @@
                                     </th>
                                     <th
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        TITULO
+                                        NOMBRE
                                     </th>
                                     <th
                                         class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
@@ -85,7 +85,7 @@
                                                     class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
                                             </div>
                                             <div class="text-sm">
-                                                <div class="font-medium ">{{ $page->title }}</div>
+                                                <div class="font-medium ">{{ $page->name }}</div>
                                             </div>
                                         </td>
 
@@ -109,11 +109,11 @@
                                                     class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded-md flex items-center">
                                                     <i class="material-icons-outlined text-base">visibility</i>
                                                 </a>
-                                                <a href="{{ route('admin.pages.edit', $page->id) }}"
+                                                <a href="{{ route('admin.home.index') }}"
                                                     class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded-md flex items-center">
                                                     <i class="material-icons-outlined text-base">edit</i>
                                                 </a>
-                                                <form action="{{ route('admin.pages.eliminar', $page->id) }}"
+                                                {{-- <form action="{{ route('admin.pages.eliminar', $page->id) }}"
                                                     method="post">
                                                     @csrf
                                                     @method('DELETE')
@@ -121,7 +121,7 @@
                                                         class="bg-red-100 text-red-400 hover:text-red-600 hover:bg-red-100 px-2 py-1 rounded-md flex items-center">
                                                         <i class="material-icons-round text-base">delete_outline</i>
                                                     </button>
-                                                </form>
+                                                </form> --}}
                                             </div>
                                         </td>
                                     </tr>
@@ -131,7 +131,7 @@
                         <div
                             class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
                             <span class="text-xs xs:text-sm text-gray-900">
-                                Showing 1 to 4 of 50 Entries
+                                Mostrando datos
                             </span>
                             <div class="inline-flex mt-2 xs:mt-0">
                                 <button
@@ -152,7 +152,7 @@
     </div>
 
     <div class="flex justify-center pb-4 pt-2">
-        <span class="text-sm">Graph Evolution 2023</span>
+        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
     </div>
 
 </x-app-layout>
