@@ -48,7 +48,7 @@
                                                     Descripcion
                                                 </label>
                                                 <textarea type="text" name="description"
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white text-gray-500 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                     rows="4" placeholder="Descripcion de la pagina">{{ $home->description }}</textarea>
                                             </div>
                                         </div>

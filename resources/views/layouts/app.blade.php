@@ -9,6 +9,7 @@
     <title>{{ config('app.name', 'Graph Evolution') }}</title>
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
 
+
     <!-- Fonts -->
 
     <link rel="preconnect" href="https://fonts.bunny.net">

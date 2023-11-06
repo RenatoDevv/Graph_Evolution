@@ -4,7 +4,8 @@
             <div class=overflow-hidden shadow-xl">
                 <section
                     class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
-                    <h1 class="text-3xl font-bold text-center text-gray-800">Detalles de la Pagina de Inicio </h1>
+                    <h1 class="text-3xl font-bold text-center text-gray-800">Detalles de la Pagina de Inicio Graph
+                        Evolution</h1>
                     <p class="text-center text-gray-500">Datos de la Pagina</p>
                     <div class="bg-white p-8 rounded-md w-full">
                         <div
@@ -70,7 +71,7 @@
                                                 <td class="px-5 py-4">
                                                     <span
                                                         class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ">
-                                                        {!! Str::limit($home->description, 30) !!}
+                                                        {!! Str::limit($home->description, 50) !!}
                                                     </span>
                                                 </td>
                                                 <td class="px-5 py-4">
@@ -113,7 +114,8 @@
                             <div class="container mx-auto px-4">
                                 <div class="flex flex-wrap items-center md:justify-between justify-center">
                                     <div class="w-full md:w-6/12 px-4 mx-auto text-center">
-                                        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
+                                        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph
+                                            Evolution</a>
                                     </div>
                                 </div>
                             </div>
