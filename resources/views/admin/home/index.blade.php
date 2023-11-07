@@ -7,6 +7,7 @@
                     <h1 class="text-3xl font-bold text-center text-gray-800">Detalles de la Pagina de Inicio Graph
                         Evolution</h1>
                     <p class="text-center text-gray-500">Datos de la Pagina</p>
+                    <a href="{{ route('admin.home.create') }}" class="btn btn-danger">Crear Nueva Pagina</a>
                     <div class="bg-white p-8 rounded-md w-full">
                         <div
                             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">
@@ -57,9 +58,9 @@
                                                 </td>
                                                 <td class="px-5 py-4 flex items-center gap-1">
                                                     <div class="relative h-10 w-10">
-                                                        <img class="h-full w-full rounded-full object-cover object-center"
-                                                            src="https://www.comparapps.com/wp-content/uploads/2020/04/que-es-una-pagina-web.png"
-                                                            alt="" />
+                                                        <img src="{{ asset('storage/' . $home->image_file) }}"
+                                                            alt="Imagen"
+                                                            class="h-full w-full rounded-full object-cover object-center">
                                                         <span
                                                             class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
                                                     </div>

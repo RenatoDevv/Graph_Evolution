@@ -15,7 +15,8 @@
             </div>
         @endforeach
         <div class="home-image">
-            <img src="{{ asset('img/home-derecha.png') }}" alt="" width="100%">
+            <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen" class="w-full object-cover object-center">
+            {{-- <img src="{{ asset('img/home-derecha.png') }}" alt="" width="100%"> --}}
         </div>
 
     </section>
@@ -30,14 +31,13 @@
             commodi laboriosam fuga facere, ex doloribus.</p>
         <div class="grid justify-center w-auto gap-4 sm:flex-col md:grid-col-1 lg:grid-cols-4">
             <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
-                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
-                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
-                        class="h-full w-full object-cover" />
+                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="{{ asset('img/services/logo_design.jpg') }}" alt="" width="100%">
                 </div>
                 <div class="p-6 ">
                     <div class="mb-2 flex items-center justify-between">
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Apple AirPods
+                            Diseño de Logos
                         </p>
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                             $95.00
@@ -57,14 +57,13 @@
                 </div>
             </div>
             <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
-                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
-                        class="h-full w-full object-cover" />
+                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="{{ asset('img/services/card_design.jpg') }}" alt="" width="100%">
                 </div>
                 <div class="p-6">
                     <div class="mb-2 flex items-center justify-between">
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Apple AirPods
+                            Tarjetas de Presentacion
                         </p>
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                             $95.00
@@ -84,14 +83,13 @@
                 </div>
             </div>
             <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
-                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
-                        class="h-full w-full object-cover" />
+                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="{{ asset('img/services/banner_design.jpg') }}" alt="" width="100%">
                 </div>
                 <div class="p-6">
                     <div class="mb-2 flex items-center justify-between">
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Apple AirPods
+                            Banners
                         </p>
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                             $95.00
@@ -111,14 +109,13 @@
                 </div>
             </div>
             <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div class="relative mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
-                    <img src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
-                        class="h-full w-full object-cover" />
+                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                    <img src="{{ asset('img/services/camara.jpg') }}" alt="" width="100%">
                 </div>
                 <div class="p-6">
                     <div class="mb-2 flex items-center justify-between">
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Apple AirPods
+                            Volantes
                         </p>
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                             $95.00
@@ -177,21 +174,25 @@
             </div>
         </div>
     </section>
-    <section class="p-5">
+    <section class="p-5 w-full bg-slate-400 h-screen overflow-hidden">
         <h2 class="fw-bold text-center mb-4" style="color: #cf00be; font-size: 50px;">Nestros Trabajos</h2>
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+        <div id="carouselExampleInterval" class="carousel slide bg-indigo-500 p-5" data-bs-ride="carousel">
+            <div class="carousel-inner bg-red-400 p-3 ">
                 <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="{{ asset('img/fondo.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/services/logo_design.jpg') }}" class="d-block w-auto h-auto" alt="..."
+                        width="100%">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/banner1.png') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-auto" alt="..."
+                        width="100%">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/ps.png') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-auto" alt="..."
+                        width="100%">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/banner2.png') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-auto" alt="..."
+                        width="100%">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"

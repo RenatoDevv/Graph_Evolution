@@ -213,9 +213,21 @@ body {
         padding: 0 1.875rem;
         /*30px*/
     }
-
+    .header {
+        background: #09f;
+    }
+    .header .navigation .menu_responsive {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background: #cf00be;
+        z-index: +20;
+        padding: 20px;
+    }
     .header .navigation ul {
-        display: none;
+        display: block;
     }
 
     .header .navigation .navigation-button {
@@ -253,18 +265,3 @@ body {
 
 }
 
-@media only screen and (max-width: 500px) {
-    body {
-        padding: 0 1.25rem;
-        /*20px*/
-    }
-    .footer .footer-contanier {
-        gap: 30px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    body {
-        padding: 0 0.938rem;
-    }
-}

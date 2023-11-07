@@ -80,6 +80,31 @@ class SitioController extends Controller
         return view('admin.home.index', compact('homes'));
     }
 
+    public function homeCreate() {
+        return view('admin.home.create');
+    }
+
+    public function homeStore(Request $request){
+        $request->validate([
+            'title' => 'required',
+            'description' =>'required',
+            'image_file' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validación de la imagen
+        ]);
+
+        if ($request->hasFile('image_file')) {
+            $image_file = $request->file('image_file')->store('images', 'public'); // Almacenar la imagen en el sistema de archivos
+
+            // Guardar la ruta de la imagen en la base de datos
+            $home = new Home();
+            $home->title = $request->title;
+            $home->description = $request->description;
+            $home->image_file = $image_file;
+
+            $home->save();
+        }
+        return redirect()->route('admin.home.index');
+    }
+
     public function homeEdit($id):View
     {
         $home = Home::find($id);

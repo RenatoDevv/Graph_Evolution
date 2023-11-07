@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('homes', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
+            $table->string('name')->unique()->nullable();
             $table->string('title')->require();
             $table->string('description')->require();
             $table->string('image_file')->nullable();

@@ -5,9 +5,8 @@
                 {{-- contenido dentro del contenedor padre --}}
                 <section
                     class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
-                    <h1 class="text-3xl font-bold text-center text-gray-800">Actualizar Pagina de Inicio </h1>
-                    <p class="text-center text-gray-500">Ingrese los campos requeridos para actualizar la informacion de
-                        la pagina</p>
+                    <h1 class="text-3xl font-bold text-center text-gray-800">Crear</h1>
+                    <p class="text-center text-gray-500">Recuerde que solo se puede crear una sola pagina y editarla</p>
                     <div class="bg-white p-8 rounded-md w-full">
                         <div
                             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">
@@ -19,8 +18,8 @@
                                 </div>
                             </div>
                             <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                                <form class="mt-8 space-y-3" action="{{ route('admin.home.update', $home->id) }}"
-                                    method="POST">
+                                <form class="mt-8 space-y-3" action="{{ route('admin.home.store') }}" method="POST"
+                                    enctype="multipart/form-data">
                                     @csrf
                                     <h6 class="text-gray-400 text-sm mt-3 mb-6 font-bold uppercase">
                                         Informacion de la pagina
@@ -34,7 +33,7 @@
                                                 </label>
                                                 <input
                                                     class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="title" value="{{ $home->title }}"
+                                                    type="text" name="title" value=""
                                                     placeholder="Titulo del Sitio" required>
                                             </div>
                                         </div>
@@ -48,10 +47,11 @@
                                                 </label>
                                                 <textarea type="text" name="description"
                                                     class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white text-gray-500 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                    rows="4" placeholder="Descripcion de la pagina">{{ $home->description }}</textarea>
+                                                    rows="4" placeholder="Descripcion de la pagina"></textarea>
                                             </div>
                                         </div>
                                     </div>
+
                                     <hr class="mt-6 border-b-1 border-blueGray-300">
                                     <div class="w-full px-4 ">
                                         <div>
@@ -84,7 +84,7 @@
                                         <button type="submit"
                                             class="my-5 w-auto flex justify-center bg-blue-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
                                             font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Actualizar
+                                            Registrar
                                         </button>
                                     </div>
                                 </form>

@@ -176,28 +176,4 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
-    body {
-        padding: 0 1.25rem;
-        /*20px*/
-    }
-}
 
-@media only screen and (max-width: 400px) {
-    .home-content {
-        gap: 20px;
-        margin-top: 50px;
-        margin-bottom: 100px;
-    }
-
-    .home-content .home-text {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: 20px;
-    }
-
-    .home-content .home-text .home-title {
-        font-size: 2.6rem;
-    }
-}

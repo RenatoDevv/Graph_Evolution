@@ -13,7 +13,7 @@ class Home extends Model
     protected $fillable =[
         'title',
         'description',
-        'image_files',
+        'image_file',
     ];
 }
 

@@ -28,7 +28,7 @@
                 <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
                         alt="" width="100%"></a>
             </div>
-            <ul>
+            <ul class="menu_responsive">
                 <li><a href="{{ route('home') }}" class="navigation-links">Inicio</a></li>
                 <li><a href="{{ route('services') }}" class="navigation-links">Servicios</a></li>
                 <li><a href="{{ route('about') }}" class="navigation-links">Nosotros</a></li>
@@ -78,6 +78,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
     @yield('scripts')
 </body>
 
