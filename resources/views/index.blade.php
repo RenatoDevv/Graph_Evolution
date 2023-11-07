@@ -34,7 +34,7 @@
                 <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/logo_design.jpg') }}" alt="" width="100%">
                 </div>
-                <div class="p-6 ">
+                <div class="p-6">
                     <div class="mb-2 flex items-center justify-between">
                         <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
                             Diseño de Logos
@@ -174,25 +174,21 @@
             </div>
         </div>
     </section>
-    <section class="p-5 w-full bg-slate-400 h-screen overflow-hidden">
+    <section class="p-5">
         <h2 class="fw-bold text-center mb-4" style="color: #cf00be; font-size: 50px;">Nestros Trabajos</h2>
-        <div id="carouselExampleInterval" class="carousel slide bg-indigo-500 p-5" data-bs-ride="carousel">
-            <div class="carousel-inner bg-red-400 p-3 ">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="{{ asset('img/services/logo_design.jpg') }}" class="d-block w-auto h-auto" alt="..."
-                        width="100%">
+                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-auto" alt="..."
-                        width="100%">
+                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-auto" alt="..."
-                        width="100%">
+                    <img src="{{ asset('img/ps.png') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-auto" alt="..."
-                        width="100%">
+                    <img src="{{ asset('img/banner2.png') }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
@@ -207,30 +203,4 @@
             </button>
         </div>
     </section>
-    <section>
-        <p>Hola Mundo</p>
-    </section>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Abrir Modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="{{ asset('img/fondo.jpg') }}" alt="" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection

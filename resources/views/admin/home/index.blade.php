@@ -3,11 +3,17 @@
         <div class="w-auto mx-auto">
             <div class=overflow-hidden shadow-xl">
                 <section
-                    class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
+                    class=" flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
                     <h1 class="text-3xl font-bold text-center text-gray-800">Detalles de la Pagina de Inicio Graph
                         Evolution</h1>
                     <p class="text-center text-gray-500">Datos de la Pagina</p>
-                    <a href="{{ route('admin.home.create') }}" class="btn btn-danger">Crear Nueva Pagina</a>
+                    {{-- This is metod of create home page --}}
+                    <div>
+                        {{-- <a href="{{ route('admin.home.create') }}"
+                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
+                            Nueva Pagina
+                        </a> --}}
+                    </div>
                     <div class="bg-white p-8 rounded-md w-full">
                         <div
                             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">

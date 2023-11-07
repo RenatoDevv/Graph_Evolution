@@ -72,28 +72,6 @@
             </div>
         </div>
     </section>
-    <button type="button g" class="wathc-video btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Ver Video
-    </button>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-        data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content border-none">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel h-bold">Graph Evolution</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="{{ asset('img/video.png') }}" alt="" class="cursor-pointer" width="100%">
-                </div>
-                <div class="modal-footer text-center">
-                    {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button> --}}
-                    <p class="text-center">Copyrigth &copy; 2023 Graph Evolution todos los derechos reservados</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 @endsection
