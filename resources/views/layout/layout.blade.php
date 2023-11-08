@@ -28,13 +28,13 @@
                 <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
                         alt="" width="100%"></a>
             </div>
-            <ul class="menu_responsive">
+            <ul class="navigarion_ham " id="navigarion_hamb">
                 <li><a href="{{ route('home') }}" class="navigation-links">Inicio</a></li>
                 <li><a href="{{ route('services') }}" class="navigation-links">Servicios</a></li>
                 <li><a href="{{ route('about') }}" class="navigation-links">Nosotros</a></li>
             </ul>
             <a href="{{ route('contact') }}" class="navigation-button">Contacto</a>
-            <button type="submit" class="responsive-button"><i class="bi bi-justify responsive-button"></i></button>
+            <button type="button" class="responsive-button" id="responsive-button"><i class="bi bi-justify responsive-button"></i></button>
         </nav>
     </header>
     <main>

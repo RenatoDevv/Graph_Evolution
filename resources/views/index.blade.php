@@ -18,7 +18,6 @@
             <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen" class="w-full object-cover object-center">
             {{-- <img src="{{ asset('img/home-derecha.png') }}" alt="" width="100%"> --}}
         </div>
-
     </section>
 
     <section class="home-services d-flex flex-column align-items-center" id="services">
@@ -135,15 +134,14 @@
                 </div>
             </div>
         </div>
-        {{-- <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" /> --}}
     </section>
+
     <section class="home-preference  d-flex flex-column align-items-center">
         <h2 class="mb-5 fs-1 fw-bold mt-5" style="color: #cf00be">Porque elegirnos?</h2>
         <div class="d-flex justify-content-center gap-5 w-75 flex-wrap mt-5">
             <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
                 <i class="bi bi-trophy"
                     style="padding: 20px 35px; background:#cf00bee8; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; border-radius:50%;font-size: 50px;"></i>
-                {{-- <img src="..." class="card-img-top" alt="..."> --}}
                 <div class="card-body">
                     <h5 class="card-title text-center fs-3">Calidad</h5>
                     <p class="card-text text-center fs-4">Vivimos en un mundo donde todos dicen que tienen los mejores
@@ -153,7 +151,6 @@
             <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
                 <i class="bi bi-rocket"
                     style="padding: 20px 33px; background:#cf00bec2; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; border-radius:50%; font-size: 50px;"></i>
-                {{-- <img src="..." class="card-img-top" alt="..."> --}}
                 <div class="card-body">
                     <h5 class="card-title text-center fs-3">Honestidad</h5>
                     <p class="card-text text-center fs-4">La<strong> transparencia, sinceridad y franqueza,</strong> son
@@ -163,7 +160,6 @@
             <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
                 <i class="bi bi-heart-pulse"
                     style="padding: 20px 35px; background:#cf00bec2; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; border-radius:50%; font-size: 50px;"></i>
-                {{-- <img src="..." class="card-img-top" alt="..."> --}}
                 <div class="card-body">
                     <h5 class="card-title text-center fs-3">Pasión</h5>
                     <p class="card-text text-center fs-4">Disfrutamos lo que hacemos Por ello, el tener la
@@ -174,6 +170,7 @@
             </div>
         </div>
     </section>
+
     <section class="p-5">
         <h2 class="fw-bold text-center mb-4" style="color: #cf00be; font-size: 50px;">Nestros Trabajos</h2>
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">

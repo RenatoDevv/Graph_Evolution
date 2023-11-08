@@ -214,17 +214,24 @@ body {
         /*30px*/
     }
     .header {
-        background: #09f;
+
     }
-    .header .navigation .menu_responsive {
+    .header .navigation .navigation-button {
+        display: none;
+    }
+    .header .navigation .navigarion_ham {
+        display: none;
+    }
+    .header .navigation .navigarion_ham.menu_responsive  {
         position: fixed;
         top: 0;
         right: 0;
         width: 80%;
         height: 100%;
-        background: #cf00be;
+        background: #4b3849;
         z-index: +20;
         padding: 20px;
+        display: block;
     }
     .header .navigation ul {
         display: block;
@@ -236,6 +243,7 @@ body {
 
     .header .navigation .responsive-button {
         display: block;
+        color: #09f;
     }
 
 

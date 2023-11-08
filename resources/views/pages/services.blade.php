@@ -18,21 +18,21 @@
                 </p>
             </div>
             <div class="grid lg:grid-cols-3 py-4 gap-x-4 gap-y-3 justify-between sm:grid-cols-1">
-                <div class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-md  dark:shadow-none">
+                <div class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-md  dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image1.png?raw=true"
-                                alt="" />
+
+                            <img src="{{ asset('img/services/card_services.jpg') }}" alt=""
+                                class="h-[100px] w-[100px] rounded-lg">
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Impresion de Banners
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
@@ -49,21 +49,20 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image2.png?raw=true"
-                                alt="" />
+                            <img src="{{ asset('img/services/diseño_services.jpg') }}" alt=""
+                                class="h-[100px] w-[100px] rounded-lg">
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Diseño de Logos
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
@@ -80,12 +79,11 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image3.png?raw=true"
-                                alt="" />
+                            <img class="h-[100px] w-[100px] rounded-lg"
+                                src="{{ asset('img/services/card_services_1.jpg') }}" alt="" />
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
@@ -94,7 +92,7 @@
                             <p class="mt-2 text-sm text-gray-600">
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
@@ -111,11 +109,10 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image3.png?raw=true"
+                            <img class="h-[100px] w-[100px] rounded-lg" src="{{ asset('img/services/logo_services.jpg') }}"
                                 alt="" />
                         </div>
                         <div class="ml-4">
@@ -125,7 +122,7 @@
                             <p class="mt-2 text-sm text-gray-600">
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
@@ -142,12 +139,11 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image3.png?raw=true"
-                                alt="" />
+                            <img class="h-[100px] w-[100px] rounded-lg"
+                                src="{{ asset('img/services/banner_services.jpg') }}" alt="" />
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
@@ -156,7 +152,7 @@
                             <p class="mt-2 text-sm text-gray-600">
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
@@ -173,11 +169,11 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image3.png?raw=true"
+                            <img class="h-[100px] w-[100px] rounded-lg"
+                                src="{{asset('img/services/fly_services.jpg')}}"
                                 alt="" />
                         </div>
                         <div class="ml-4">
@@ -187,7 +183,7 @@
                             <p class="mt-2 text-sm text-gray-600">
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
@@ -204,11 +200,11 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image3.png?raw=true"
+                            <img class="h-[100px] w-[100px] rounded-lg"
+                                src="{{ asset('img/services/banner_servicios.jpg')}}"
                                 alt="" />
                         </div>
                         <div class="ml-4">
@@ -218,7 +214,7 @@
                             <p class="mt-2 text-sm text-gray-600">
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
@@ -235,11 +231,11 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
-                            <img class="h-[83px] w-[83px] rounded-lg"
-                                src="https://github.com/horizon-ui/horizon-tailwind-react-ts-corporate/blob/main/src/assets/img/profile/image3.png?raw=true"
+                            <img class="h-[100px] w-[100px] rounded-lg"
+                                src="{{ asset('img/services/banner_servicios3.jpg')}}"
                                 alt="" />
                         </div>
                         <div class="ml-4">
@@ -249,7 +245,7 @@
                             <p class="mt-2 text-sm text-gray-600">
                                 Project #1 .
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact')}}">
+                                    href="{{ route('contact') }}">
                                     Contactar Ahora
                                 </a>
                             </p>
