@@ -12,9 +12,9 @@
 
 <body>
     <div class="container_404">
-        <div style="width:70%;">
-            <img src="{{ asset('img/404/icon_404_graph_evolution.png') }}" class="image_404" alt="Imagen de pagina no encontrada"
-                width="100%">
+        <div class="container-image">
+            <img src="{{ asset('img/404/icon_404_graph_evolution.png') }}" class="image_404"
+                alt="Imagen de pagina no encontrada" width="100%">
         </div>
         <div class="container_404_info">
             <div class="title_404">
@@ -22,10 +22,12 @@
             </div>
             <h1>@yield('message')</h1>
             <div>
-                <a href="{{ route('home')}}" class="link_404">Llevame al Inicio</a>
+                <a href="{{ route('home') }}" class="link_404">Llevame al Inicio</a>
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="{{ asset('js/err-404-revel.js') }}"></script>
 </body>
 
 </html>

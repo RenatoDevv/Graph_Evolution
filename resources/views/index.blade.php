@@ -53,7 +53,8 @@
             sapiente autem natus amet
             commodi laboriosam fuga facere, ex doloribus.</p>
         <div class="grid justify-center w-auto gap-4 sm:flex-col md:grid-col-1 lg:grid-cols-4">
-            <div class="card-services-one relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
+            <div
+                class="card-services-one relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
                 <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/logo_design.jpg') }}" alt="" width="100%">
                 </div>
@@ -71,15 +72,15 @@
                         available wireless charging case.
                     </p>
                 </div>
-                <div class="p-6 pt-0 ">
-                    <button
-                        class="w-full rounded-lg bg-gray-300 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
-                        type="button">
+                <div class="p-6 pt-0 w-full flex items-center">
+                    <a href="{{ route('services') }}"
+                        class="w-full rounded-lg bg-gray-300 py-3  text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white">
                         Ver Ahora
-                    </button>
+                    </a>
                 </div>
             </div>
-            <div class="card-services-two relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="card-services-two relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                 <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/card_design.jpg') }}" alt="" width="100%">
                 </div>
@@ -97,15 +98,15 @@
                         available wireless charging case.
                     </p>
                 </div>
-                <div class="p-6 pt-0">
-                    <button
-                        class=" bg-gray-300 w-full rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
-                        type="button">
+                <div class="p-6 pt-0 w-full flex items-center">
+                    <a href="{{ route('services') }}"
+                        class=" bg-gray-300 w-full rounded-lg py-3 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white">
                         Ver Ahora
-                    </button>
+                    </a>
                 </div>
             </div>
-            <div class="card-services-three relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="card-services-three relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                 <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/banner_design.jpg') }}" alt="" width="100%">
                 </div>
@@ -123,15 +124,16 @@
                         available wireless charging case.
                     </p>
                 </div>
-                <div class="p-6 pt-0">
-                    <button
-                        class="bg-gray-300 w-full rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
+                <div class="p-6 pt-0 w-full flex items-center">
+                    <a href="{{ route('services') }}"
+                        class="bg-gray-300 w-full rounded-lg  py-3 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
                         type="button">
                         Ver Ahora
-                    </button>
+                    </a>
                 </div>
             </div>
-            <div class="card-services-four relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div
+                class="card-services-four relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                 <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/camara.jpg') }}" alt="" width="100%">
                 </div>
@@ -149,12 +151,12 @@
                         available wireless charging case.
                     </p>
                 </div>
-                <div class="p-6 pt-0">
-                    <button
-                        class="bg-gray-300 w-full rounded-lg bg-blue-gray-900/10 py-3 px-6 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
+                <div class="p-6 pt-0 w-full flex items-center">
+                    <a href="{{ route('services') }}"
+                        class="bg-gray-300 w-full rounded-lg py-3 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
                         type="button">
                         Ver Ahora
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -195,32 +197,36 @@
         </div>
     </section>
 
-    <section class="p-5">
-        <h2 class="fw-bold text-center mb-4" style="color: #cf00be; font-size: 50px;">Nestros Trabajos</h2>
+    <section class="bg-indigo-600">
+        <h2 class="fw-bold text-center mb-4 text-[#cf00be] sm:text-2xl lg:text-5xl">Nuestros Trabajos</h2>
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner w-full">
                 <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-full"
+                        alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/services/camara.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/carrusel/pr-banner-tw.jpg') }}" class="d-block w-full"
+                        alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/ps.png') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/carrusel/pr-banner-tr.jpg') }}" class="d-block w-full"
+                        alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/banner2.png') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/carrusel/pr-banner-fr.jpg') }}" class="d-block w-full"
+                        alt="Graph Evolution">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden">Anterior</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
     </section>
@@ -228,7 +234,7 @@
 
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/hm-reveal.js')}}"></script>
+    <script src="{{ asset('js/hm-reveal.js') }}"></script>
 
 
 @endsection

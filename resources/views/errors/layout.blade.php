@@ -11,6 +11,8 @@
         <!-- Styles -->
         <style>
             html, body {
+                width: 100%;
+                height: 100vh;
                 background: #2c2131;
                 color: #636b6f;
                 font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -47,9 +49,10 @@
         <div class="flex-center position-ref full-height bg-indigo-400">
             <div class="content">
                 <div class="title">
-                    @yield('message')
+
                 </div>
             </div>
         </div>
+
     </body>
 </html>
