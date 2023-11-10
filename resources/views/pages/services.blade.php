@@ -5,11 +5,11 @@
 @endsection
 @section('content')
     <section class="container services-contaiener w-full  lg:p-5 sm:p-1">
-        <h2 class="text-center font-bold lg:text-6xl sm:text-lg">Explore nuestros servicios</h2>
+        <h2 class="services-title text-center font-bold lg:text-6xl sm:text-lg">Explore nuestros servicios</h2>
         <div
             class="relative flex h-full w-full flex-col rounded-[20px]  bg-clip-border lg:p-4  shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:shadow-none sm:p-0">
             <div class="mb-8 w-full">
-                <h4 class="text-3xl font-bold text-gray-100 dark:text-white">
+                <h4 class="services-subtitle text-3xl font-bold text-gray-100 dark:text-white">
                     Todos los Servicios
                 </h4>
                 <p class="services-description mt-2 text-2lg text-gray-300">
@@ -17,8 +17,8 @@
                     engaged by providing meaningful information.
                 </p>
             </div>
-            <div class="grid lg:grid-cols-3 py-4 gap-x-4 gap-y-3 justify-between sm:grid-cols-1">
-                <div class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-md  dark:shadow-none">
+            <div class="srv-content-cards grid lg:grid-cols-3 py-4 gap-x-4 gap-y-3 justify-between sm:grid-cols-1">
+                <div class="srv-card-on flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-md  dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
 
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="srv-card-tw flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img src="{{ asset('img/services/diseño_services.jpg') }}" alt=""
@@ -60,7 +60,7 @@
                                 Diseño de Logos
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href="{{ route('contact') }}">
                                     Contactar Ahora
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="srv-card-tr flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
@@ -87,10 +87,10 @@
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Banner Design
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href="{{ route('contact') }}">
                                     Contactar Ahora
@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    class="srv-card-fr flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg" src="{{ asset('img/services/logo_services.jpg') }}"
@@ -117,10 +117,10 @@
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Impresion de Volantes
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href="{{ route('contact') }}">
                                     Contactar Ahora
@@ -138,8 +138,7 @@
                         </svg>
                     </div>
                 </div>
-                <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div class="srv-card-fv flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
@@ -147,10 +146,10 @@
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Diseño de Tarjetas
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href="{{ route('contact') }}">
                                     Contactar Ahora
@@ -168,20 +167,18 @@
                         </svg>
                     </div>
                 </div>
-                <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div class="srv-card-sx flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
-                                src="{{asset('img/services/fly_services.jpg')}}"
-                                alt="" />
+                                src="{{ asset('img/services/fly_services.jpg') }}" alt="" />
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Tarjetas de Presentacion
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href="{{ route('contact') }}">
                                     Contactar Ahora
@@ -199,20 +196,18 @@
                         </svg>
                     </div>
                 </div>
-                <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div class="srv-card-sv flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
-                                src="{{ asset('img/services/banner_servicios.jpg')}}"
-                                alt="" />
+                                src="{{ asset('img/services/banner_servicios.jpg') }}" alt="" />
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Diseño de Logos
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href="{{ route('contact') }}">
                                     Contactar Ahora
@@ -230,20 +225,18 @@
                         </svg>
                     </div>
                 </div>
-                <div
-                    class="flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div class="srv-card-eg flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
-                                src="{{ asset('img/services/banner_servicios3.jpg')}}"
-                                alt="" />
+                                src="{{ asset('img/services/banner_servicios3.jpg') }}" alt="" />
                         </div>
                         <div class="ml-4">
                             <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Technology behind the Blockchain
+                                Diseño de Banner
                             </p>
                             <p class="mt-2 text-sm text-gray-600">
-                                Project #1 .
+                                Calidad
                                 <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                                     href="{{ route('contact') }}">
                                     Contactar Ahora
@@ -265,4 +258,7 @@
         </div>
     </section>
 
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/src-reveal.js') }}"></script>
 @endsection

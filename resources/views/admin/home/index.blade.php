@@ -99,7 +99,7 @@
                                                             class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded-md flex items-center">
                                                             <i class="material-icons-outlined text-base">edit</i>
                                                         </a>
-                                                        {{-- <form action="{{ route('admin.home.eliminar', $home->id) }}"
+                                                        <form action="{{ route('admin.home.delete', $home->id) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('DELETE')
@@ -108,7 +108,7 @@
                                                                 <i
                                                                     class="material-icons-round text-base">delete_outline</i>
                                                             </button>
-                                                        </form> --}}
+                                                        </form>
                                                     </div>
                                                 </td>
                                             </tr>

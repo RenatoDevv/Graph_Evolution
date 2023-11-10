@@ -51,10 +51,9 @@ Route::middleware([
     // Route::get('/admin/Phome/show', [AdminController::class, 'pageshow'])->name('admin.home.show');
     Route::get('/admin/Phome/edit/{id}', [SitioController::class, 'homeEdit'])->name('admin.home.edit');
     Route::post('/admin/Phome/update/{id}', [SitioController::class, 'homeUpdate'])->name('admin.home.update');
+    Route::delete('/admin/Phome/delete/{id}', [SitioController::class, 'homeDelete'])->name('admin.home.delete');
 
-    // Route::get('/admin/pages/users', [PageController::class, 'users'])->name('admin.users');
-    // Route::get('/admin/pages/profile', [PageController::class, 'profile'])->name('admin.profile');
-
+    // Route::get('/admin/Phome/profile', [PageController::class, 'profile'])->name('admin.profile');
 
 });
 

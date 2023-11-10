@@ -10,7 +10,7 @@
                 <h2 class="m-4 contactP-title">Contactanos</h2>
             </div>
         </div>
-        <div class="contact-socials d-flex flex-wrap align-items-center justify-content-center gap-3">
+        <div class="contact-socials  d-flex flex-wrap align-items-center justify-content-center gap-3">
             <div class="card-socials social-one d-flex flex-column align-items-center gap-3 bg-transparent">
                 <i class="bi bi-whatsapp"></i>
                 <h2>WhatsApp</h2>
@@ -37,9 +37,9 @@
             </div>
         </div>
         <div class="contact-form d-flex gap-5 w-75 justify-content-center align-items-center">
-            <img src="{{ asset('img/robot.png') }}" class="img-fluid w-50" alt=""
+            <img src="{{ asset('img/robot.png') }}" class="form-image" alt=""
                 style="background-size: cover; objetc-fit: contain;" class="w-50" width="">
-            <form class="row g-3 d-flex flex-column justify-content-center align-items-center" id="explorationForm"
+            <form class="form-ct row g-3 d-flex flex-column justify-content-center align-items-center" id="explorationForm"
                 method="GET" action="">
                 <h2 class="text-center">Envie un mensaje</h2>
                 <div class="mb-3">
@@ -82,6 +82,7 @@
     </div>
 @endsection
 @section('scripts')
+    <script src="{{ asset('js/ct-reveal.js') }}"></script>
     <script>
         var button_save = document.getElementById('explorationForm');
         button_save.addEventListener("submit", function(event) {

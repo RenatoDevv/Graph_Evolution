@@ -113,9 +113,16 @@ class SitioController extends Controller
 
     public function homeUpdate(Request $request, $id) {
         $home = Home::find($id);
-        $home->title = $request->title;
-        $home->description = $request->description;
-        $home->update($request->all());
+        if ($request->hasFile('image_file')) {
+            $image_file = $request->file('image_file')->store('images', 'public'); // Almacenar la imagen en el sistema de archivos
+
+            // Guardar la ruta de la imagen en la base de datos
+            $home->title = $request->title;
+            $home->description = $request->description;
+            $home->image_file = $image_file;
+
+            $home->save();
+        }
 
         return redirect()->route('admin.home.index');
     }

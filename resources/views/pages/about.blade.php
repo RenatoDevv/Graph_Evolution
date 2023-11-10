@@ -14,20 +14,21 @@
                 </p>
             </div>
         </div>
-        <div class="content-image" style="width: 40%">
-            <img src="{{ asset('img/about/galactic.jpg') }}" alt="" width="100%">
+        <div class="content-image">
+            <img src="{{ asset('img/about/galactic.jpg') }}" alt="" width="70%">
         </div>
     </section>
     <div class="about-biografi d-flex">
-        <h2 style="border-bottom: 3px solid white; line-heigth: 20px;">Biografia </h2>
-        <p class="w-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum neque non illo blanditiis <br> ex
+        <h2 class="aboout-title-b" style="border-bottom: 3px solid white; line-heigth: 20px;">Biografia </h2>
+        <p class="about-description w-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum neque non illo
+            blanditiis <br> ex
             quae quod vitae
             tempora pariatur cumque porro, cupiditate maxime suscipit <br> reprehenderit velit in quibusdam nobis
             voluptatum!
         </p>
     </div>
     <section class="graph-about">
-        <div class="about-content">
+        <div class="about-content on-box">
             <h2 class="about-title">Misión</h2>
             <div class="about-text d-flex">
                 <img src="{{ asset('img/about/mision.png') }}" alt="MISION Graph Evolition" width="100%"
@@ -38,7 +39,7 @@
                     servicios de calidad que generen impacto en la comunicación. </p>
             </div>
         </div>
-        <div class="about-content">
+        <div class="about-content tw-box">
             <h2 class="about-title">Vision</h2>
             <div class="about-text d-flex">
                 <img src="{{ asset('img/about/vision.png') }}" alt="" title="VISION Graph Evolution" width="100%">
@@ -47,7 +48,7 @@
                 </p>
             </div>
         </div>
-        <div class="about-content">
+        <div class="about-content tr-box">
             <h2 class="about-title text-center">Valores</h2>
             <div class="about-text">
                 <p class="about-description">
@@ -59,7 +60,7 @@
                 <img src="{{ asset('img/about/valores.png') }}" alt="" width="100%">
             </div>
         </div>
-        <div class="about-content">
+        <div class="about-content fr-box">
             <h2 class="text-center">Objetivos</h2>
             <div class="about-text ">
                 <img src="{{ asset('img/about/objetivos.png') }}" alt="" width="100%">
@@ -72,6 +73,10 @@
             </div>
         </div>
     </section>
+
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/ab-an-reveal.js') }}"></script>
 
 
 @endsection

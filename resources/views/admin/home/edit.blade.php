@@ -20,7 +20,7 @@
                             </div>
                             <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
                                 <form class="mt-8 space-y-3" action="{{ route('admin.home.update', $home->id) }}"
-                                    method="POST">
+                                    method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <h6 class="text-gray-400 text-sm mt-3 mb-6 font-bold uppercase">
                                         Informacion de la pagina
@@ -70,9 +70,10 @@
                                                 <p class="mt-2 text-gray-500 tracking-wide">los tamaños recomendades
                                                     1300x800, formatos aceptados.
                                                     PNG, JPG. </p>
-
+                                                <img src="{{asset('storage/' . $home->image_file)}}" alt="">
                                                 <input id="dropzone-file" name="image_file" type="file"
-                                                    class="" />
+                                                    class=""
+                                                    value="" />
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">

@@ -34,7 +34,8 @@
                 <li><a href="{{ route('about') }}" class="navigation-links">Nosotros</a></li>
             </ul>
             <a href="{{ route('contact') }}" class="navigation-button">Contacto</a>
-            <button type="button" class="responsive-button" id="responsive-button"><i class="bi bi-justify responsive-button"></i></button>
+            <button type="button" class="responsive-button" id="responsive-button"><i
+                    class="bi bi-justify responsive-button"></i></button>
         </nav>
     </header>
     <main>
@@ -43,7 +44,7 @@
     <footer class="footer" data-bs-theme="blue">
         <div class="footer-contanier">
             <div class="footer-container-box">
-                <h2 class="footer-logo">Graph <br>Evolution</h2>
+                <h2 class="footer-logo font-bold">Graph <br>Evolution</h2>
                 <p class="footer-description">Lorem, ipsum dolor sit amet consectetur<br> adipisicing elit.
                     Voluptatibus, esse.</p>
             </div>
@@ -76,9 +77,10 @@
         </div>
         <p class="copyrigth-text m-0 p-0">Copyright © 2023 Graph Evolution. todos los derechos reservados &copy;</p>
     </footer>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/rs-hm.js') }}"></script>
     @yield('scripts')
 </body>
 
