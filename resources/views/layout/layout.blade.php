@@ -44,9 +44,12 @@
     <footer class="footer" data-bs-theme="blue">
         <div class="footer-contanier">
             <div class="footer-container-box">
-                <h2 class="footer-logo font-bold">Graph <br>Evolution</h2>
-                <p class="footer-description">Lorem, ipsum dolor sit amet consectetur<br> adipisicing elit.
-                    Voluptatibus, esse.</p>
+                <div>
+                    <img src="{{ asset('img/logo.png')}}" alt="" width=100>
+                </div>
+
+                {{-- <h2 class="footer-logo font-bold">Graph <br>Evolution</h2> --}}
+                <p class="footer-description">Transformando ideas.</p>
             </div>
             <div class="footer-container-box">
                 <p class="footer-title m-0">SERVICIOS</p>
