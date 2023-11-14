@@ -1,7 +1,10 @@
-var button_responsive = document.getElementById("responsive-button");
+const open_navbar = document.querySelector(".open_navbar");
+const navbar = document.querySelector(".navigation");
+const close_button = document.querySelector(".close_nav");
 
-var navigation_responsive = document.getElementById("navigarion_hamb");
-
-button_responsive.addEventListener("click", () => {
-    navigation_responsive.classList.add("menu_responsive");
+open_navbar.addEventListener("click", function () {
+    navbar.classList.toggle("show");
+});
+close_button.addEventListener("click", function () {
+    navbar.classList.toggle("show");
 });

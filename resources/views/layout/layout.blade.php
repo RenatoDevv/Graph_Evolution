@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Graph Evolution @yield('title')</title>
+    <title>Graph Evolution - @yield('title')</title>
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -23,20 +23,23 @@
 
 <body class="">
     <header class="header">
+        <div class="logo">
+            <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
+                    alt="" width="100%"></a>
+        </div>
         <nav class="navigation">
-            <div class="logo">
-                <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
-                        alt="" width="100%"></a>
-            </div>
-            <ul class="navigarion_ham " id="navigarion_hamb">
+            <button class="close_nav" style="border: none; background: transparent">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <ul class="navigarion_ham ">
                 <li><a href="{{ route('home') }}" class="navigation-links">Inicio</a></li>
                 <li><a href="{{ route('services') }}" class="navigation-links">Servicios</a></li>
                 <li><a href="{{ route('about') }}" class="navigation-links">Nosotros</a></li>
             </ul>
+
             <a href="{{ route('contact') }}" class="navigation-button">Contacto</a>
-            <button type="button" class="responsive-button" id="responsive-button"><i
-                    class="bi bi-justify responsive-button"></i></button>
         </nav>
+        <button class="open_navbar"><i class="bi bi-list"></i></button>
     </header>
     <main>
         @yield('content')
@@ -45,7 +48,7 @@
         <div class="footer-contanier">
             <div class="footer-container-box">
                 <div>
-                    <img src="{{ asset('img/logo.png')}}" alt="" width=100>
+                    <img src="{{ asset('img/logo.png') }}" alt="" width=100>
                 </div>
 
                 {{-- <h2 class="footer-logo font-bold">Graph <br>Evolution</h2> --}}
@@ -54,18 +57,17 @@
             <div class="footer-container-box">
                 <p class="footer-title m-0">SERVICIOS</p>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Servicios</a></li>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('services') }}">Servicios</a></li>
+                    <li><a href="{{ route('about') }}">Nosotros</a></li>
                 </ul>
             </div>
             <div class="footer-container-box">
                 <p class="footer-title m-0">EMPRESA</p>
                 <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="{{ route('about') }}">About</a></li>
+                    <li><a href="{{ route('services') }}">Services</a></li>
+                    <li><a href="{{ route('contact') }}">Contact</a></li>
                     <li><a href=""></a></li>
                 </ul>
             </div>

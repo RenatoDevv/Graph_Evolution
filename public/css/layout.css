@@ -18,7 +18,7 @@
     --font-description-text: 1.563rem;
     /*25*/
     --corner-radius-buttom: 1.563rem;
-    --animation-hover-buttom: .3s ease;
+    --animation-hover-buttom: 0.3s ease;
     --shadow-color-buttom: 0px 5px 30px 2px #e606b5d7;
 }
 
@@ -34,42 +34,54 @@ body {
     font-weight: 400;
     color: var(--color-white);
 }
+main {
+}
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 0;
+    color: #fff;
+    padding: 0 100px;
+    align-items: center;
     padding: 20px 0;
 }
 
+.header .logo a img {
+    width: 150px;
+}
+
 .header .navigation {
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-.header .navigation .logo a img {
-    width: 150px;
+.header .navigation .close_nav {
+    display: none;
 }
 
-.header .navigation ul {
+.header .navigation .navigarion_ham {
     display: flex;
     gap: 25px;
     list-style: none;
     margin: 0;
 }
 
-.header .navigation ul li {
+.header .navigation .navigarion_ham li {
     list-style: none;
 }
 
-.header .navigation ul li .navigation-links {
+.header .navigation .navigarion_ham li .navigation-links {
     font-size: var(--font-link-text);
     font-weight: 500;
     text-decoration: none;
     color: #fff;
 }
 
-.header .navigation ul li .navigation-links:hover {
+.header .navigation .navigarion_ham li .navigation-links:hover {
     color: var(--navlink-text-color);
 }
 
@@ -89,7 +101,7 @@ body {
     box-shadow: var(--shadow-color-buttom);
 }
 
-.header .navigation .responsive-button {
+.header .open_navbar {
     border: none;
     background: transparent;
     text-decoration: none;
@@ -99,7 +111,7 @@ body {
     display: none;
 }
 
-.header .navigation .responsive-button:hover {
+.header .navigation .open_navbar:hover {
     color: var(--color-pink);
 }
 
@@ -116,11 +128,14 @@ body {
     justify-content: space-between;
 }
 
-.footer .footer-contanier .footer-container-box {}
+.footer .footer-contanier .footer-container-box {
+}
 
-.footer .footer-contanier .footer-container-box .footer-logo {}
+.footer .footer-contanier .footer-container-box .footer-logo {
+}
 
-.footer .footer-contanier .footer-container-box .footer-description {}
+.footer .footer-contanier .footer-container-box .footer-description {
+}
 
 .footer .footer-contanier .footer-container-box .footer-title {
     color: #e76800;
@@ -190,7 +205,6 @@ body {
     }
 
     .footer .footer-container .footer-container-box {
-
     }
 
     .footer .footer-contanier .footer-container-box .footer-title {
@@ -205,7 +219,6 @@ body {
         color: var(--color-white);
         font-size: 1.063rem;
     }
-
 }
 
 @media only screen and (max-width: 700px) {
@@ -214,25 +227,59 @@ body {
         /*30px*/
     }
     .header {
-
+        position: relative;
+    }
+    .header .navigation {
+        background: #353535d5;
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin-left: -130%;
+        width: 100%;
+        transition: 0.3s all ease-in-out;
+        margin-left: -100%;
     }
     .header .navigation .navigation-button {
         display: none;
     }
-    .header .navigation .navigarion_ham {
-        display: none;
+    .header .navigation.show {
+        width: 100%;
+        margin-left: 0;
+        z-index: 40;
     }
-    .header .navigation .navigarion_ham.menu_responsive  {
-        position: fixed;
-        top: 0;
+    .header .navigation .close_nav {
+        display: block;
+        position: absolute;
         right: 0;
-        width: 80%;
-        height: 100%;
-        background: #4b3849;
-        z-index: +20;
-        padding: 20px;
+        top: 0;
+        margin: 50px 20px 0 0;
+        cursor: pointer;
+    }
+
+    .header .navigation .close_nav i {
+        color: #fff;
+        background: #2c2131;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-weight: bold;
+    }
+
+    .header .open_navbar {
         display: block;
     }
+
+    .header .navigation .navigarion_ham {
+        width: 80%;
+        height: 100vh;
+        padding: 50px;
+        background: #2c2131;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header .hambur {
+        display: block;
+    }
+
     .header .navigation ul {
         display: block;
     }
@@ -245,7 +292,6 @@ body {
         display: block;
         color: #09f;
     }
-
 
     .footer {
         display: flex;
@@ -270,6 +316,4 @@ body {
     .footer .footer-contanier .footer-container-box ul li a {
         font-size: 1.063rem;
     }
-
 }
-

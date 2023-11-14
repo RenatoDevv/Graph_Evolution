@@ -52,7 +52,7 @@
         <p class="services-description text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. A nisi <br>
             sapiente autem natus amet
             commodi laboriosam fuga facere, ex doloribus.</p>
-        <div class="grid justify-center w-auto gap-4 sm:flex-col md:grid-col-1 lg:grid-cols-4">
+        <div class="grid justify-center w-auto gap-4 sm:flex-col sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div
                 class="card-services-one relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
                 <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
@@ -238,4 +238,3 @@
 
 
 @endsection
-
