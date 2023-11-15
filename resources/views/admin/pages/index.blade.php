@@ -2,12 +2,8 @@
     <div
         class="flex  flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
         <h1 class="text-3xl font-bold text-center text-gray-800">👋 Bienvenido al panel de Paginas</h1>
-        <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis
-            voluptas ullam,
-            perferendis in enim at
-            quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
-            commodi
-            alias?</p>
+        <p class="text-center text-gray-500">En esta seccion se muestra toda la informacion de las paginas existentes
+            dentro del sitio web</p>
         <div class="bg-white p-8 rounded-md w-full">
             <div class=" flex items-center justify-between pb-6">
                 <div>

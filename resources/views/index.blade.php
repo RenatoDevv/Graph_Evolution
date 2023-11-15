@@ -198,7 +198,7 @@
     </section>
 
     <section class="w-full">
-        <h2 class="fw-bold text-center mb-4 text-[#cf00be] sm:text-2xl lg:text-5xl">Algunos de nuestros trabajos</h2>
+
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner w-full">
                 <div class="carousel-item active" data-bs-interval="5000">
