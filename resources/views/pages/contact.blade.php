@@ -12,13 +12,13 @@
         </div>
         <div class="contact-socials  d-flex flex-wrap align-items-center justify-content-center gap-3">
             <div class="card-socials social-one d-flex flex-column align-items-center gap-3 bg-transparent">
-                <i class="bi bi-whatsapp text-green-500" ></i>
+                <i class="bi bi-whatsapp text-green-500"></i>
                 {{-- <h2>WhatsApp</h2> --}}
                 <p class="text-center">Envie un mensaje para consultar</p>
                 <a href="https://web.whatsapp.com/" target="blank" class="button-message btn p-2 w-100">Mensaje Ahora</a>
             </div>
             <div class="card-socials social-two d-flex flex-column align-items-center gap-3 bg-transparent">
-                <i class="bi bi-envelope-paper text-yellow-500" ></i>
+                <i class="bi bi-envelope-paper text-yellow-500"></i>
                 {{-- <h2>Mensaje</h2> --}}
                 <p class="text-center">Envie un correo para aclarar sus dudas.</p>
                 <a href="mailto:prueba@gmail.com" class="btn button-message  p-2 w-100">Enviar Correo</a>

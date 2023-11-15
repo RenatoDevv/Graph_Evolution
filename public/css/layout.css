@@ -84,6 +84,9 @@ main {
 .header .navigation .navigarion_ham li .navigation-links:hover {
     color: var(--navlink-text-color);
 }
+.header .navigation .navigarion_ham li .contact-button {
+    display: none;
+}
 
 .header .navigation .navigation-button {
     background-color: var(--color-pink);
@@ -283,10 +286,11 @@ main {
     .header .navigation ul {
         display: block;
     }
-
-    .header .navigation .navigation-button {
-        display: none;
+    .header .navigation .navigarion_ham li .contact-button {
+        display: block;
     }
+
+
 
     .header .navigation .responsive-button {
         display: block;
