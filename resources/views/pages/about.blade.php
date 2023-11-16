@@ -9,8 +9,7 @@
         <div class="content-about-descripcion">
             <h1 class="content-title">Graph <br> _Evolution</h1>
             <div class="content-description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, similique in dicta enim illum atque
-                    porro. reiciendis dicta ad nihil. Lorem ipsum dolor sit amet.
+                <p>Transformando Ideas.
                 </p>
             </div>
         </div>
@@ -20,23 +19,19 @@
     </section>
     <div class="about-biografi d-flex">
         <h2 class="aboout-title-b" style="border-bottom: 3px solid white; line-heigth: 20px;">Biografia </h2>
-        <p class="about-description w-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum neque non illo
-            blanditiis <br> ex
-            quae quod vitae
-            tempora pariatur cumque porro, cupiditate maxime suscipit <br> reprehenderit velit in quibusdam nobis
-            voluptatum!
+        <p class="about-description w-auto">Somos una empresa que busca transformar ideas en soluciones visuales, fusionando
+            la creatividad y el concepto de nuestros clientes.
         </p>
     </div>
     <section class="graph-about">
         <div class="about-content on-box">
             <h2 class="about-title">🌟Misión</h2>
             <div class="about-text d-flex">
-                <div>
-                    <img src="{{ asset('img/about/mision_graph_evolution.jpg') }}" alt="mision Graph Evolition"
-                        class="rounded-lg w-full object-cover">
+                <div class="flex justify-center">
+                    <img src="{{ asset('img/about/mision_gr_evolution.jpg') }}" alt="mision Graph Evolition"
+                        class="rounded-3xl w-3/4 image-mision">
                 </div>
-                <p class="about-description">Somos una empresa que busca transformar ideas en soluciones visuales,
-                    fusionando la creatividad y el concepto de nuestros clientes. Nos esforzamos por cumplir con todas las
+                <p class="about-description">Nos esforzamos por cumplir con todas las
                     necesidades y trabajos que nuestros clientes soliciten, nuestro objetivo es brindar productos y
                     servicios de calidad que generen impacto en la comunicación. </p>
             </div>
@@ -44,9 +39,9 @@
         <div class="about-content tw-box">
             <h2 class="about-title">🌟Vision</h2>
             <div class="about-text d-flex">
-                <div>
+                <div class=" w-full">
                     <img src="{{ asset('img/about/vision_graph_evolution.jpg') }}" alt=""
-                        title="vision Graph Evolution" class="w-full">
+                        title="vision Graph Evolution" class="w-full rounded-3xl">
                 </div>
                 <p class="about-description">Ser una empresa líder que impacte, incursionando en más ramas de la
                     comunicación publicitaria para el progreso de nuestra sociedad.
@@ -62,13 +57,20 @@
                     <li>✨ Amabilidad</li>
                 </ul>
                 </p>
-                <img src="{{ asset('img/about/valores.png') }}" alt="valores graph evolution" class="w-full">
+                <div>
+                    <img src="{{ asset('img/about/valores_graph_evolution.jpg') }}" alt="valores graph evolution"
+                        class="rounded-3xl w-full">
+                </div>
             </div>
         </div>
         <div class="about-content fr-box">
             <h2 class="text-center">🌟Objetivos</h2>
             <div class="about-text ">
-                <img src="{{ asset('img/about/objetivos.png') }}" alt="objetivos graph evolution" class="w-full">
+                <div class="w-full">
+
+                    <img src="{{ asset('img/about/objetivos_gr_evolution.jpg') }}" alt="objetivos graph evolution"
+                        class="w-full rounded-3xl">
+                </div>
                 <ul>
                     <li>Poder innovar visualmente todas aquellas ideas que nuestro público tenga.</li>
                     <li>Ser reconocido como una empresa líder en diseño e imprenta a nivel de Arequipa.</li>

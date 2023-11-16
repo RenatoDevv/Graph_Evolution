@@ -63,10 +63,10 @@ section .wathc-video:hover {
 .graph-about .about-content {
     display: flex;
     justify-content: space-between;
-    gap: 280px;
+    gap: 200px;
 }
 
-.graph-about .about-content .about-text img {
+.graph-about .about-content .about-text .image-mision {
     background-position: center;
     background-size: cover;
 }
