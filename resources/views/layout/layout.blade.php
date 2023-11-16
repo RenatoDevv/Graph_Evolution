@@ -35,7 +35,8 @@
                 <li><a href="{{ route('home') }}" class="navigation-links">Inicio</a></li>
                 <li><a href="{{ route('services') }}" class="navigation-links">Servicios</a></li>
                 <li><a href="{{ route('about') }}" class="navigation-links">Nosotros</a></li>
-                <li><a href="{{ route('contact')}}" class="navigation-links contact-button">Contacto</a></li>
+                <li><a href="{{ route('help') }}" class="navigation-links">Soporte</a></li>
+                <li><a href="{{ route('contact') }}" class="navigation-links contact-button">Contacto</a></li>
             </ul>
 
             <a href="{{ route('contact') }}" class="navigation-button">Contacto</a>
@@ -58,26 +59,27 @@
             <div class="footer-container-box">
                 <p class="footer-title m-0">SERVICIOS</p>
                 <ul>
-                    <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('services') }}">Servicios</a></li>
-                    <li><a href="{{ route('about') }}">Nosotros</a></li>
+                    <li><a href="{{ route('services') }}">Diseño Logo</a></li>
+                    <li><a href="{{ route('services') }}">Banner</a></li>
+                    <li><a href="{{ route('services') }}">Volantes</a></li>
                 </ul>
             </div>
             <div class="footer-container-box">
                 <p class="footer-title m-0">EMPRESA</p>
                 <ul>
-                    <li><a href="{{ route('about') }}">About</a></li>
-                    <li><a href="{{ route('services') }}">Services</a></li>
-                    <li><a href="{{ route('contact') }}">Contact</a></li>
+                    <li><a href="{{ route('about') }}">Nosotros</a></li>
+                    <li><a href="{{ route('services') }}">Servicios</a></li>
+                    <li><a href="{{ route('contact') }}">Contacto</a></li>
                     <li><a href=""></a></li>
                 </ul>
             </div>
             <div class="footer-container-box">
                 <p class="footer-title m-0">CONTACTO</p>
-                <ul class="d-flex gap-2">
-                    <li><a href=""><i class="bi bi-phone-fill"></i></a></li>
-                    <li><a href=""><i class="bi bi-facebook"></i></a></li>
-                    <li><a href=""><i class="bi bi-envelope-at-fill"></i></a></li>
+                <ul class="d-flex gap-2 footer-socials list-none">
+                    <li><a href="" class=""><i class="bi bi-phone-fill"></i></a></li>
+                    <li><a href="" class=""><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="" class=""><i class="bi bi-envelope-check-fill"></i></a></li>
+                    <li><a href="" class=""><i class="bi bi-tiktok"></i></a></li>
                 </ul>
             </div>
         </div>

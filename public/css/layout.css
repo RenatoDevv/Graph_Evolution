@@ -34,7 +34,14 @@ body {
     font-weight: 400;
     color: var(--color-white);
 }
-main {
+body::-webkit-scrollbar {
+    width: 9px;
+    background-color: transparent;
+    padding: 0 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-pink);
+    border-radius: 20px;
 }
 
 .header {
@@ -144,20 +151,8 @@ main {
     color: #e76800;
     font-weight: 500;
 }
-
-.footer .footer-contanier .footer-container-box ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.footer .footer-contanier .footer-container-box ul li {
-    list-style: none;
-}
-
 .footer .footer-contanier .footer-container-box ul li a {
     text-decoration: none;
-    list-style: none;
     color: var(--color-white);
     font-size: 17px;
 }
@@ -177,16 +172,6 @@ main {
         padding: 0 3.125rem;
         /* 50px */
     }
-
-    /* .header .navigation ul {
-        display: ;
-    }
-    .header .navigation .navigation-button {
-        display: none;
-    }
-    .header .navigation .responsive-button {
-        display: block;
-    } */
     /* CONTENT STYLES*/
     /* FOOTER STYLES*/
     .contact-content .contact-presentation .contactP-title {
@@ -289,8 +274,6 @@ main {
     .header .navigation .navigarion_ham li .contact-button {
         display: block;
     }
-
-
 
     .header .navigation .responsive-button {
         display: block;

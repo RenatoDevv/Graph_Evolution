@@ -19,6 +19,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/about', [HomeController::class, 'about'], 'about')->name('about');
 Route::get('/contact', [HomeController::class, 'contact'], 'contact')->name('contact');
+Route::get('/soporte', [HomeController::class, 'help'], 'help')->name('help');
 
 
 Route::middleware([

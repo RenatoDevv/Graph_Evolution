@@ -2,7 +2,6 @@
 @section('title', 'Inicio')
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-
 @endsection
 @section('content')
     <section class="home-content w-100 d-flex">
@@ -23,9 +22,9 @@
     </div>
     <section class="home-about">
         <article class="home-about-text w-2/5">
-            <h2 class="font-bold">Nuestros Principales trabajos</h2>
-            <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor.</p>
-            <a href="" class="px-10 py-2 bg-[#cf00be] rounded-full">Contrata</a>
+            <h2 class="font-bold">El diseño es el arte de combinar la creatividad y la tecnología para comunicar ideas.</h2>
+            <p></p>
+            <a href="" class="px-10 py-2 bg-[#cf00be] rounded-full">Conocer más</a>
         </article>
         <article class="home-about-cards w-1/2">
             <div class="card-one p-2 rounded-lg grid-col w-72">
@@ -49,9 +48,7 @@
             <a href="#services"><i class="bi bi-arrow-down"></i></a>
         </div> --}}
         <h2 class="services-title fw-bold">Servicios</h2>
-        <p class="services-description text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. A nisi <br>
-            sapiente autem natus amet
-            commodi laboriosam fuga facere, ex doloribus.</p>
+        <p class="services-description text-center">Servicios mas destacados</p>
         <div class="grid justify-center w-auto gap-4 sm:flex-col sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div
                 class="card-services-one relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
@@ -166,8 +163,8 @@
         <h2 class="pref-title mb-5 fs-1 fw-bold mt-5 text-[#cf00be]">Porque elegirnos?</h2>
         <div class="pref-content d-flex justify-content-center gap-5 w-75 flex-wrap mt-5">
             <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
-                <i class="bi bi-trophy"
-                    style="padding: 20px 35px; background:#cf00bee8; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; border-radius:50%;font-size: 50px;"></i>
+                <i class="bi bi-trophy bg-[#cf00bec2] rounded-full "
+                    style="padding: 20px 35px; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body">
                     <h5 class="card-title text-center fs-3">Calidad</h5>
                     <p class="card-text text-center fs-4">Vivimos en un mundo donde todos dicen que tienen los mejores
@@ -175,21 +172,23 @@
                 </div>
             </div>
             <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
-                <i class="bi bi-rocket"
-                    style="padding: 20px 33px; background:#cf00bec2; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; border-radius:50%; font-size: 50px;"></i>
+                <i class="bi bi-hand-thumbs-up bg-[#cf00bec2] rounded-full"
+                    style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body">
                     <h5 class="card-title text-center fs-3">Honestidad</h5>
-                    <p class="card-text text-center fs-4">La<strong> transparencia, sinceridad y franqueza,</strong> son
+                    <p class="card-text text-center fs-4">La<strong class="bg-[#cf00be1e]"> transparencia, sinceridad y
+                            franqueza,</strong> son
                         valores con las que cuenta Graph Evolutión</p>
                 </div>
             </div>
             <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
-                <i class="bi bi-heart-pulse"
-                    style="padding: 20px 35px; background:#cf00bec2; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; border-radius:50%; font-size: 50px;"></i>
+                <i class="bi bi-heart-pulse bg-[#cf00bec2] rounded-full"
+                    style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body">
                     <h5 class="card-title text-center fs-3">Pasión</h5>
                     <p class="card-text text-center fs-4">Disfrutamos lo que hacemos Por ello, el tener la
-                        <strong>pasión</strong> como uno de nuestro valor los resulatos de nuestro trabajo son
+                        <strong class="bg-[#cf00be21]">pasión</strong> como uno de nuestro valor los resulatos de nuestro
+                        trabajo son
                         satisfactorios para nuestros clientes.
                     </p>
                 </div>
