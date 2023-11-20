@@ -58,21 +58,8 @@ class SitioController extends Controller
 
 
 
-    //-------------------------------------------------------------------------------------------
+    //Pagina de inicio CRUD-------------------------------------------------------------------------------------------
 
-    //IDICION DE HOME
-    // public function homeIndex() {
-    //     return "Hola Mundo";
-    // }
-
-    // public function homeStore(Request $request) {
-    //     $home = new Home;
-    //     $home->title = $request->title;
-    //     $home->description = $request->description;
-    //     $home->image_file = $request->image_file;
-    //     $home->save();
-    //     return redirect()->route('admin.users')->with('message','Guardado Satisfactoriamente !');
-    // }
 
     public function homeIndex():View
     {
@@ -133,7 +120,72 @@ class SitioController extends Controller
         $home = Home::find($id);
         $home->delete();
 
-        return redirect()->route('admin.pages');
+        return redirect()->back();
     }
+
+
+
+    //SERVICES CONTROLLER --------------------------------------------------------------------
+
+    // public function servicesIndex():View {
+    //     $services = Service::all();
+    //     return view('admin.services.index', compact('services'));
+    // }
+
+    // public function servicesCreate():View {
+    //     return view('admin.services.create');
+    // }
+
+    // public function servicesStore(Request $request) {
+    //     $request->validate([
+    //         'title' => 'required',
+    //         'description' =>'required',
+    //         'price' => 'required',
+    //         'images_file' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validación de la imagen
+    //     ]);
+
+    //     if ($request->hasFile('images_file')) {
+    //         $images_file = $request->file('images_file')->store('services', 'public'); // Almacenar la imagen en el sistema de archivos
+
+    //         // Guardar la ruta de la imagen en la base de datos
+    //         $service = new Service();
+    //         $service->title = $request->title;
+    //         $service->description = $request->description;
+    //         $service->price = $request->price;
+    //         $service->images_file = $images_file;
+
+    //         $service->save();
+    //     }
+    //     return redirect()->route('admin.services.index');
+    // }
+
+
+    // public function servicesEdit($id):View {
+
+    //     $service = Service::find($id);
+    //     return view('admin.services.edit', compact('service'));
+    // }
+
+    // public function servicesUpdate(Request $request, $id) {
+    //     $service = Service::find($id);
+    //     if ($request->hasFile('image_file')) {
+    //         $image_file = $request->file('image_file')->store('services', 'public');
+    //         $service = new Service();
+    //         $service->title = $request->title;
+    //         $service->description = $request->description;
+    //         $service->price = $request->price;
+    //         $service->image_file = $image_file;
+
+    //          $service->save();
+    //      }
+
+    //     return redirect()->route('admin.services.index');
+    // }
+
+    // public function servicesDelete($id) {
+    //     $service = Service::find($id);
+    //     $service->delete();
+    //     return redirect()->back();
+    // }
 
 }

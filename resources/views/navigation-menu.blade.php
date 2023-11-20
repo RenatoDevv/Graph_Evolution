@@ -183,11 +183,11 @@
                                     <path
                                         d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514Z" />
                                 </svg>
-                                <span class="ml-5">{{ __('Home') }}</span>
+                                <span class="ml-5">{{ __('Inicio') }}</span>
                             </x-nav-link>
                         </li>
                         <li class="mt-0.5 w-full">
-                            <x-nav-link href="" :active="request()->routeIs('')">
+                            <x-nav-link href="{{ route('admin.services.index') }}" :active="request()->routeIs('admin.services.index')">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-cart-x-fill" viewBox="0 0 16 16">
                                     <path
