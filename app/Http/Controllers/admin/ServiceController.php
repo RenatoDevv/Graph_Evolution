@@ -28,7 +28,7 @@ class ServiceController extends Controller
         ]);
 
         if ($request->hasFile('images_file')) {
-            $image_file = $request->file('images_file')->store('services', 'public');
+            $images_file = $request->file('images_file')->store('services', 'public');
             $service = new Service();
         }
 

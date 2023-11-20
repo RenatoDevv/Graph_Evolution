@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\Home;
+use App\Models\Service;
 
 class HomeController extends Controller
 {
@@ -18,7 +19,8 @@ class HomeController extends Controller
 
     public function services (): View
     {
-        return view('pages.services');
+        $services = Service::all();
+        return view('pages.services', compact('services'));
     }
     public function about ():View
     {

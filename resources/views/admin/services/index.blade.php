@@ -66,7 +66,7 @@
                                     </th>
                                     <th
                                         class="pl-8 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        Options
+                                        OPCIONES
                                     </th>
                                 </tr>
                             </thead>
@@ -107,7 +107,7 @@
                                             <div class="flex gap-2">
                                                 <span
                                                     class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
-                                                    <img src="{{ asset('storage/services' . $service->images_file) }}"
+                                                    <img src="{{ asset('storage/service' . $service->images_file) }}"
                                                         alt="Imagen"
                                                         class="h-full w-full rounded-full object-cover object-center">
                                                 </span>
@@ -165,7 +165,7 @@
         <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
     </div>
 
-    {{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         Swal.fire({
             title: "Are you sure?",

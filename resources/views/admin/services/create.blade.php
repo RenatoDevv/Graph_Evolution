@@ -79,9 +79,6 @@
                                                 1300 </span>
                                             <input id="dropzone-file" name="images_file" type="file"
                                                 class="" />
-                                            @error('title')
-                                                <span>{{ $message }}</span>
-                                            @enderror
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">
