@@ -44,6 +44,27 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
+.notify_events {
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 5px 0;
+    position: sticky;
+    top: 0;
+    width: auto;
+    background: var(--color-pink);
+    z-index: 10;
+    animation: movie 5s infinite alternate;
+}
+@keyframes movie {
+    0%,100% {
+        border: 1px solid var(--color-pink);
+    }
+}
+.notify_events .mesage_events {
+    font-size: 16px;
+    text-align: center;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -54,7 +75,6 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     padding: 20px 0;
 }
-
 .header .logo a img {
     width: 150px;
 }

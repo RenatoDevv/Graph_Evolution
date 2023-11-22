@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\SitioController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\admin\MessageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -73,9 +74,17 @@ Route::middleware([
     Route::get('/admin/Services/index', [ServiceController::class, 'index'])->name('admin.services.index');
     Route::get('/admin/Services/create', [ServiceController::class, 'create'])->name('admin.services.create');
     Route::post('/admin/Services/store', [ServiceController::class, 'store'])->name('admin.services.store');
-    Route::get('/admin/Services/show', [ServiceController::class, 'show'])->name('admin.services.show');
+    Route::get('/admin/Services/show{id}', [ServiceController::class, 'show'])->name('admin.services.show');
     Route::get('/admin/Services/edit/{id}', [ServiceController::class, 'edit'])->name('admin.services.edit');
     Route::post('/admin/Services/update/{id}', [ServiceController::class, 'update'])->name('admin.services.update');
     Route::delete('/admin/Services/delete/{id}', [ServiceController::class, 'delete'])->name('admin.services.delete');
+
+
+    // MESSAGE CRUD CONTROLLER
+
+    Route::get('/admin/message', [MessageController::class, 'index'])->name('admin.message');
+    Route::get('admin/message/store', [MessageController::class, 'store'])->name('admin.message.store');
+    Route::post('/admin/message/edit/{id}', [MessageController::class, 'edit'])->name('admin.message.edit');
+    Route::delete('/admin/message/delete/{id}', [MessageController::class, 'destroy'])->name('admin.message.delete');
 });
 

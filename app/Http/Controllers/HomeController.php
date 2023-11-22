@@ -14,7 +14,8 @@ class HomeController extends Controller
     {
         // Renderizando datos desde la base de datos
         $homes = Home::all();
-        return view('index', compact('homes'));
+        $services = Service::take(4)->get();
+        return view('index', compact('homes', 'services'));
     }
 
     public function services (): View

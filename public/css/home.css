@@ -123,7 +123,22 @@
     margin-left: -120px;
 }
 .home-services {
+    /* background: #09f; */
     margin-top: 80px;
+}
+/* .home-services .services_container {
+    background: #cf00be;
+} */
+.home-services .services_container .card-services-one {
+    transition: 0.2s ease-in-out;
+}
+.home-services .services_container .card-services-one:hover {
+    scale: 1.01;
+    transition: 0.1s ease-out;
+    cursor: pointer;
+}
+.home-services .services-title {
+    font-size: 10px;
 }
 .home-services .services-title {
     font-family: Inter, sans-serif;
@@ -138,6 +153,7 @@
 .home-services .card-container .card img {
     border-radius: 10px;
 }
+
 .home-preference {
     padding: 100px 0;
     margin: 200px 0;
@@ -148,14 +164,12 @@
         margin-bottom: 150px;
     }
     .home-content .home-text .home-title {
-        font-size: 2.9rem;
     }
     .home-content .home-image {
         margin-top: -70px;
     }
     .home-services,
     .home-services .services-description {
-        margin-bottom: 50px;
     }
 }
 @media only screen and (max-width: 700px) {

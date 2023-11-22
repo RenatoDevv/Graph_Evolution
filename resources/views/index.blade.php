@@ -47,38 +47,43 @@
         {{-- <div class="ArrowFloat">
             <a href="#services"><i class="bi bi-arrow-down"></i></a>
         </div> --}}
-        <h2 class="services-title fw-bold">Servicios</h2>
+        <h2 class="services-title fw-medium">Servicios</h2>
         <p class="services-description text-center">Servicios mas destacados</p>
-        <div class="grid justify-center w-auto gap-4 sm:flex-col sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            <div
-                class="card-services-one relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
-                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
-                    <img src="{{ asset('img/services/logo_design.jpg') }}" alt="" width="100%">
-                </div>
-                <div class="p-6">
-                    <div class="mb-2 flex items-center justify-between">
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Diseño de Logos
-                        </p>
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            $95.00
+        <div
+            class="services_container grid justify-center w-auto gap-4 sm:flex-col sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+            @foreach ($services as $service)
+                <div
+                    class="card-services-one relative flex w-80 min-w-min flex-col rounded-xl bg-white text-gray-700 shadow-md h-auto overflow-hidden mt-5">
+                    <div class="relative mx-0 mt-0 h-auto overflow-hidden  bg-white bg-clip-border text-gray-700">
+                        <img src="{{ asset('storage/' . $service->images_file) }}" alt="" width="100%"
+                            class="w-80 h-56 object-cover object-center">
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-2 flex items-center justify-between">
+                            <p class="block font-sans text-base font-medium leading-relaxed text-gray-900">
+                                {{ $service->title }}
+                            </p>
+                            <p class="block font-sans text-xs font-medium leading-relaxed text-pink-500">
+                                Apx. &#83;/ {{ $service->price }}
+                            </p>
+                        </div>
+                        <p class="block font-sans text-base font-normal leading-normal text-gray-700 opacity-75">
+                            {{ Str::limit($service->description, '70') }}
+                            {{-- With plenty of talk and listen time, voice-activated Siri access, and an
+                        available wireless charging case. --}}
                         </p>
                     </div>
-                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        With plenty of talk and listen time, voice-activated Siri access, and an
-                        available wireless charging case.
-                    </p>
+                    <div class="p-6 pt-0 w-full flex items-center">
+                        <a href="{{ route('services') }}"
+                            class="w-full rounded-lg bg-gray-300 py-3  text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white">
+                            Ver Ahora
+                        </a>
+                    </div>
                 </div>
-                <div class="p-6 pt-0 w-full flex items-center">
-                    <a href="{{ route('services') }}"
-                        class="w-full rounded-lg bg-gray-300 py-3  text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white">
-                        Ver Ahora
-                    </a>
-                </div>
-            </div>
-            <div
-                class="card-services-two relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+            @endforeach
+            {{-- <div
+                class="card-services-two relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md overflow-hidden">
+                <div class="relative h-auto overflow-hidden bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/card_design.jpg') }}" alt="" width="100%">
                 </div>
                 <div class="p-6">
@@ -103,8 +108,8 @@
                 </div>
             </div>
             <div
-                class="card-services-three relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                class="card-services-three relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md overflow-hidden">
+                <div class="relative h-auto overflow-hidden bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/banner_design.jpg') }}" alt="" width="100%">
                 </div>
                 <div class="p-6">
@@ -130,8 +135,8 @@
                 </div>
             </div>
             <div
-                class="card-services-four relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div class="relative mx-4 mt-4 h-auto overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+                class="card-services-four relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md overflow-hidden">
+                <div class="relative h-auto overflow-hidden bg-white bg-clip-border text-gray-700">
                     <img src="{{ asset('img/services/camara.jpg') }}" alt="" width="100%">
                 </div>
                 <div class="p-6">
@@ -155,7 +160,7 @@
                         Ver Ahora
                     </a>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
@@ -201,16 +206,13 @@
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner w-full">
                 <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-full"
-                        alt="Graph Evolution">
+                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-full" alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-tw.jpg') }}" class="d-block w-full"
-                        alt="Graph Evolution">
+                    <img src="{{ asset('img/carrusel/pr-banner-tw.jpg') }}" class="d-block w-full" alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-tr.jpg') }}" class="d-block w-full"
-                        alt="Graph Evolution">
+                    <img src="{{ asset('img/carrusel/pr-banner-tr.jpg') }}" class="d-block w-full" alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
                     <img src="{{ asset('img/carrusel/pr-banner-fr.jpg') }}" class="d-block w-full"

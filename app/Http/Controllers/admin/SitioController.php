@@ -8,6 +8,7 @@ use Illuminate\View\View;
 use App\Models\User;
 use App\Models\Page;
 use App\Models\Home;
+use App\Models\Service;
 
 class SitioController extends Controller
 {
@@ -108,8 +109,8 @@ class SitioController extends Controller
             $home->description = $request->description;
             $home->image_file = $image_file;
 
-            $home->save();
         }
+        $home->update($request->all());
 
         return redirect()->route('admin.home.index');
     }

@@ -22,6 +22,9 @@
 </head>
 
 <body class="">
+    <div class="notify_events">
+        <p class="mesage_events">🎄🤶 Graph Evolution te desea feliz año nuevo. lore❄️🤶🎄</p>
+    </div>
     <header class="header">
         <div class="logo">
             <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
@@ -50,9 +53,8 @@
         <div class="footer-contanier">
             <div class="footer-container-box">
                 <div>
-                    <img src="{{ asset('img/logo.png') }}" alt="" width=100>
+                    <a href=""><img src="{{ asset('img/logo.png') }}" alt="" width=100></a>
                 </div>
-
                 {{-- <h2 class="footer-logo font-bold">Graph <br>Evolution</h2> --}}
                 <p class="footer-description">Transformando ideas.</p>
             </div>
@@ -76,14 +78,14 @@
             <div class="footer-container-box">
                 <p class="footer-title m-0">CONTACTO</p>
                 <ul class="d-flex gap-2 footer-socials list-none">
-                    <li><a href="" class=""><i class="bi bi-phone-fill"></i></a></li>
                     <li><a href="" class=""><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="" class=""><i class="bi bi-envelope-check-fill"></i></a></li>
-                    <li><a href="" class=""><i class="bi bi-tiktok"></i></a></li>
+                    <li><a href="" class=""><i class="bi bi-envelope-fill"></i></a></li>
+                    <li><a href="" class=""><i class="bi bi-messenger"></i></a></li>
+                    <li><a href="" class=""><i class="bi bi-whatsapp"></i></a></li>
                 </ul>
             </div>
         </div>
-        <p class="copyrigth-text m-0 p-0">Copyright © 2023 Graph Evolution. todos los derechos reservados &copy;</p>
+        <p class="copyrigth-text m-0 p-0">🌟 © 2023 Graph Evolution. todos los derechos reservados</p>
     </footer>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

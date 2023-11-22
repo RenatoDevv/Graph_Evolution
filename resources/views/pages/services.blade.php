@@ -18,37 +18,41 @@
                 </p>
             </div>
             <div class="srv-content-cards grid lg:grid-cols-3 py-4 gap-x-4 gap-y-3 justify-between sm:grid-cols-1">
-                <div class="srv-card-on flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-md  dark:shadow-none">
-                    <div class="flex items-center">
-                        <div class="">
+                @foreach ($services as $service)
+                    <div
+                        class="srv-card-on flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-md  dark:shadow-none">
+                        <div class="flex items-center">
+                            <div class="">
 
-                            <img src="{{ asset('img/services/card_services.jpg') }}" alt=""
-                                class="h-[100px] w-[100px] rounded-lg">
+                                <img src="{{ asset('storage/'. $service->images_file)  }}" alt=""
+                                    class="h-[100px] w-[100px] rounded-lg">
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-base font-medium text-navy-700 dark:text-white">
+                                    {{ $service->title }}
+                                    {{-- Impresion de Banners --}}
+                                </p>
+                                <p class="mt-2 text-sm text-gray-600">
+                                    Calidad
+                                    <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
+                                        href="{{ route('contact') }}">
+                                        Contactar Ahora
+                                    </a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="ml-4">
-                            <p class="text-base font-medium text-navy-700 dark:text-white">
-                                Impresion de Banners
-                            </p>
-                            <p class="mt-2 text-sm text-gray-600">
-                                Calidad
-                                <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                    href="{{ route('contact') }}">
-                                    Contactar Ahora
-                                </a>
-                            </p>
+                        <div class="mr-4 flex items-center justify-center text-gray-600 dark:text-white">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 5.63l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83a.996.996 0 000-1.41z">
+                                </path>
+                            </svg>
                         </div>
                     </div>
-                    <div class="mr-4 flex items-center justify-center text-gray-600 dark:text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
-                            width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path
-                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 5.63l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83a.996.996 0 000-1.41z">
-                            </path>
-                        </svg>
-                    </div>
-                </div>
-                <div
+                @endforeach
+                {{-- <div
                     class="srv-card-tw flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
@@ -138,7 +142,8 @@
                         </svg>
                     </div>
                 </div>
-                <div class="srv-card-fv flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div
+                    class="srv-card-fv flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
@@ -167,7 +172,8 @@
                         </svg>
                     </div>
                 </div>
-                <div class="srv-card-sx flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div
+                    class="srv-card-sx flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
@@ -196,7 +202,8 @@
                         </svg>
                     </div>
                 </div>
-                <div class="srv-card-sv flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div
+                    class="srv-card-sv flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
@@ -225,7 +232,8 @@
                         </svg>
                     </div>
                 </div>
-                <div class="srv-card-eg flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                <div
+                    class="srv-card-eg flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
                     <div class="flex items-center">
                         <div class="">
                             <img class="h-[100px] w-[100px] rounded-lg"
@@ -253,7 +261,7 @@
                             </path>
                         </svg>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
