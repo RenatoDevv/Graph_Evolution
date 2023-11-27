@@ -23,10 +23,15 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'name'=> 'required',
+            'message'=> 'required',
+        ]);
         $message = new Mesagge();
         $message->create($request->all());
 
-        return redirect()->route('admin.message');
+        return redirect()->route('admin.message')->with('message','El mensaje a sido guardado exitosamente');
     }
 
     /**
@@ -34,7 +39,8 @@ class MessageController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $mesagge = Mesagge::find($id);
+        return view('admin.message.index', compact('mesagge'));
     }
 
     /**
@@ -42,14 +48,19 @@ class MessageController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $mesagge = Mesagge::find($id);
+        $mesagge->update($request->all());
+        return redirect()->route('admin.message');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $mesagge = Mesagge::find($id);
+        $mesagge->delete();
+
+        return redirect()->back()->with('eliminado', 'El Mensaje a sido Eliminado Correctamente');
     }
 }

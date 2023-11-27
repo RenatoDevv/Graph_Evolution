@@ -10,7 +10,7 @@
                     <h2 class="text-gray-600 font-semibold text-2xl">Mensaje</h2>
                     <span class="text-sm">Mensajes</span>
                 </div>
-                <div class="flex items-center justify-between ">
+                <div class="flex items-center justify-between">
                     <div class="relative mt-2 rounded-md shadow-sm">
                         <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3">
                             <span class="text-gray-500 sm:text-sm">
@@ -30,10 +30,10 @@
                             placeholder="Buscar....">
                     </div>
                     <div class="lg:ml-40 ml-10 space-x-8">
-                        <a href="{{ route('admin.services.create') }}"
+                        {{-- <a href="{{ route('admin.services.create') }}"
                             class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
                             Nuevo Mensaje
-                        </a>
+                        </a> --}}
                         <button
                             class="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="button" data-ripple-light="true" data-dialog-target="web-3-dialog">
@@ -89,15 +89,17 @@
                                         </td>
                                         <td class="px-5 py-4">
                                             <div class="flex justify-start gap-4">
-                                                <a href="{{ route('admin.services.show', $service->id) }}"
+                                                <a href="{{ route('admin.message.show', $mesagge->id) }}"
+                                                    data-ripple-light="true" data-dialog-target="web-3-dialog"
                                                     class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded-md flex items-center">
+
                                                     <i class="material-icons-outlined text-base">visibility</i>
                                                 </a>
-                                                <a href="{{ route('admin.services.edit', $service->id) }}"
+                                                <a href="{{ route('admin.services.edit', $mesagge->id) }}"
                                                     class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded-md flex items-center">
                                                     <i class="material-icons-outlined text-base">edit</i>
                                                 </a>
-                                                <form action="{{ route('admin.services.delete', $service->id) }}"
+                                                <form action="{{ route('admin.message.delete', $mesagge->id) }}"
                                                     method="post">
                                                     @csrf
                                                     @method('DELETE')
@@ -133,10 +135,11 @@
                     </div>
 
                     <div data-dialog-backdrop="web-3-dialog" data-dialog-backdrop-close="true"
-                        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
-                        <div class="relative bg-white m-4 rounded-lg shadow-2xl text-blue-gray-500 antialiased font-sans text-base font-light leading-relaxed w-1/4 min-w-[25%] max-w-[25%]"
+                        class=" fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                        <div class="relative bg-white m-4 rounded-lg shadow-2xl text-blue-gray-500 font-sans text-base font-light leading-relaxed w-1/4 min-w-[25%] max-w-[25%] px-5"
                             data-dialog="web-3-dialog">
-                            <form action="">
+                            <form action="{{ route('admin.message.store') }}" method="POST">
+                                @csrf
                                 <div
                                     class="flex items-center shrink-0 p-4 text-blue-gray-900 antialiased font-sans text-2xl font-semibold leading-snug justify-between">
                                     <h5
@@ -158,9 +161,9 @@
                                     </button>
                                 </div>
                                 <div
-                                    class="relative p-4 text-blue-gray-500 antialiased font-sans text-base font-light leading-relaxed overflow-y-scroll pr-2">
+                                    class="relative p-4 text-blue-gray-500 antialiased font-sans text-base font-light leading-relaxed pr-2">
                                     <div class="mb-6">
-                                        <input type="text" name=""
+                                        <input type="text" name="name"
                                             class="block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 ring-1 ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 hover:ring-1 hover:ring-gray-300"
                                             placeholder="Nombre">
                                     </div>
@@ -171,19 +174,71 @@
                                     </div>
                                 </div>
                                 <div
-                                    class="flex items-center shrink-0 flex-wrap p-4 text-blue-gray-500 justify-between gap-2 border-t border-blue-gray-50">
+                                    class="flex items-center cursor-pointer flex-wrap p-4 text-blue-gray-500 justify-between gap-2 border-t border-blue-gray-50 ">
                                     <button
-                                        class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg text-pink-500 hover:bg-pink-500/10 active:bg-pink-500/30"
-                                        type="button" data-ripple-dark="true">
-                                        Learn More
+                                        class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:pointer-events-none text-xs py-3 px-6 rounded-lg text-pink-500 hover:bg-pink-500/10 active:bg-pink-500/30"
+                                        type="button" data-ripple-dark="true" data-dialog-close="true">
+                                        Cancelar
                                     </button>
                                     <button
-                                        class="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                        class="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none font-bold"
                                         type="submit" data-ripple-light="true" data-dialog-target="web-3-dialog">
                                         Registrar Mensaje
                                     </button>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                    <div data-dialog-backdrop="web-4-dialog" data-dialog-backdrop-close="true"
+                        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+                        <div class="relative bg-white m-4 rounded-lg shadow-2xl text-blue-gray-500 antialiased font-sans text-base font-light leading-relaxed w-1/4 min-w-[25%] max-w-[25%]"
+                            data-dialog="web-4-dialog">
+                            <div
+                                class="flex items-center shrink-0 p-4 text-blue-gray-900 antialiased font-sans text-2xl font-semibold leading-snug justify-between">
+                                <h5
+                                    class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-blue-gray-900">
+                                    Mostrando Datos del Mensaje
+                                </h5>
+                                <button
+                                    class="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-8 max-w-[32px] h-8 max-h-[32px] rounded-lg text-xs text-blue-gray-500 hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30"
+                                    type="button" data-ripple-dark="true" data-dialog-close="true">
+                                    <span
+                                        class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor" aria-hidden="true"
+                                            class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div
+                                class="relative p-4 text-blue-gray-500 antialiased font-sans text-base font-light leading-relaxed overflow-y-scroll pr-2">
+                                <div class="mb-6">
+                                    <input type="text" name="name"
+                                        class="block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 ring-1 ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 hover:ring-1 hover:ring-gray-300"
+                                        placeholder="Nombre">
+                                </div>
+                                <div>
+                                    <input type="text" name="message"
+                                        class="block w-full rounded-md border-0 py-1.5 pl-10 pr-20 text-gray-900 ring-1 ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 hover:ring-1 hover:ring-gray-300 mb-6"
+                                        placeholder="Descripcion">
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center shrink-0 flex-wrap p-4 text-blue-gray-500 justify-between gap-2 border-t border-blue-gray-50">
+                                <button
+                                    class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg text-pink-500 hover:bg-pink-500/10 active:bg-pink-500/30"
+                                    type="button" data-ripple-dark="true">
+                                    Learn More
+                                </button>
+                                <button
+                                    class="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                    type="submit" data-ripple-light="true" data-dialog-target="web-4-dialog">
+                                    Salir
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,23 +253,42 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
 
+    @if (session('message'))
+        <script>
+            Swal.fire({
+                title: "Registrado!",
+                text: "{{ session('message') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
+
+    @if (session('eliminado'))
+        <script>
+            Swal.fire({
+                title: "Eliminado!",
+                text: "{{ session('eliminado') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
     <script>
         // Swal.fire({
-        //     title: "Are you sure?",
-        //     text: "You won't be able to revert this!",
-        //     icon: "warning",
-        //     showCancelButton: true,
-        //     confirmButtonColor: "#3085d6",
-        //     cancelButtonColor: "#d33",
-        //     confirmButtonText: "Yes, delete it!"
+        // title: "Are you sure?",
+        // text: "You won't be able to revert this!",
+        // icon: "warning",
+        // showCancelButton: true,
+        // confirmButtonColor: "#3085d6",
+        // cancelButtonColor: "#d33",
+        // confirmButtonText: "Yes, delete it!"
         // }).then((result) => {
-        //     if (result.isConfirmed) {
-        //         Swal.fire({
-        //             title: "Deleted!",
-        //             text: "Your file has been deleted.",
-        //             icon: "success"
-        //         });
-        //     }
+        // if (result.isConfirmed) {
+        // Swal.fire({
+        // title: "Deleted!",
+        // text: "Your file has been deleted.",
+        // icon: "success"
+        // });
+        // }
         // });
     </script>
 </x-app-layout>

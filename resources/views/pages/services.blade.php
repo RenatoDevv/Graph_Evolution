@@ -17,38 +17,26 @@
                     engaged by providing meaningful information.
                 </p>
             </div>
-            <div class="srv-content-cards grid lg:grid-cols-3 py-4 gap-x-4 gap-y-3 justify-between sm:grid-cols-1">
+            <div class="srv-content-cards flex flex-wrap gap-5 justify-center m-auto">
                 @foreach ($services as $service)
-                    <div
-                        class="srv-card-on flex w-full items-center justify-between rounded-2xl bg-white p-2 shadow-md  dark:shadow-none">
-                        <div class="flex items-center">
-                            <div class="">
+                    <div class="bg-white rounded-lg border p-1 pb-4 w-72 srv-card-tw">
+                        <img src="{{ asset('storage/' . $service->images_file) }}" alt="Placeholder Image"
+                            class="w-full h-48 rounded-md object-cover">
+                        <div class="px-3 py-1">
+                            <div class=" flex justify-between items-center">
+                                <p class="font-bold text-xl mb-2 text-gray-700">{{ $service->title }}</p>
+                                <p class="text-green-500 font-semibold text-sm">{{ $service->price }}</p>
+                            </div>
+                            <p class="text-gray-600 text-base">
+                                This is a simple blog card example using Tailwind CSS. You can replace this text with your
+                                own
+                                blog content.
+                            </p>
 
-                                <img src="{{ asset('storage/'. $service->images_file)  }}" alt=""
-                                    class="h-[100px] w-[100px] rounded-lg">
-                            </div>
-                            <div class="ml-4">
-                                <p class="text-base font-medium text-navy-700 dark:text-white">
-                                    {{ $service->title }}
-                                    {{-- Impresion de Banners --}}
-                                </p>
-                                <p class="mt-2 text-sm text-gray-600">
-                                    Calidad
-                                    <a class="ml-1 font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                                        href="{{ route('contact') }}">
-                                        Contactar Ahora
-                                    </a>
-                                </p>
-                            </div>
                         </div>
-                        <div class="mr-4 flex items-center justify-center text-gray-600 dark:text-white">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path
-                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 5.63l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83a.996.996 0 000-1.41z">
-                                </path>
-                            </svg>
+                        <div class="px-3 py-2">
+                            <a href="https://wa.link/caodrd" target="_blank"
+                                class="text-sky-500 text-lg hover:bg-sky-500 hover:text-gray-200 rounded border-2 border-sky-500 font-bold py-1 px-3">Contactar</a>
                         </div>
                     </div>
                 @endforeach

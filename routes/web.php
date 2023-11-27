@@ -83,7 +83,8 @@ Route::middleware([
     // MESSAGE CRUD CONTROLLER
 
     Route::get('/admin/message', [MessageController::class, 'index'])->name('admin.message');
-    Route::get('admin/message/store', [MessageController::class, 'store'])->name('admin.message.store');
+    Route::post('admin/message/store', [MessageController::class, 'store'])->name('admin.message.store');
+    Route::get('admin/message/show', [MessageController::class, 'show'])->name('admin.message.show');
     Route::post('/admin/message/edit/{id}', [MessageController::class, 'edit'])->name('admin.message.edit');
     Route::delete('/admin/message/delete/{id}', [MessageController::class, 'destroy'])->name('admin.message.delete');
 });

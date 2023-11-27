@@ -5,7 +5,13 @@
 const effect = ScrollReveal({
     distance: "100px",
     duration: 3000,
-    delay: 300,
+    delay: 200,
+    reset: true,
+});
+const effectE = ScrollReveal({
+    distance: "300px",
+    duration: 1000,
+    delay: 200,
     reset: true,
 });
 const effectM = ScrollReveal({
@@ -15,21 +21,21 @@ const effectM = ScrollReveal({
     reset: true,
 });
 
-effect.reveal(".home-title", {
-    delay: 200,
-    origin: "left",
-});
-effect.reveal(".home-description", {
-    delay: 200,
-    origin: "left",
-});
-effect.reveal(".home-link", {
+effectE.reveal(".home-title", {
     delay: 200,
     origin: "bottom",
 });
-effectM.reveal(".home-image", {
+effectE.reveal(".home-description", {
     delay: 200,
-    origin: "right",
+    origin: "bottom",
+});
+effectE.reveal(".home-link", {
+    delay: 200,
+    origin: "bottom",
+});
+effectE.reveal(".home-image", {
+    delay: 200,
+    origin: "top",
 });
 
 // ----------------------

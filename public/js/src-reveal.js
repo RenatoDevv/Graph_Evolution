@@ -8,7 +8,7 @@ const effectM = ScrollReveal({
     distance: "20px",
     duration: 2000,
     delay: 300,
-    reset: false,
+    reset: true,
 });
 
 effect.reveal(".services-title", {
@@ -23,35 +23,8 @@ effect.reveal(".services-description", {
     delay: 200,
     origin: "top",
 });
-effect.reveal(".srv-card-on", {
-    delay: 200,
-    origin: "right",
-});
-effect.reveal(".srv-card-tw", {
-    delay: 200,
-    origin: "right",
-});
-effect.reveal(".srv-card-tr", {
-    delay: 200,
-    origin: "right",
-});
-effect.reveal(".srv-card-fr", {
-    delay: 200,
-    origin: "right",
-});
-effect.reveal(".srv-card-fv", {
-    delay: 200,
-    origin: "right",
-});
-effect.reveal(".srv-card-sx", {
-    delay: 200,
-    origin: "right",
-});
-effect.reveal(".srv-card-sv", {
-    delay: 200,
-    origin: "right",
-});
-effect.reveal(".srv-card-eg", {
-    delay: 200,
-    origin: "right",
+
+effectM.reveal(".srv-card-tw", {
+    delay: 100,
+    origin: "left",
 });

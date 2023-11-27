@@ -29,7 +29,7 @@
                 <i class="bi bi-facebook text-sky-500"></i>
                 {{-- <h2>Facebook</h2> --}}
                 <p class="text-center">Visite nuestra pagian de Facebook para enterarse de novedades.</p>
-                <a href="https://facebook.com" class="btn button-message  p-2 w-100">Ver Ahora </a>
+                <a href="https://facebook.com" target="_blank" class="btn button-message  p-2 w-100">Ver Ahora </a>
             </div>
             <div class="card-socials social-four d-flex flex-column align-items-center gap-3 bg-transparent">
                 <i class="bi bi-geo-alt-fill text-green-600"></i>

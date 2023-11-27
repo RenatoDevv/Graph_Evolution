@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\Home;
 use App\Models\Service;
+use App\Models\Mesagge;
 
 class HomeController extends Controller
 {

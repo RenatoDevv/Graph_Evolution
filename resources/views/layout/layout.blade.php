@@ -23,7 +23,7 @@
 
 <body class="">
     <div class="notify_events">
-        <p class="mesage_events">🎄🤶 Graph Evolution te desea feliz año nuevo. lore❄️🤶🎄</p>
+        <p class="mesage_events">🎄🤶 G E❄️🤶🎄</p>
     </div>
     <header class="header">
         <div class="logo">

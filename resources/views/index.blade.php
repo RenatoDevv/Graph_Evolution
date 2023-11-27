@@ -1,5 +1,5 @@
 @extends('layout.layout')
-@section('title', 'Inicio')
+
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
@@ -14,7 +14,8 @@
             </div>
         @endforeach
         <div class="home-image">
-            <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen" class="w-full object-cover object-center">
+            <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen"
+                class="hero_img w-full object-cover object-center">
         </div>
     </section>
     <div class="ArrowFloat">
@@ -39,7 +40,6 @@
             <div class="card-four p-2 rounded-lg w-80">
                 <img src="{{ asset('img/services/home_design.jpg') }}" alt="" width="100%">
             </div>
-
         </article>
     </section>
 
@@ -164,35 +164,43 @@
         </div>
     </section>
 
-    <section class="home-preference  d-flex flex-column align-items-center">
+    <section class="delay_section">
+        <img src="{{ asset('img/graph_evolution_h_i.jpg')}}" alt="" class="object-cover delay_image">
+    </section>
+    <section class="home-preference  d-flex flex-column items-center">
         <h2 class="pref-title mb-5 fs-1 fw-bold mt-5 text-[#cf00be]">Porque elegirnos?</h2>
-        <div class="pref-content d-flex justify-content-center gap-5 w-75 flex-wrap mt-5">
-            <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
+        <div class="pref-content flex justify-center gap-10 w-full flex-wrap mt-5">
+            <div class="card_pref_blur flex flex-col items-center w-80 rounded-lg p-3">
                 <i class="bi bi-trophy bg-[#cf00bec2] rounded-full "
                     style="padding: 20px 35px; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
-                <div class="card-body">
-                    <h5 class="card-title text-center fs-3">Calidad</h5>
-                    <p class="card-text text-center fs-4">Vivimos en un mundo donde todos dicen que tienen los mejores
+                <div class="card-body mt-3">
+                    <h5 class="card-title text-center fs-3 font-bold text-[#bf93ec]">Calidad</h5>
+                    <p class="text-gray-400 text-center fs-4">Vivimos en un mundo donde todos dicen que tienen los
+                        mejores
                         productos del mercado. Pero una cosa es afirmarlo y la otra es garantizarlo</p>
                 </div>
             </div>
-            <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
+            <div class="card_pref_blur flex flex-col items-center w-80 rounded-lg p-3">
                 <i class="bi bi-hand-thumbs-up bg-[#cf00bec2] rounded-full"
                     style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
-                <div class="card-body">
-                    <h5 class="card-title text-center fs-3">Honestidad</h5>
-                    <p class="card-text text-center fs-4">La<strong class="bg-[#cf00be1e]"> transparencia, sinceridad y
+                <div class="card-body mt-3">
+                    <h5 class="card-title text-center fs-3 font-bold text-[#bf93ec]">Honestidad</h5>
+                    <p class="text-gray-400 text-center fs-4">La<strong class="bg-[#bf93ec] text-gray-900">
+                            transparencia,
+                            sinceridad y
                             franqueza,</strong> son
                         valores con las que cuenta Graph Evolutión</p>
                 </div>
             </div>
-            <div class="card d-flex flex-column align-items-center pt-4 bg-transparent" style="width: 23rem;">
+            <div class="card_pref_blur flex flex-col items-center w-80 rounded-lg p-3">
                 <i class="bi bi-heart-pulse bg-[#cf00bec2] rounded-full"
                     style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
-                <div class="card-body">
-                    <h5 class="card-title text-center fs-3">Pasión</h5>
-                    <p class="card-text text-center fs-4">Disfrutamos lo que hacemos Por ello, el tener la
-                        <strong class="bg-[#cf00be21]">pasión</strong> como uno de nuestro valor los resulatos de nuestro
+                <div class="card-body mt-3">
+                    <h5 class="card-title text-center fs-3 font-bold text-[#bf93ec]">Pasión</h5>
+                    <p class="text-gray-400 text-center fs-4">Disfrutamos lo que hacemos Por ello, el tener la
+                        <strong class="bg-[#bf93ec] text-gray-900">pasión</strong> como uno de nuestro valor los
+                        resulatos de
+                        nuestro
                         trabajo son
                         satisfactorios para nuestros clientes.
                     </p>
@@ -231,11 +239,7 @@
             </button>
         </div>
     </section>
-
-
 @endsection
 @section('scripts')
     <script src="{{ asset('js/hm-reveal.js') }}"></script>
-
-
 @endsection

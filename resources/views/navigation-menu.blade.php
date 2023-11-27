@@ -130,7 +130,7 @@
                 <hr class="h-19 bg-white">
                 <!-- Navigation Links -->
                 <div class="flex-col items-center justify-between overflow-auto grow w-full h-auto">
-                    <ul class="flex flex-col p-0 text-white px-2 w-full gap-3 mb-60">
+                    <ul class="flex flex-col p-0 text-white px-2 w-full gap-3 mb-40">
                         <li class="w-auto mt-4 ml-5">
                             <h4
                                 class=" text-white font-bold leading-tight uppercase dark:text-white text-sm opacity-80">
