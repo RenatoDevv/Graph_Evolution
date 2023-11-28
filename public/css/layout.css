@@ -10,12 +10,13 @@
     --primary-color-text: #fff;
     --navlink-text-color: #cf00be;
     --navlink-text-hoverC: #ffffff;
-    --font-link-text: 1.25rem;
-    --font-title-text: 4.063rem;
+    --font-link-text: 1rem;
+    --font-title-text: 3.5rem;
     /*65px*/
     --font-subtitle-text: 3.125rem;
     /*50px*/
-    --font-description-text: 1.563rem;
+    --font-body:1rem;
+    --font-description-text: 1.5rem;
     /*25*/
     --corner-radius-buttom: 1.563rem;
     --animation-hover-buttom: 0.3s ease;
@@ -30,7 +31,7 @@ body {
     padding: 0 9.375rem;
     display: flex;
     flex-direction: column;
-    font-size: var(--font-description-text);
+    font-size: var(--font-body);
     font-weight: 400;
     color: var(--color-white);
 }
@@ -45,17 +46,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .notify_events {
-    width: 100%;
-    padding: 10px 0 5px 0;
+    background-image: url("https://cdn.pixabay.com/photo/2022/12/14/19/54/christmas-7656133_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4px 0;
     position: sticky;
     top: 0;
     width: auto;
-    background: #cf00bed0;
     z-index: 10;
+    margin: 10px 0;
+    transition: 0.5s ease-in-out;
 }
 
 .notify_events .mesage_events {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -63,14 +68,19 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 40px 0;
+    height: 39px;
     color: #fff;
     padding: 0 100px;
     align-items: center;
-    padding: 20px 0;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.header .logo {
+    width: 5rem;
 }
 .header .logo a img {
-    width: 150px;
+    max-width: 100%;
+    width: auto;
 }
 
 .header .navigation {
@@ -153,22 +163,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footer .footer-contanier .footer-container-box {
+
 }
 
 .footer .footer-contanier .footer-container-box .footer-logo {
 }
 
 .footer .footer-contanier .footer-container-box .footer-description {
+    margin-top: 10px;
 }
 
 .footer .footer-contanier .footer-container-box .footer-title {
+    font-size: 1.2rem;
     color: #e76800;
-    font-weight: 500;
+    font-weight: bold;
 }
 .footer .footer-contanier .footer-container-box ul li a {
     text-decoration: none;
     color: var(--color-white);
-    font-size: 17px;
 }
 
 .footer .footer-contanier .footer-container-box ul li a:hover {

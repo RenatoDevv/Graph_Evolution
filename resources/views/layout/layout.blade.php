@@ -23,7 +23,7 @@
 
 <body class="">
     <div class="notify_events">
-        <p class="mesage_events">🎄🤶 G E❄️🤶🎄</p>
+        <p class="mesage_events">🎄🤶 G e o oo lorem❄️🤶🎄</p>
     </div>
     <header class="header">
         <div class="logo">
@@ -59,7 +59,7 @@
                 <p class="footer-description">Transformando ideas.</p>
             </div>
             <div class="footer-container-box">
-                <p class="footer-title m-0">SERVICIOS</p>
+                <p class="footer-title m-0">Servicios</p>
                 <ul>
                     <li><a href="{{ route('services') }}">Diseño Logo</a></li>
                     <li><a href="{{ route('services') }}">Banner</a></li>
@@ -67,7 +67,7 @@
                 </ul>
             </div>
             <div class="footer-container-box">
-                <p class="footer-title m-0">EMPRESA</p>
+                <p class="footer-title m-0">Empresa</p>
                 <ul>
                     <li><a href="{{ route('about') }}">Nosotros</a></li>
                     <li><a href="{{ route('services') }}">Servicios</a></li>
@@ -76,16 +76,15 @@
                 </ul>
             </div>
             <div class="footer-container-box">
-                <p class="footer-title m-0">CONTACTO</p>
+                <p class="footer-title m-0">Contacto</p>
                 <ul class="d-flex gap-2 footer-socials list-none">
                     <li><a href="" class=""><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="" class=""><i class="bi bi-envelope-fill"></i></a></li>
-                    <li><a href="" class=""><i class="bi bi-messenger"></i></a></li>
+
                     <li><a href="" class=""><i class="bi bi-whatsapp"></i></a></li>
                 </ul>
             </div>
         </div>
-        <p class="copyrigth-text m-0 p-0">🌟 © 2023 Graph Evolution. todos los derechos reservados</p>
+        <p class="copyrigth-text m-0 p-0 text-gray-300"> © 2023 Graph Evolution 🌟</p>
     </footer>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

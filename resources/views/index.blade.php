@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 @section('content')
-    <section class="home-content w-100 d-flex">
+    <section class="home-content w-100 flex justify-between items-center">
         @foreach ($homes as $home)
             <div class="home-text d-flex flex-column gap-2">
                 <h2 class="home-title fw-bold">{{ $home->title }}</h2>
@@ -13,9 +13,9 @@
                 <a href="{{ route('services') }}" class="home-link text-start text-decoration-none fw-medium">Conocer más</a>
             </div>
         @endforeach
-        <div class="home-image">
+        <div class="home-image flex rounded-xl">
             <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen"
-                class="hero_img w-full object-cover object-center">
+                class="hero_img object-cover object-center m-auto rounded-3xl" loading="lazy">
         </div>
     </section>
     <div class="ArrowFloat">
@@ -23,12 +23,13 @@
     </div>
     <section class="home-about">
         <article class="home-about-text w-2/5">
-            <h2 class="font-bold">El diseño es el arte de combinar la creatividad y la tecnología para comunicar ideas.</h2>
+            <h2 class="font-bold text-5xl">El diseño es el arte de combinar la creatividad y la tecnología para comunicar
+                ideas.</h2>
             <p></p>
-            <a href="" class="px-10 py-2 bg-[#cf00be] rounded-full">Conocer más</a>
+            <a href="#services" class="px-10 py-2 bg-[#cf00be] rounded-full">Conocer más</a>
         </article>
         <article class="home-about-cards w-1/2">
-            <div class="card-one p-2 rounded-lg grid-col w-72">
+            <div class="card-one p-2 rounded-lg w-72">
                 <img src="{{ asset('img/about/camara.jpg') }}" alt="" width="100%">
             </div>
             <div class="card-two p-2 rounded-lg  w-96 h-auto">
@@ -44,17 +45,14 @@
     </section>
 
     <section class="home-services d-flex flex-column align-items-center" id="services">
-        {{-- <div class="ArrowFloat">
-            <a href="#services"><i class="bi bi-arrow-down"></i></a>
-        </div> --}}
         <h2 class="services-title fw-medium">Servicios</h2>
         <p class="services-description text-center">Servicios mas destacados</p>
         <div
-            class="services_container grid justify-center w-auto gap-4 sm:flex-col sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+            class="services_container flex flex-wrap justify-center items-end w-auto gap-4 sm:items-center sm:justify-center md:justify-center ">
             @foreach ($services as $service)
                 <div
-                    class="card-services-one relative flex w-80 min-w-min flex-col rounded-xl bg-white text-gray-700 shadow-md h-auto overflow-hidden mt-5">
-                    <div class="relative mx-0 mt-0 h-auto overflow-hidden  bg-white bg-clip-border text-gray-700">
+                    class="card-services-one relative flex w-80 min-w-min flex-col rounded-xl bg-white text-gray-700 shadow-md h-auto overflow-hidden">
+                    <div class="relative m-auto h-auto overflow-hidden  bg-white bg-clip-border text-gray-700">
                         <img src="{{ asset('storage/' . $service->images_file) }}" alt="" width="100%"
                             class="w-80 h-56 object-cover object-center">
                     </div>
@@ -165,8 +163,17 @@
     </section>
 
     <section class="delay_section">
-        <img src="{{ asset('img/graph_evolution_h_i.jpg')}}" alt="" class="object-cover delay_image">
+        <img src="{{ asset('img/graph_evolution_h_i.jpg') }}" alt="" class="object-cover w-full delay_image">
+        <div class="delay_text_cont">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quia corporis qui, nobis pariatur
+                perspiciatis libero beatae nostrum eligendi fuga totam dolore repudiandae labore officia unde doloribus
+                numquam, officiis possimus.</p>
+        </div>
+        <div class="delay_text_intro">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident dignissimos sequi, nihil sint ratione iure vitae perferendis, fugit maxime excepturi dolorum voluptatibus quisquam? Non possimus fuga repellat amet veniam pariatur.</p>
+        </div>
     </section>
+
     <section class="home-preference  d-flex flex-column items-center">
         <h2 class="pref-title mb-5 fs-1 fw-bold mt-5 text-[#cf00be]">Porque elegirnos?</h2>
         <div class="pref-content flex justify-center gap-10 w-full flex-wrap mt-5">
@@ -209,18 +216,18 @@
         </div>
     </section>
 
-    <section class="w-full">
-
+    <section class="">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner w-full">
                 <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-full" alt="Graph Evolution">
+                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-auto" alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
                     <img src="{{ asset('img/carrusel/pr-banner-tw.jpg') }}" class="d-block w-full" alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-tr.jpg') }}" class="d-block w-full" alt="Graph Evolution">
+                    <img src="{{ asset('img/carrusel/pr-banner-tr.jpg') }}" class="d-block w-full"
+                        alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
                     <img src="{{ asset('img/carrusel/pr-banner-fr.jpg') }}" class="d-block w-full"
