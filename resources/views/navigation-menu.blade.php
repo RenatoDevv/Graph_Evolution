@@ -1,6 +1,7 @@
-<nav x-data="{ open: false }" class="bg-[#313a46] border-gray-100 w-80 lg:block min-[400px]:hidden sm:hidden md:hidden ">
+<nav x-data="{ open: false }"
+    class="bg-[#313a46] h-screen  border-gray-100 w-80 lg:block lg:overflow-hidden min-[400px]:hidden sm:hidden md:hidden sticky top-0">
     <!-- Primary Navigation Menu -->
-    <div class="mx-auto  h-screen  sticky top-0">
+    <div class="mx-auto   sticky top-0">
         <div class="h-screen ">
             <div class="flex flex-col items-start gap-0 pt-6">
                 <!-- Logo -->
@@ -129,8 +130,8 @@
 
                 <hr class="h-19 bg-white">
                 <!-- Navigation Links -->
-                <div class="flex-col items-center justify-between overflow-auto grow w-full h-auto">
-                    <ul class="flex flex-col p-0 text-white px-2 w-full gap-3 mb-40">
+                <div class="flex-col items-center justify-between grow w-full h-auto">
+                    <ul class="flex flex-col p-0 text-white px-2 w-full gap-2 mb-auto">
                         <li class="w-auto mt-4 ml-5">
                             <h4
                                 class=" text-white font-bold leading-tight uppercase dark:text-white text-sm opacity-80">
@@ -207,7 +208,7 @@
                             </x-nav-link>
                         </li>
                         <li class="mt-0.5 w-full">
-                            <x-nav-link href="" :active="request()->routeIs('')">
+                            <x-nav-link href="#" :active="request()->routeIs('')">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-building-fill-check" viewBox="0 0 16 16">
                                     <path
@@ -222,10 +223,10 @@
 
                         </li>
                     </ul>
-                    <ul class="flex flex-col mb-0 p-3 text-white px-6 w-full gap-3 float-bottom">
+                    <ul class="flex flex-col mb-0 p-3 text-white px-6 w-full gap-2">
                         <form method="POST" action="{{ route('logout') }}" x-data>
                             @csrf
-                            <a class="py-2 text-base m-auto flex items-center justify-center w-full rounded-lg bg-sky-500/75 hover:bg-sky-500/70 dark:opacity-80  dark:text-white"
+                            <a class="py-2 text-base m-auto flex items-center justify-center w-full rounded-lg bg-sky-500/75 hover:bg-sky-500/70 dark:opacity-80  dark:text-white float-right"
                                 href="{{ route('logout') }}" @click.prevent="$root.submit();">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">

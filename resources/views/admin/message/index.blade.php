@@ -84,7 +84,7 @@
                                         <td class="px-5 py-4">
                                             <span
                                                 class="inline-flex items-center gap-1 rounded-full px-2 py-1 text-sm font-medium ">
-                                                {!! Str::limit($mesagge->description, 30) !!}
+                                                {!! Str::limit($mesagge->message, 30) !!}
                                             </span>
                                         </td>
                                         <td class="px-5 py-4">

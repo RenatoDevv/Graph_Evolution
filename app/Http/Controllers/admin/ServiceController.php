@@ -56,12 +56,14 @@ class ServiceController extends Controller
         $service = Service::find($id);
 
         if ($request->hasFile('images_file')) {
-
             $images_file = $request->file('images_file')->store('services', 'public');
-            $service->images_file = $images_file;
-        }
 
-        $service->update($request->all());
+            $service->title = $request->title;
+            $service->description = $request->description;
+            $service->price = $request->price;
+            $service->images_file = $images_file;
+            $service->save();
+        }
 
         return redirect()->route('admin.services.index');
     }

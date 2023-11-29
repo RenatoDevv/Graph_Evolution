@@ -29,10 +29,7 @@
                             </span>
                         </summary>
                         <p class="text-neutral-400 mt-3 group-open:animate-fadeIn transition">
-                            We offers a variety of billing options, including monthly and annual subscription plans,
-                            as well as pay-as-you-go pricing for certain services. Payment is typically made through a
-                            credit
-                            card or other secure online payment method.
+                            Pronto estara disponible las respuestas de las preguntas.
                         </p>
                     </details>
                 </div>
@@ -49,13 +46,7 @@
                             </span>
                         </summary>
                         <p class="text-neutral-400 mt-3 group-open:animate-fadeIn">
-                            We offers a 30-day money-back guarantee for most of its subscription plans. If you are not
-                            satisfied with your subscription within the first 30 days, you can request a full refund.
-                            Refunds
-                            for subscriptions that have been active for longer than 30 days may be considered on a
-                            case-by-case
-                            basis.
-                        </p>
+                            Pronto estara disponible las respuestas de las preguntas.
                     </details>
                 </div>
                 <div class="py-5">
@@ -71,12 +62,7 @@
                             </span>
                         </summary>
                         <p class="text-neutral-400 mt-3 group-open:animate-fadeIn">
-                            We offers a 30-day money-back guarantee for most of its subscription plans. If you are not
-                            satisfied with your subscription within the first 30 days, you can request a full refund.
-                            Refunds
-                            for subscriptions that have been active for longer than 30 days may be considered on a
-                            case-by-case
-                            basis.
+                            Pronto estara disponible las respuestas de las preguntas.
                         </p>
                     </details>
                 </div>

@@ -21,9 +21,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="">
+<body class="mx-auto">
     <div class="notify_events">
-        <p class="mesage_events">🎄🤶 G e o oo lorem❄️🤶🎄</p>
+        <p class="mesage_events">🎄🤶 ❄️🤶🎄</p>
     </div>
     <header class="header">
         <div class="logo">

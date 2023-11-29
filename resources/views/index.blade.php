@@ -170,7 +170,9 @@
                 numquam, officiis possimus.</p>
         </div>
         <div class="delay_text_intro">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident dignissimos sequi, nihil sint ratione iure vitae perferendis, fugit maxime excepturi dolorum voluptatibus quisquam? Non possimus fuga repellat amet veniam pariatur.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident dignissimos sequi, nihil sint ratione
+                iure vitae perferendis, fugit maxime excepturi dolorum voluptatibus quisquam? Non possimus fuga repellat
+                amet veniam pariatur.</p>
         </div>
     </section>
 

@@ -15,7 +15,7 @@
     /*65px*/
     --font-subtitle-text: 3.125rem;
     /*50px*/
-    --font-body:1rem;
+    --font-body: 1rem;
     --font-description-text: 1.5rem;
     /*25*/
     --corner-radius-buttom: 1.563rem;
@@ -70,7 +70,6 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 39px;
     color: #fff;
-    padding: 0 100px;
     align-items: center;
     padding-top: 10px;
     margin-bottom: 20px;
@@ -163,7 +162,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footer .footer-contanier .footer-container-box {
-
 }
 
 .footer .footer-contanier .footer-container-box .footer-logo {
@@ -198,8 +196,6 @@ body::-webkit-scrollbar-thumb {
         padding: 0 3.125rem;
         /* 50px */
     }
-    /* CONTENT STYLES*/
-    /* FOOTER STYLES*/
     .contact-content .contact-presentation .contactP-title {
         font-size: 50px;
     }
@@ -242,6 +238,8 @@ body::-webkit-scrollbar-thumb {
     }
     .header {
         position: relative;
+        padding: 0 ;
+
     }
     .header .navigation {
         background: #353535d5;
