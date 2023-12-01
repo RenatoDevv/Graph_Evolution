@@ -1,20 +1,24 @@
 .home-content {
-    padding: var(--padding-int);
-    width: 100%;
+    /* padding: var(--padding-int);
+    width: 100%; */
     height: 80vh;
 }
+
 .home-content .home-text {
     align-items: flex-start;
     justify-content: flex-end;
     width: 800px;
     margin-right: 100px;
 }
+
 .home-content .home-text .home-title {
     font-size: var(--font-title-text);
 }
+
 .home-content .home-text .home-description {
     font-size: var(--font-description-text);
 }
+
 .home-content .home-text .home-link {
     border-radius: var(--corner-radius-buttom);
     background: var(--navlink-text-color);
@@ -22,14 +26,17 @@
     font-size: var(--font-link-text);
     padding: 8px 20px;
 }
+
 .home-content .home-link:hover {
     opacity: 0.9;
     box-shadow: var(--shadow-color-buttom);
 }
+
 .home-content .home-image {
     width: 30%;
     filter: drop-shadow(0 10px 50px rgba(202, 7, 143, 0.644));
 }
+
 .home-content .home-image .hero_img {
     width: 100%;
     transition-delay: 0.5s;
@@ -39,25 +46,31 @@
 }
 
 @keyframes movie {
+
     0%,
     100% {
         transition-delay: 0.5s;
         clip-path: polygon(2% 0%, 0% 99%, 99% 99%, 100% 2%);
     }
+
     25% {
         clip-path: polygon(7% 37%, 81% 12%, 89% 79%, 41% 88%);
     }
+
     50% {
         transition-delay: 0.8s;
         clip-path: polygon(12% 12%, 88% 69%, 31% 95%, 9% 65%);
     }
+
     75% {
         clip-path: polygon(27% 86%, 7% 26%, 86% 16%, 58% 88%);
     }
+
     100% {
         clip-path: polygon(27% 88%, 91% 83%, 87% 13%, 3% 54%);
     }
 }
+
 .ArrowFloat {
     margin: 0 auto 100px;
     background: #cf00be;
@@ -72,31 +85,41 @@
     transition: 0.3s ease-in-out;
     animation: 1s ease-in-out infinite 3s floatin;
 }
+
 .ArrowFloat:hover {
     box-shadow: 0 0 0 10px #cf00be94, 0 0 50px #cf00be70, 0 0 100px #cf00be70;
 }
+
 .ArrowFloat a {
     text-decoration: none;
     color: #fff;
 }
+
 .ArrowFloat a i {
     font-size: 30px;
     font-weight: 700;
 }
+
 @keyframes floatin {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
 }
+
 .home-about {
+    background: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(98, 19, 255, 0.01) 85.72%), #13111C;
     width: 100%;
     display: flex;
     margin: 200px 0;
+    margin: auto;
 }
+
 .home-about .home-about-text {
     margin: auto;
     display: flex;
@@ -104,35 +127,43 @@
     align-items: start;
     gap: 20px;
 }
+
 .home-about .home-about-cards {
     display: grid;
     grid-template-columns: auto auto;
 }
+
 .home-about .home-about-cards img {
     border-radius: 10px;
     transition: 0.4s ease-in-out;
 }
+
 .home-about .home-about-cards img:hover {
     box-shadow: 0 0 0 2px #ffffff4b, 0 0 0 10px #ffffff15, 0 0 0 15px #ffffff13;
     transform: scale(1.2);
     transition: 0.5s ease-in-out;
     z-index: 50;
 }
+
 .home-about .home-about-cards .card-one {
     margin-top: -40px;
     margin-right: -200px;
 }
+
 .home-about .home-about-cards .card-one:hover {
     animation: none;
 }
+
 .home-about .home-about-cards .card-two {
     margin-bottom: 50px;
     margin-left: -100px;
     z-index: 10;
 }
+
 .home-about .home-about-cards .card-three {
     margin-top: -150px;
 }
+
 .home-about .home-about-cards .card-four {
     margin-top: -100px;
     margin-left: -120px;
@@ -141,30 +172,37 @@
 .home-services {
     margin-top: 80px;
 }
+
 .home-services .services-description {
     margin-bottom: 50px;
 }
+
 .home-services .services_container .card-services-one {
     transition: 0.3s all;
 }
+
 .home-services .services_container .card-services-one:hover {
     scale: 1.05;
     transition: 0.3s all;
     cursor: pointer;
 }
+
 .home-services .services-title {
     font-size: 2.5;
 }
+
 .home-services .services-title {
     font-family: Inter, sans-serif;
     font-size: var(--font-subtitle-text);
     color: #cf00be;
 }
+
 .home-services .card-container .card {
     border-radius: 10px;
     border: 1px solid #cf00be93;
     box-shadow: 0 8px 24px #cf00be25;
 }
+
 .home-services .card-container .card img {
     border-radius: 10px;
 }
@@ -185,6 +223,7 @@
     perspective: 500px;
     transform: rotate(0deg) perspective(100px) rotateX(14deg);
 }
+
 .delay_section .delay_text_cont {
     background: #0099ff4f;
     border-radius: 30px;
@@ -196,6 +235,7 @@
     margin: 20px;
     backdrop-filter: blur(5px);
 }
+
 .delay_section .delay_text_intro {
     background: #cf00be67;
     border-radius: 30px;
@@ -212,11 +252,12 @@
     transform: rotate(30deg) perspective(500px) rotateX(10deg);
 } */
 .home-preference {
-
+    background: #13111c1a;
+    width: 100%;
     margin: 200px 0;
 }
+
 .home-preference .pref-content {
-    background: #13111c1a;
     padding: 50px 0;
 }
 
@@ -227,38 +268,57 @@
     border: 1px solid #3d2259;
 }
 
-@media only screen and (max-width: 1200px) {
-    .home-content {
-    }
+.text-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+.text-content .text-desig {
+    background: linear-gradient(45deg, #cf00be, #973e0b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@media screen and (max-width: 1200px) {
+    .home-content {}
+
     .home-content .home-text {
         margin-right: 0;
     }
+
     .home-content .home-image {
         width: 80%;
     }
+
     /* .home-content .home-image {
         margin-top: -70px;
     } */
     .home-services,
-    .home-services .services-description {
-    }
+    .home-services .services-description {}
 }
-@media only screen and (max-width: 700px) {
+
+@media screen and (max-width: 700px) {
+    body {
+    
+    }
     .home-content {
         flex-direction: column;
     }
+    
     .home-content .home-text {
         display: flex;
         align-items: center;
         width: 100%;
         padding-bottom: 0;
     }
+
     .home-about .home-about-text p,
     .home-content .home-text .home-description,
     .home-content .home-text .home-link,
     .home-content .home-text .home-title {
         text-align: center;
     }
+
     .home-content .home-image {
         margin-top: 100px;
         padding: 0;
@@ -266,28 +326,35 @@
         margin: 0;
         width: 100%;
     }
+
     .home-content .home-image .hero_img {
         min-width: 100%;
     }
+
     .home-services .services-description br {
         display: none;
     }
+
     .ArrowFloat {
         margin-bottom: 50px;
     }
+
     .home-about {
         flex-direction: column;
         margin: 100px 0;
     }
+
     .home-about .home-about-text {
         width: 100%;
         align-items: center;
         gap: 10px;
     }
+
     .home-about .home-about-text h2 {
         text-align: center;
         font-size: 40px;
     }
+
     .home-about .home-about-cards {
         margin-top: 50px;
         overflow: hidden;
@@ -295,39 +362,47 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .home-about .home-about-cards img {
         border-radius: 10px;
         transition: 0.4s ease-in-out;
         max-width: 100%;
     }
+
     .home-about .home-about-cards .card-one {
         width: 150px;
         height: auto;
         margin-top: 0;
         margin-right: 0;
     }
+
     .home-about .home-about-cards .card-one:hover {
         animation: none;
     }
+
     .home-about .home-about-cards .card-two {
         width: 200px;
         height: auto;
         margin-bottom: 0;
         margin-left: 0;
     }
+
     .home-about .home-about-cards .card-three {
         width: 150px;
         height: auto;
         margin-top: 0;
     }
+
     .home-about .home-about-cards .card-four {
         width: 150px;
         height: auto;
         margin-top: 0;
         margin-left: 0;
     }
+
     .home-preference {
-        padding: 100px 0;
-        margin: 50px 0;
+        
+        
     }
+
 }

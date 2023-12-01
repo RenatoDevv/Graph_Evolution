@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 @section('content')
-    <section class="home-content w-100 flex justify-between items-center">
+    <section class="content home-content  w-100 flex justify-between items-center ">
         @foreach ($homes as $home)
             <div class="home-text d-flex flex-column gap-2">
                 <h2 class="home-title fw-bold">{{ $home->title }}</h2>
@@ -21,7 +21,8 @@
     <div class="ArrowFloat">
         <a href="#services"><i class="bi bi-arrow-down"></i></a>
     </div>
-    <section class="home-about">
+
+    <section class="content home-about 0 ">
         <article class="home-about-text w-2/5">
             <h2 class="font-bold text-5xl">El diseño es el arte de combinar la creatividad y la tecnología para comunicar
                 ideas.</h2>
@@ -44,7 +45,7 @@
         </article>
     </section>
 
-    <section class="home-services d-flex flex-column align-items-center" id="services">
+    <section class="content home-services  d-flex flex-column align-items-center " id="services">
         <h2 class="services-title fw-medium">Servicios</h2>
         <p class="services-description text-center">Servicios mas destacados</p>
         <div
@@ -67,8 +68,6 @@
                         </div>
                         <p class="block font-sans text-base font-normal leading-normal text-gray-700 opacity-75">
                             {{ Str::limit($service->description, '70') }}
-                            {{-- With plenty of talk and listen time, voice-activated Siri access, and an
-                        available wireless charging case. --}}
                         </p>
                     </div>
                     <div class="p-6 pt-0 w-full flex items-center">
@@ -79,90 +78,10 @@
                     </div>
                 </div>
             @endforeach
-            {{-- <div
-                class="card-services-two relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md overflow-hidden">
-                <div class="relative h-auto overflow-hidden bg-white bg-clip-border text-gray-700">
-                    <img src="{{ asset('img/services/card_design.jpg') }}" alt="" width="100%">
-                </div>
-                <div class="p-6">
-                    <div class="mb-2 flex items-center justify-between">
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Tarjetas de Presentacion
-                        </p>
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            $95.00
-                        </p>
-                    </div>
-                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        With plenty of talk and listen time, voice-activated Siri access, and an
-                        available wireless charging case.
-                    </p>
-                </div>
-                <div class="p-6 pt-0 w-full flex items-center">
-                    <a href="{{ route('services') }}"
-                        class=" bg-gray-300 w-full rounded-lg py-3 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white">
-                        Ver Ahora
-                    </a>
-                </div>
-            </div>
-            <div
-                class="card-services-three relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md overflow-hidden">
-                <div class="relative h-auto overflow-hidden bg-white bg-clip-border text-gray-700">
-                    <img src="{{ asset('img/services/banner_design.jpg') }}" alt="" width="100%">
-                </div>
-                <div class="p-6">
-                    <div class="mb-2 flex items-center justify-between">
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Banners
-                        </p>
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            $95.00
-                        </p>
-                    </div>
-                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        With plenty of talk and listen time, voice-activated Siri access, and an
-                        available wireless charging case.
-                    </p>
-                </div>
-                <div class="p-6 pt-0 w-full flex items-center">
-                    <a href="{{ route('services') }}"
-                        class="bg-gray-300 w-full rounded-lg  py-3 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
-                        type="button">
-                        Ver Ahora
-                    </a>
-                </div>
-            </div>
-            <div
-                class="card-services-four relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md overflow-hidden">
-                <div class="relative h-auto overflow-hidden bg-white bg-clip-border text-gray-700">
-                    <img src="{{ asset('img/services/camara.jpg') }}" alt="" width="100%">
-                </div>
-                <div class="p-6">
-                    <div class="mb-2 flex items-center justify-between">
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            Volantes
-                        </p>
-                        <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                            $95.00
-                        </p>
-                    </div>
-                    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        With plenty of talk and listen time, voice-activated Siri access, and an
-                        available wireless charging case.
-                    </p>
-                </div>
-                <div class="p-6 pt-0 w-full flex items-center">
-                    <a href="{{ route('services') }}"
-                        class="bg-gray-300 w-full rounded-lg py-3 text-center font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:scale-105  hover:bg-fuchsia-600 hover:text-white"
-                        type="button">
-                        Ver Ahora
-                    </a>
-                </div>
-            </div> --}}
         </div>
     </section>
 
-    <section class="delay_section">
+    <section class="delay_section content">
         <img src="{{ asset('img/graph_evolution_h_i.jpg') }}" alt="" class="object-cover w-full delay_image">
         <div class="delay_text_cont">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quia corporis qui, nobis pariatur
@@ -176,10 +95,10 @@
         </div>
     </section>
 
-    <section class="home-preference  d-flex flex-column items-center">
+    <section class="content home-preference  d-flex flex-column items-center ">
         <h2 class="pref-title mb-5 fs-1 fw-bold mt-5 text-[#cf00be]">Porque elegirnos?</h2>
         <div class="pref-content flex justify-center gap-10 w-full flex-wrap mt-5">
-            <div class="card_pref_blur flex flex-col items-center w-80 rounded-lg p-3">
+            <div class="card_pref_blur flex flex-col items-center w-80 min-[200px]: rounded-lg p-3">
                 <i class="bi bi-trophy bg-[#cf00bec2] rounded-full "
                     style="padding: 20px 35px; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body mt-3">
@@ -218,7 +137,7 @@
         </div>
     </section>
 
-    <section class="">
+    <section class="content">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner w-full">
                 <div class="carousel-item active" data-bs-interval="5000">
@@ -248,7 +167,11 @@
             </button>
         </div>
     </section>
+
+    <section class="text-content bg-slate-600 my-10  h-60">
+        <p class="text-desig text-[200px]  font-bold text-center my-auto">Creative Desing Works </p>
+    </section>
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/hm-reveal.js') }}"></script>
+    {{-- <script src="{{ asset('js/hm-reveal.js') }}"></script> --}}
 @endsection

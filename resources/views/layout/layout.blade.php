@@ -25,7 +25,7 @@
     <div class="notify_events">
         <p class="mesage_events">🎄🤶 ❄️🤶🎄</p>
     </div>
-    <header class="header">
+    <header class="header content ">
         <div class="logo">
             <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
                     alt="" width="100%"></a>
@@ -46,10 +46,10 @@
         </nav>
         <button class="open_navbar"><i class="bi bi-list"></i></button>
     </header>
-    <main>
+    <main class="mx-auto grid content-center justify-center items-center">
         @yield('content')
     </main>
-    <footer class="footer" data-bs-theme="blue">
+    <footer class="footer content bg-gray-900" data-bs-theme="blue">
         <div class="footer-contanier">
             <div class="footer-container-box">
                 <div>
