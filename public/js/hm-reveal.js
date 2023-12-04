@@ -6,19 +6,19 @@ const effect = ScrollReveal({
     distance: "100px",
     duration: 3000,
     delay: 200,
-    reset: true,
+    reset: false,
 });
 const effectE = ScrollReveal({
     distance: "300px",
     duration: 1000,
     delay: 200,
-    reset: true,
+    reset: false,
 });
 const effectM = ScrollReveal({
     distance: "20px",
     duration: 2000,
     delay: 300,
-    reset: true,
+    reset: false,
 });
 
 effectE.reveal(".home-title", {

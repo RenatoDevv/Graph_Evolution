@@ -15,7 +15,7 @@
     /*65px*/
     --font-subtitle-text: 3.125rem;
     /*50px*/
-    --font-body: 1rem;
+    --font-body: 1.1rem;
     --content: 0 9.375rem;
     --font-description-text: 1.5rem;
     /*25*/
@@ -55,11 +55,11 @@ body::-webkit-scrollbar-thumb {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 4px 0;
+    padding: 10px 0 5px 0;
     position: sticky;
     top: 0;
     z-index: 10;
-    margin: 10px 0;
+    margin-bottom: 5px;
     transition: 0.5s ease-in-out;
 }
 
@@ -125,21 +125,6 @@ body::-webkit-scrollbar-thumb {
     display: none;
 }
 
-.header .navigation .navigation-button {
-    background-color: var(--color-pink);
-    text-decoration: none;
-    color: var(--color-white);
-    padding: 10px 40px;
-    border-radius: var(--corner-radius-buttom);
-    font-size: var(--font-link-text);
-    font-weight: 500;
-    transition: var(--animation-hover-buttom);
-}
-
-.header .navigation .navigation-button:hover {
-    opacity: 0.9;
-    box-shadow: var(--shadow-color-buttom);
-}
 
 .header .open_navbar {
     border: none;

@@ -8,7 +8,7 @@ const effectM = ScrollReveal({
     distance: "20px",
     duration: 2000,
     delay: 300,
-    reset: true,
+    reset: false,
 });
 
 effect.reveal(".services-title", {

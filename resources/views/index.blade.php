@@ -7,13 +7,27 @@
     <section class="content home-content  w-100 flex justify-between items-center ">
         @foreach ($homes as $home)
             <div class="home-text d-flex flex-column gap-2">
-                <h2 class="home-title fw-bold">{{ $home->title }}</h2>
-                <p class="home-description">{{ $home->description }}
-                </p>
-                <a href="{{ route('services') }}" class="home-link text-start text-decoration-none fw-medium">Conocer más</a>
+                <div class="text-start order-2 max-w-3xl animate-hero-text-slide-up-fade sm:shrink-0 md:order-1 lg:pl-16">
+                    <h1
+                        class="home-title text-start text-9xl md:text-7xl md:leading-[8rem] tracking-tight font-bold
+                        ">
+                        {{ $home->title }}</h1>
+                    <p
+                        class="mb-8 mt-4 max-w-[30rem] leading-7 md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal text-start">
+                        {{ $home->description }}</p>
+                    <a href="{{ route('services') }}"
+                        class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg bg-[#cf00be] hover:bg-[#cf00bed8] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                        Conocer más
+                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         @endforeach
-        <div class="home-image flex rounded-xl">
+        <div class="home-image flex rounded-xl mr-5 md:mr-0">
             <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen"
                 class="hero_img object-cover object-center m-auto rounded-3xl" loading="lazy">
         </div>
@@ -22,12 +36,20 @@
         <a href="#services"><i class="bi bi-arrow-down"></i></a>
     </div>
 
-    <section class="content home-about 0 ">
+    <section class="content home-about mt-14 ">
         <article class="home-about-text w-2/5">
             <h2 class="font-bold text-5xl">El diseño es el arte de combinar la creatividad y la tecnología para comunicar
                 ideas.</h2>
             <p></p>
-            <a href="#services" class="px-10 py-2 bg-[#cf00be] rounded-full">Conocer más</a>
+            <a href="#services"
+                class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg bg-[#cf00be] hover:bg-[#cf00bed8] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Conocer más
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+            </a>
         </article>
         <article class="home-about-cards w-1/2">
             <div class="card-one p-2 rounded-lg w-72">
@@ -45,7 +67,7 @@
         </article>
     </section>
 
-    <section class="content home-services  d-flex flex-column align-items-center " id="services">
+    <section class="content home-services  d-flex flex-column align-items-center mt-28">
         <h2 class="services-title fw-medium">Servicios</h2>
         <p class="services-description text-center">Servicios mas destacados</p>
         <div
@@ -81,18 +103,8 @@
         </div>
     </section>
 
-    <section class="delay_section content">
+    <section class="delay_section">
         <img src="{{ asset('img/graph_evolution_h_i.jpg') }}" alt="" class="object-cover w-full delay_image">
-        <div class="delay_text_cont">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quia corporis qui, nobis pariatur
-                perspiciatis libero beatae nostrum eligendi fuga totam dolore repudiandae labore officia unde doloribus
-                numquam, officiis possimus.</p>
-        </div>
-        <div class="delay_text_intro">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident dignissimos sequi, nihil sint ratione
-                iure vitae perferendis, fugit maxime excepturi dolorum voluptatibus quisquam? Non possimus fuga repellat
-                amet veniam pariatur.</p>
-        </div>
     </section>
 
     <section class="content home-preference  d-flex flex-column items-center ">
@@ -137,14 +149,43 @@
         </div>
     </section>
 
+    <section class="bento-grid flex flex-col justify-center items-center my-28">
+        <h2>Shorten your project times massively, starting today</h2>
+        <p>Whether you're working on a small design project or a larger application, Cabana has everything you need to power
+            through your projects… fast.</p>
+        <div class="content-bento mt-11 max-w-4xl">
+            <div class="bentos border border-gray-500  ">
+                <h2 class="text-xl font-bold  text-fuchsia-600">Calidad</h2>
+                <p>Vivimos en un mundo donde todos dicen que tienen los mejores productos del mercado. Pero una cosa es
+                    afirmarlo y la otra es garantizarlo</p>
+            </div>
+            <div class="bentos border border-gray-500">
+                <h2 class="text-xl font-boldorder ">Honestidad</h2>
+                <p>La transparencia, sinceridad y franqueza, son valores con las que cuenta Graph Evolutión</p>
+            </div>
+            <div class="bentos border border-gray-500 ">
+                <h2 class="text-xl font-bold ">Pasion</h2>
+                <p>Disfrutamos lo que hacemos Por ello, el tener la pasión como uno de nuestro valor los resulatos de
+                    nuestro trabajo son satisfactorios para nuestros clientes.</p>
+            </div>
+            <div class="bentos border border-gray-500 ">
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+            <div class="bentos border border-gray-500 ">
+                <p>Lorem, ipsum dolor.</p>
+            </div>
+        </div>
+    </section>
     <section class="content">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner w-full">
                 <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-auto" alt="Graph Evolution">
+                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-auto"
+                        alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-tw.jpg') }}" class="d-block w-full" alt="Graph Evolution">
+                    <img src="{{ asset('img/carrusel/pr-banner-tw.jpg') }}" class="d-block w-full"
+                        alt="Graph Evolution">
                 </div>
                 <div class="carousel-item" data-bs-interval="5000">
                     <img src="{{ asset('img/carrusel/pr-banner-tr.jpg') }}" class="d-block w-full"
@@ -173,5 +214,5 @@
     </section>
 @endsection
 @section('scripts')
-    {{-- <script src="{{ asset('js/hm-reveal.js') }}"></script> --}}
+    <script src="{{ asset('js/hm-reveal.js') }}"></script>
 @endsection

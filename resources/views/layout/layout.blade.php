@@ -41,15 +41,18 @@
                 <li><a href="{{ route('help') }}" class="navigation-links">Soporte</a></li>
                 <li><a href="{{ route('contact') }}" class="navigation-links contact-button">Contacto</a></li>
             </ul>
+            <a href="{{ route('contact') }}"
+                class="inline-flex justify-center items-center py-2 px-5 text-base font-medium text-center text-white rounded-lg bg-[#cf00be] hover:bg-[#cf00bed8] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Contacto
+            </a>
 
-            <a href="{{ route('contact') }}" class="navigation-button">Contacto</a>
         </nav>
         <button class="open_navbar"><i class="bi bi-list"></i></button>
     </header>
     <main class="mx-auto grid content-center justify-center items-center">
         @yield('content')
     </main>
-    <footer class="footer content bg-gray-900" data-bs-theme="blue">
+    <footer class="footer content bg-[#0c0a11]" data-bs-theme="blue">
         <div class="footer-contanier">
             <div class="footer-container-box">
                 <div>

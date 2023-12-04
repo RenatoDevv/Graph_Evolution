@@ -2,13 +2,13 @@ const effect = ScrollReveal({
     distance: "100px",
     duration: 3000,
     delay: 300,
-    reset: true,
+    reset: false,
 });
 const effectM = ScrollReveal({
     distance: "50px",
     duration: 2000,
     delay: 300,
-    reset: true,
+    reset: false,
 });
 
 effect.reveal(".content-title", {
