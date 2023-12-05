@@ -5,7 +5,7 @@
 }
 
 :root {
-    --color-pink: #cf00be;
+    --color-pink: #cf0068;
     --color-white: #fff;
     --primary-color-text: #fff;
     --navlink-text-color: #cf00be;
@@ -37,7 +37,7 @@ body {
 
 body::-webkit-scrollbar {
     width: 9px;
-    background-color: transparent;
+    background-color: #181818;
 }
 
 body::-webkit-scrollbar-thumb {
