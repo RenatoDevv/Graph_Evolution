@@ -81,9 +81,14 @@
             <div class="footer-container-box">
                 <p class="footer-title m-0">Contacto</p>
                 <ul class="d-flex gap-2 footer-socials list-none">
-                    <li><a href="" class=""><i class="bi bi-facebook"></i></a></li>
+                    <li>
+                        <a href="https://facebook.com" target="_blank" class="">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </li>
 
-                    <li><a href="" class=""><i class="bi bi-whatsapp"></i></a></li>
+                    <li><a href="https://github.com" target="_blank" class=""><i class="bi bi-whatsapp"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
