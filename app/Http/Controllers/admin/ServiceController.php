@@ -8,7 +8,7 @@ use App\Models\Service;
 use Illuminate\Support\Facades\Storage;
 
 
-
+ 
 class ServiceController extends Controller
 {
     public function index() {
@@ -54,24 +54,31 @@ class ServiceController extends Controller
 
     public function update(Request $request, $id) {
         $service = Service::find($id);
+        // dd($request->all);
 
         if ($request->hasFile('images_file')) {
             $images_file = $request->file('images_file')->store('services', 'public');
+
+            Storage::disk('public')->delete($service->images_file);
 
             $service->title = $request->title;
             $service->description = $request->description;
             $service->price = $request->price;
             $service->images_file = $images_file;
-            $service->save();
         }
+        $service->update($request->all());
 
         return redirect()->route('admin.services.index');
     }
 
     public function delete($id) {
         $service = Service::find($id);
+        if($service->images_file){
+            Storage::disk('public')->delete($service->images_file);
+        }
         $service->delete();
         return redirect()->back();
+        // dd("me quieren eliminar");
     }
 }
 
