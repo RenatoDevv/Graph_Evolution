@@ -78,7 +78,6 @@ class ServiceController extends Controller
         }
         $service->delete();
         return redirect()->back();
-        // dd("me quieren eliminar");
     }
 }
 

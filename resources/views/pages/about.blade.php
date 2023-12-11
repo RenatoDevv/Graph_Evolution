@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('css/pages/about.css') }}">
 @endsection
 @section('content')
-    <section class="content-about">
+    <section class="content-about content">
         <div class="content-about-descripcion">
             <h1 class="content-title">Graph <br> _Evolution</h1>
             <div class="content-description">
@@ -17,13 +17,13 @@
             <img src="{{ asset('img/about/galactic.jpg') }}" alt="" width="70%">
         </div>
     </section>
-    <div class="about-biografi d-flex">
+    <div class="about-biografi d-flex content">
         <h2 class="aboout-title-b" style="border-bottom: 3px solid white; line-heigth: 20px;">Biografia </h2>
         <p class="about-description w-auto">Somos una empresa que busca transformar ideas en soluciones visuales, fusionando
             la creatividad y el concepto de nuestros clientes.
         </p>
     </div>
-    <section class="graph-about">
+    <section class="graph-about content">
         <div class="about-content on-box">
             <h2 class="about-title">🌟Misión</h2>
             <div class="about-text d-flex">

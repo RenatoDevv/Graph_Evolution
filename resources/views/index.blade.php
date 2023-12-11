@@ -8,16 +8,15 @@
     <section class="content home-content  w-100 flex justify-between items-end ">
         @foreach ($homes as $home)
             <div class="home-text d-flex flex-column gap-2">
-                <div class="text-start order-2 max-w-3xl animate-hero-text-slide-up-fade sm:shrink-0 md:order-1 lg:pl-16">
+                <div class="text-start max-w-3xl animate-hero-text-slide-up-fade sm:shrink-0 ">
                     <h1
                         class="home-title text-start text-9xl md:text-7xl md:leading-[8rem] tracking-tight font-bold
                         ">
                         {{ $home->title }}</h1>
                     <p
-                        class="mb-8 mt-4 max-w-[30rem] leading-7 md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal text-start">
+                        class="mb-8 mt-4 w-auto max-w-[30rem] leading-7 md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal text-start md:max-w-auto">
                         {{ $home->description }}</p>
-                    <div class="flex gap-3">
-
+                    <div class="flex gap-3 md:justify-center lg:justify-start">
                         <a href="{{ route('services') }}"
                             class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg bg-[#cf0068] hover:bg-[#cf0068b2] ">
                             Conocer más

@@ -26,7 +26,6 @@
 
 body {
     width: 100%;
-    /* background: #2c2131; */
     background: #13111C;
     display: flex;
     flex-direction: column;
@@ -190,7 +189,9 @@ body::-webkit-scrollbar-thumb {
     }
 
     .content {
-        padding: 0 3.125rem;
+        /* overflow: auto; */
+        padding: 0 1.25rem;
+        
     }
 
     .contact-content .contact-presentation .contactP-title {
@@ -230,13 +231,14 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 700px) {
     body {
         width: 100%;
-        background: #09f;
+        
         /* padding: ; */
         /*30px*/
-        overflow-y: hidden;
+        
     }
 
     .content {
+        overflow: auto;
         padding: 0 1.875rem;
     }
 
@@ -246,7 +248,7 @@ body::-webkit-scrollbar-thumb {
 
     .header {
         position: relative;
-        padding: 0;
+        padding: 0 10px;
     }
 
     .header .navigation {
@@ -313,14 +315,14 @@ body::-webkit-scrollbar-thumb {
         display: block;
     }
 
-    .header .navigation .responsive-button {
-        display: block;
+    .header .navigation .button-lg {
+        display: none;
         color: #09f;
     }
 
     main {
         width: 100%;
-        background: #cf00be;
+        margin: 0;
     }
 
     .footer {

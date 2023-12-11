@@ -42,7 +42,7 @@
                 <li><a href="{{ route('contact') }}" class="navigation-links contact-button">Contacto</a></li>
             </ul>
             <a href="{{ route('contact') }}"
-                class="inline-flex justify-center items-center py-2 px-5 text-base font-medium text-center text-white rounded-lg bg-[#cf0068] hover:bg-[#cf0068d8] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                class="button-lg inline-flex justify-center items-center py-2 px-5 text-base font-medium text-center text-white rounded-lg bg-[#cf0068] hover:bg-[#cf0068d8]">
                 Contacto
             </a>
 

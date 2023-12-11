@@ -1,13 +1,9 @@
-.contact-content {
-    margin: 0 -150px;
-}
-
 .contact-presentation {
     width: 70%;
     margin: 100px 0 50px 0;
 }
 
-.contact-content .contact-presentation .contactP-title {
+.contact-presentation .contactP-title {
     font-size: 70px;
     color: var(--color-white);
     width: 0;
@@ -39,23 +35,7 @@
     margin: 50px;
     padding: 150px 0 300px 0;
     height: auto;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 97%);
-    background: linear-gradient(
-            327.21deg,
-            rgba(33, 0, 75, 0.24) 3.65%,
-            rgba(60, 0, 136, 0) 40.32%
-        ),
-        linear-gradient(
-            245.93deg,
-            rgba(209, 21, 111, 0.16) 0%,
-            rgba(209, 25, 80, 0) 36.63%
-        ),
-        linear-gradient(
-            147.6deg,
-            rgba(58, 19, 255, 0) 29.79%,
-            rgba(98, 19, 255, 0.01) 85.72%
-        ),
-        #13111c;
+
 }
 
 .contact-socials .card-socials {
@@ -86,13 +66,13 @@
     color: #ffffff;
 }
 
-.contact-content .contact-form {
+.contact-form {
     width: 100%;
     padding: 50px;
     border-radius: 18px;
 }
 
-.contact-content .contact-form .form-image {
+.contact-form .form-image {
     width: 60%;
 }
 
@@ -103,33 +83,37 @@
 }
 
 .contact-map iframe {
-    background: #1076b9;
     padding: 0 2px;
     width: 100%;
 }
 
-@media only screen and (max-width: 1200px) {
-    .contact-content {
-        margin: 0 -50px;
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 700px) {
+
+    .contact-presentation .contactP-title {
+        font-size: 40px;
     }
 
     .contact-socials {
-        margin: 25px;
+        width: 100%;
+        margin: 0;
         padding: 150px 0 300px 0;
+        height: auto;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 97%);
+        background: linear-gradient(327.21deg,
+                rgba(33, 0, 75, 0.24) 3.65%,
+                rgba(60, 0, 136, 0) 40.32%),
+            linear-gradient(245.93deg,
+                rgba(209, 21, 111, 0.16) 0%,
+                rgba(209, 25, 80, 0) 36.63%),
+            linear-gradient(147.6deg,
+                rgba(58, 19, 255, 0) 29.79%,
+                rgba(98, 19, 255, 0.01) 85.72%),
+            #13111c;
     }
-}
 
-@media only screen and (max-width: 700px) {
-    body {
-        padding: 0 1.25rem;
-        /*20px*/
-    }
-
-    .contact-content {
-        margin: 0 -50px;
-    }
-
-    .contact-content .contact-form .form-image {
+    .contact-form .form-image {
         width: 100%;
     }
 
@@ -143,17 +127,14 @@
         width: 100%;
     }
 
-    .contact-socials {
-        margin: 1px;
-        padding: 150px 0 300px 0;
-    }
+
 
     .contact-form .imageForm {
         display: none;
     }
 
-    .contact-form form {
-    }
+    .contact-form form {}
+
     .contact-map {
         overflow: hidden;
     }
