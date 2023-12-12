@@ -175,16 +175,17 @@
             </a>
         </article>
         <article class="home-about-cards w-1/2">
-            <div class="card-one p-2 rounded-lg w-72">
+            <div class="card-one cards-home p-5 rounded-lg w-auto">
                 <img src="{{ asset('img/about/camara.jpg') }}" alt="" width="100%">
+                <img class="img_fest_home" src="{{asset('img/vector_fest.png')}}" alt="">
             </div>
-            <div class="card-two p-2 rounded-lg  w-96 h-auto">
+            <div class="card-two cards-home p-5 rounded-lg  w-auto h-auto">
                 <img src="{{ asset('img/services/card_design.jpg') }}" alt="" width="100%">
             </div>
-            <div class="card-three p-2 rounded-lg w-80">
+            <div class="card-three cards-home p-5 rounded-lg w-auto">
                 <img src="{{ asset('img/services/banner_design.jpg') }}" alt="" width="100%">
             </div>
-            <div class="card-four p-2 rounded-lg w-80">
+            <div class="card-four cards-home p-5 rounded-lg w-auto">
                 <img src="{{ asset('img/services/home_design.jpg') }}" alt="" width="100%">
             </div>
         </article>

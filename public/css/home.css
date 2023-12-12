@@ -133,6 +133,8 @@
 .home-about .home-about-cards {
     display: grid;
     grid-template-columns: auto auto;
+    gap: 1rem;
+    position: relative;
 }
 
 .home-about .home-about-cards img {
@@ -140,36 +142,42 @@
     transition: 0.4s ease-in-out;
 }
 
-.home-about .home-about-cards img:hover {
-    box-shadow: 0 0 0 2px #ffffff4b, 0 0 0 10px #ffffff15, 0 0 0 15px #ffffff13;
-    transform: scale(1.2);
+.home-about .home-about-cards .cards-home:hover {
+    /* box-shadow: 0 0 0 2px #ffffff4b, 0 0 0 10px #ffffff15, 0 0 0 15px #ffffff13; */
+    /* transform: scale(1.2);
     transition: 0.5s ease-in-out;
-    z-index: 50;
+    z-index: 50; */
 }
 
-.home-about .home-about-cards .card-one {
-    margin-top: -40px;
-    margin-right: -200px;
+.cards-home {
+    background: #13111c;
+    border: 1px solid #592240;
+}
+.cards-home:hover {
+    box-shadow: rgba(206, 59, 128, 0.15) 0px 4px 24px;
+}
+
+.home-about .home-about-cards .card-one {}
+
+.img_fest_home {
+    width: 4rem;
+    position: absolute;
+    top: -50px;
+    left: 0;
 }
 
 .home-about .home-about-cards .card-one:hover {
     animation: none;
 }
 
-.home-about .home-about-cards .card-two {
-    margin-bottom: 50px;
-    margin-left: -100px;
-    z-index: 10;
-}
+.home-about .home-about-cards .card-two {}
 
 .home-about .home-about-cards .card-three {
-    margin-top: -150px;
+
+    /* margin-top: -150px; */
 }
 
-.home-about .home-about-cards .card-four {
-    margin-top: -100px;
-    margin-left: -120px;
-}
+.home-about .home-about-cards .card-four {}
 
 .home-services {
     width: 100%;
@@ -398,7 +406,7 @@
 
     .home-about .home-about-cards img {
         border-radius: 10px;
-        
+
     }
 
     /* .home-about .home-about-cards .card-one {

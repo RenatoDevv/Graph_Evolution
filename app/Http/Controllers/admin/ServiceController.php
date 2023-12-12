@@ -53,20 +53,26 @@ class ServiceController extends Controller
     }
 
     public function update(Request $request, $id) {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'images_file' => 'required|image',
+        ]);
         $service = Service::find($id);
-        // dd($request->all);
 
         if ($request->hasFile('images_file')) {
-            $images_file = $request->file('images_file')->store('services', 'public');
 
             Storage::disk('public')->delete($service->images_file);
+
+            $images_file = $request->file('images_file')->store('services', 'public');
 
             $service->title = $request->title;
             $service->description = $request->description;
             $service->price = $request->price;
             $service->images_file = $images_file;
         }
-        $service->update($request->all());
+        $service->save();
 
         return redirect()->route('admin.services.index');
     }

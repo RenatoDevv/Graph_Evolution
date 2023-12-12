@@ -59,25 +59,25 @@ Route::middleware([
     // Route::get('/admin/Phome/profile', [PageController::class, 'profile'])->name('admin.profile');
 
     //services page controller CRUD
-    Route::get('/admin/Services/index', [SitioController::class, 'servicesIndex'])->name('admin.services.index');
-    Route::get('/admin/Services/create', [SitioController::class, 'servicesCreate'])->name('admin.services.create');
-    Route::post('/admin/Services/store', [SitioController::class, 'servicesStore'])->name('admin.services.store');
-    // Route::get('/admin/Phome/show', [AdminController::class, 'pageshow'])->name('admin.home.show');
-    Route::get('/admin/Services/edit/{id}', [SitioController::class, 'servicesEdit'])->name('admin.services.edit');
-    Route::post('/admin/Services/update/{id}', [SitioController::class, 'servicesUpdate'])->name('admin.services.update');
-    Route::delete('/admin/Services/delete/{id}', [SitioController::class, 'servicesDelete'])->name('admin.services.delete');
+    // Route::get('/admin/Services/index', [SitioController::class, 'servicesIndex'])->name('admin.services.index');
+    // Route::get('/admin/Services/create', [SitioController::class, 'servicesCreate'])->name('admin.services.create');
+    // Route::post('/admin/Services/store', [SitioController::class, 'servicesStore'])->name('admin.services.store');
+    // // Route::get('/admin/Phome/show', [AdminController::class, 'pageshow'])->name('admin.home.show');
+    // Route::get('/admin/Services/edit/{id}', [SitioController::class, 'servicesEdit'])->name('admin.services.edit');
+    // Route::post('/admin/Services/update/{id}', [SitioController::class, 'servicesUpdate'])->name('admin.services.update');
+    // Route::delete('/admin/Services/delete/{id}', [SitioController::class, 'servicesDelete'])->name('admin.services.delete');
 
 
 
     //SERVOCE CONTROLLER
 
-    Route::get('/admin/Services/index', [ServiceController::class, 'index'])->name('admin.services.index');
-    Route::get('/admin/Services/create', [ServiceController::class, 'create'])->name('admin.services.create');
-    Route::post('/admin/Services/store', [ServiceController::class, 'store'])->name('admin.services.store');
-    Route::get('/admin/Services/show{id}', [ServiceController::class, 'show'])->name('admin.services.show');
-    Route::get('/admin/Services/edit/{id}', [ServiceController::class, 'edit'])->name('admin.services.edit');
-    Route::post('/admin/Services/update/{id}', [ServiceController::class, 'update'])->name('admin.services.update');
-    Route::delete('/admin/Services/delete/{id}', [ServiceController::class, 'delete'])->name('admin.services.delete');
+    Route::get('/admin/services/index', [ServiceController::class, 'index'])->name('admin.services.index');
+    Route::get('/admin/services/create', [ServiceController::class, 'create'])->name('admin.services.create');
+    Route::post('/admin/services/store', [ServiceController::class, 'store'])->name('admin.services.store');
+    Route::get('/admin/services/show{id}', [ServiceController::class, 'show'])->name('admin.services.show');
+    Route::get('/admin/services/edit/{id}', [ServiceController::class, 'edit'])->name('admin.services.edit');
+    Route::post('/admin/services/update/{id}', [ServiceController::class, 'update'])->name('admin.services.update');
+    Route::delete('/admin/services/delete/{id}', [ServiceController::class, 'delete'])->name('admin.services.delete');
 
 
     // MESSAGE CRUD CONTROLLER

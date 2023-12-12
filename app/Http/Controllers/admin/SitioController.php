@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Page;
 use App\Models\Home;
 use App\Models\Service;
+use Illuminate\Support\Facades\Storage;
 
 class SitioController extends Controller
 {
@@ -69,7 +70,7 @@ class SitioController extends Controller
     }
 
     public function homeCreate() {
-        return view('admin.home.create');
+        return view('admin.home.create'); 
     }
 
     public function homeStore(Request $request){
@@ -102,6 +103,8 @@ class SitioController extends Controller
     public function homeUpdate(Request $request, $id) {
         $home = Home::find($id);
         if ($request->hasFile('image_file')) {
+            Storage::disk('public')->delete($home->image_file);
+
             $image_file = $request->file('image_file')->store('images', 'public'); // Almacenar la imagen en el sistema de archivos
 
             // Guardar la ruta de la imagen en la base de datos
@@ -110,7 +113,7 @@ class SitioController extends Controller
             $home->image_file = $image_file;
 
         }
-        $home->update($request->all());
+        $home->save();
 
         return redirect()->route('admin.home.index');
     }
@@ -119,6 +122,9 @@ class SitioController extends Controller
     //ELIMINAR ADMINISTRADOR
     public function homeDelete($id) {
         $home = Home::find($id);
+        if($home->image_file){
+            Storage::disk('public')->delete($home->image_file);
+        }
         $home->delete();
 
         return redirect()->back();

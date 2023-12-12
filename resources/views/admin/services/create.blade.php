@@ -33,8 +33,11 @@
                                                 </label>
                                                 <input
                                                     class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="title" value=""
+                                                    type="text" name="title" value="{{ old('title')}}"
                                                     placeholder="Titulo del Sitio" required>
+                                                @error('title')
+                                                    <strong>{{ $message }}</strong>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="w-full lg:w-6/12 px-4">
@@ -46,6 +49,9 @@
                                                 <textarea type="text" name="description"
                                                     class="border-0 px-3 py-3 placeholder:text-slate-400 text-blueGray-600 bg-white text-gray-500 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                     rows="2" placeholder="Descripcion de la pagina"></textarea>
+                                                @error('description')
+                                                    <strong>{{ $message }}</strong>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -66,6 +72,9 @@
                                                     class="px-3 py-3 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="text" name="price" value="" placeholder="Precio"
                                                     required>
+                                                @error('price')
+                                                    <strong>{{ $message }}</strong>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>

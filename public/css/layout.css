@@ -22,7 +22,16 @@
     --corner-radius-buttom: 1.563rem;
     --animation-hover-buttom: 0.3s ease;
     --shadow-color-buttom: 0px 5px 30px 2px #e606b5d7;
+
+    /*===== Estilos de Pagina de Nosotros =====*/
+    --font-size-title: 3rem;
+    --font-size-subtitle: 2.125rem;
+    --font-size-text: 1.1875rem;
+
+    /* Estilo de boton */
+    --padding-button: 0 1.5rem;
 }
+
 
 body {
     width: 100%;
@@ -43,6 +52,26 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--color-pink);
     border-radius: 20px;
 }
+
+
+/*=== Estilos globales para la pagina de Nosotrsos ===*/
+
+.about__title {
+    font-size: var(--font-size-title);
+    margin-bottom: 2.125rem;
+}
+
+.about__subtitle {
+    font-size: var(--font-size-subtitle);
+    margin-bottom: 2.125rem;
+}
+
+.about__text {
+    font-size: var(--font-size-text);
+}
+
+
+
 
 .content {
     padding: var(--content);
@@ -191,7 +220,7 @@ body::-webkit-scrollbar-thumb {
     .content {
         /* overflow: auto; */
         padding: 0 1.25rem;
-        
+
     }
 
     .contact-content .contact-presentation .contactP-title {
@@ -231,10 +260,10 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 700px) {
     body {
         width: 100%;
-        
+
         /* padding: ; */
         /*30px*/
-        
+
     }
 
     .content {
