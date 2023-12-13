@@ -5,28 +5,27 @@
 @endsection
 @section('content')
     {{-- Primera seccion --}}
-    <section class="content home-content  w-100 flex justify-between items-end ">
+    <section class="content hero-content  w-100 flex justify-between items-end">
         @foreach ($homes as $home)
-            <div class="home-text d-flex flex-column gap-2">
+            <div class="hero-text d-flex flex-column gap-2">
                 <div class="text-start max-w-3xl animate-hero-text-slide-up-fade sm:shrink-0 ">
-                    <h1
-                        class="home-title text-start text-9xl md:text-7xl md:leading-[8rem] tracking-tight font-bold
+                    <h1 class="section-title text-gradient tracking-tight  lg:text-start
                         ">
-                        {{ $home->title }}</h1>
+                        {{ $home->title }}
+                    </h1>
                     <p
-                        class="mb-8 mt-4 w-auto max-w-[30rem] leading-7 md:text-left text-base md:text-[1.125rem] md:leading-[1.5] text-slate-11 font-normal text-start md:max-w-auto">
-                        {{ $home->description }}</p>
+                        class="hero-description mb-6 mt-4 w-auto max-w-[36rem] text-center sm:text-center md:text-center  lg:text-start">
+                        {{ $home->description }}
+                    </p>
                     <div class="flex gap-3 md:justify-center lg:justify-start">
-                        <a href="{{ route('services') }}"
-                            class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg bg-[#cf0068] hover:bg-[#cf0068b2] ">
+                        <a href="{{ route('services') }}" class="section-button">
                             Conocer más
                             <svg class="w-4 h-3.5 ms-2 rtl:rotate-180" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor"
                                     d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z" />
                             </svg>
                         </a>
-                        <a href="{{ route('services') }}"
-                            class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg border-1 border-[#cf0068] hover:bg-[#cf0068]  ">
+                        <a href="{{ route('services') }}" class="section-buttonT ">
                             Ver Servicios
                             <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -38,7 +37,7 @@
                 </div>
             </div>
         @endforeach
-        <div class="home-image flex rounded-xl mr-5 md:mr-0">
+        <div class="hero-image flex rounded-xl mr-5 md:mr-0">
             <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen"
                 class="hero_img object-cover object-center m-auto rounded-3xl" loading="lazy">
         </div>
@@ -98,59 +97,15 @@
             </div>
         </div>
 
-
-
-
-        {{-- <div class=" font-medium text-3xl text-yellow- flex items-center gap-3 border border-gray-80">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 640 512">
-                <path fill="currentColor"
-                    d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6c40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32S208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z" />
-            </svg>
-            <span>Años de experiencia</span>
-            <span>Total clientes</span>
-            <span>Total servicios</span>
-
-            <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068a1]">
-                <path fill="currentColor"
-                    d="m8.8 10.95l2.15-2.175l-1.4-1.425l-1.1 1.1l-1.4-1.4l1.075-1.1L7 4.825L4.825 7L8.8 10.95Zm8.2 8.225L19.175 17l-1.125-1.125l-1.1 1.075l-1.4-1.4l1.075-1.1l-1.425-1.4l-2.15 2.15L17 19.175Zm-.775-12.75l1.4 1.4l1.4-1.4L17.6 5l-1.375 1.425ZM7.25 21H3v-4.25l4.375-4.375L2 7l5-5l5.4 5.4l3.775-3.8q.3-.3.675-.45t.775-.15q.4 0 .775.15t.675.45L20.4 4.95q.3.3.45.675T21 6.4q0 .4-.15.763t-.45.662l-3.775 3.8L22 17l-5 5l-5.375-5.375L7.25 21Z" />
-            </svg>
-
-            <span class=" pencil_icon font-serif">Diseño</span>
-        </div>
-        <div class=" font-medium text-3xl text-yellow- flex items-center gap-3 border border-gray-80">
-            <svg width="40" height="40" fill="currentColor" viewBox="0 0 16 16" class="text-[#0099ff85]">
-                <path
-                    d="M8.354.146a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708l1 1a.5.5 0 0 0 .708 0L7 4.207V12H1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H9V4.207l.646.647a.5.5 0 0 0 .708 0l1-1a.5.5 0 0 0 0-.708l-3-3z" />
-                <path
-                    d="M1 7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h4.5a.5.5 0 0 0 0-1H1V8h4.5a.5.5 0 0 0 0-1zm9.5 0a.5.5 0 0 0 0 1H15v2h-4.5a.5.5 0 0 0 0 1H15a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1z" />
-            </svg>
-            <span class="print_icon  font-serif">Impresión</span>
-        </div>
-        <div class=" font-medium text-3xl text-yellow- flex items-center gap-3 border border-gray-80">
-            <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068a4] ">
-                <path fill="currentColor"
-                    d="m8.8 10.95l2.15-2.175l-1.4-1.425l-1.1 1.1l-1.4-1.4l1.075-1.1L7 4.825L4.825 7L8.8 10.95Zm8.2 8.225L19.175 17l-1.125-1.125l-1.1 1.075l-1.4-1.4l1.075-1.1l-1.425-1.4l-2.15 2.15L17 19.175Zm-.775-12.75l1.4 1.4l1.4-1.4L17.6 5l-1.375 1.425ZM7.25 21H3v-4.25l4.375-4.375L2 7l5-5l5.4 5.4l3.775-3.8q.3-.3.675-.45t.775-.15q.4 0 .775.15t.675.45L20.4 4.95q.3.3.45.675T21 6.4q0 .4-.15.763t-.45.662l-3.775 3.8L22 17l-5 5l-5.375-5.375L7.25 21Z" />
-            </svg>
-            <span class=" pencil_icon font-serif">Diseño</span>
-        </div>
-        <div class="  text-3xl text-yellow- flex items-center gap-3">
-            <svg width="40" height="40" fill="currentColor" viewBox="0 0 16 16" class="text-[#0099ff7e]">
-                <path
-                    d="M8.354.146a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708l1 1a.5.5 0 0 0 .708 0L7 4.207V12H1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H9V4.207l.646.647a.5.5 0 0 0 .708 0l1-1a.5.5 0 0 0 0-.708l-3-3z" />
-                <path
-                    d="M1 7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h4.5a.5.5 0 0 0 0-1H1V8h4.5a.5.5 0 0 0 0-1zm9.5 0a.5.5 0 0 0 0 1H15v2h-4.5a.5.5 0 0 0 0 1H15a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1z" />
-            </svg>
-            <span class="print_icon font-serif">Impresión</span>
-        </div> --}}
-
-
     </section>
 
 
-    <section class="text-transparent  bg-[#13111C] my-10  h-auto">
-        <p
-            class="text-[50px] bg-gradient-to-r from-white to-pink-700 bg-clip-text font-bold text-center my-auto font-serif md:text-[50px] lg:text-[100px]">
-            Trabajos hechos con creatividad</p>
+    <section class="flex flex-col items-center  bg-[#13111C] my-10  h-auto">
+        <p class="section-subtitle text-center py-2 px-4 m-4 rounded-xl bg-[#cf006846] border-5 border-[#cf0068]">1</p>
+        <span class="text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit</span>
+        <p class="section-subtitle m-0 text-[#cf0068]">Lorem ipsum dolor sit</p>
+        <p class="mb-4 max-w-4xl text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit, nunc facilisis
+            leo laoreet urna aptent mi, sem netus tellus donec sollicitudin torquent hendrerit.</p>
         <div class="max-w-2xl bg-gray-600 rounded-lg p-3 mx-auto">
             <img src="https://img.freepik.com/fotos-premium/pantalla-computadora-pintura-colorida-ai-generativa_97167-1066.jpg?w=1380"
                 alt="">
@@ -165,7 +120,7 @@
                 ideas.</h2>
             <p></p>
             <a href="#services"
-                class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center text-white rounded-lg bg-[#cf0068] hover:bg-[#cf0068c7] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center  rounded-lg bg-[#cf0068] hover:bg-[#cf0068c7] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                 Conocer más
                 <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">
@@ -177,7 +132,7 @@
         <article class="home-about-cards w-1/2">
             <div class="card-one cards-home p-5 rounded-lg w-auto">
                 <img src="{{ asset('img/about/camara.jpg') }}" alt="" width="100%">
-                <img class="img_fest_home" src="{{asset('img/vector_fest.png')}}" alt="">
+                <img class="img_fest_home" src="{{ asset('img/vector_fest.png') }}" alt="">
             </div>
             <div class="card-two cards-home p-5 rounded-lg  w-auto h-auto">
                 <img src="{{ asset('img/services/card_design.jpg') }}" alt="" width="100%">
@@ -192,7 +147,7 @@
     </section>
     {{-- Cuarta seccion Servicios --}}
     <section class="content home-services  d-flex flex-column align-items-center mt-20 pt-10" id="services">
-        <h2 class="services-title fw-medium">Servicios</h2>
+        <h2 class="section-subtitle">Servicios</h2>
         <p class="services-description text-center">Servicios mas destacados</p>
         <div class="services_container md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
             @foreach ($services as $service)
@@ -209,7 +164,7 @@
                             </svg>
                         </p>
                     </div>
-                    <h1 class="mt-2 text-[#fff] text-xl font-semibold cursor-pointer">
+                    <h1 class="mt-2  text-xl font-semibold cursor-pointer">
                         {{ Str::limit($service->description, '70') }}</h1>
                     <div class="my-3">
                         <div class="flex space-x-1 items-center">
@@ -223,7 +178,7 @@
                         </div>
                         <div class="w-full flex items-center pt-3">
                             <a href="{{ route('services') }}"
-                                class="text-xl text-center w-full text-white bg-[#cf0068] py-2 rounded-xl shadow-lg hover:bg-[#cf0068b7]">
+                                class="text-xl text-center w-full  bg-[#cf0068] py-2 rounded-xl shadow-lg hover:bg-[#cf0068b7]">
                                 Ver Ahora
                             </a>
                         </div>
@@ -236,14 +191,14 @@
 
     {{-- Quinta seccion --}}
     <section class="content home-preference  d-flex flex-column items-center">
-        <h2 class="pref-title mb-5 fs-1 fw-bold mt-5 text-[#cf0068]">¿Por qué confiar en nosotros?</h2>
+        <h2 class="section-subtitle text-center mb-5 mt-5 text-[#cf0068]">¿Por qué confiar en nosotros?</h2>
         <div class="pref-content flex justify-center gap-3 w-full flex-wrap mt-5 max-w-6xl ">
             <div class="card_pref_blur flex flex-col items-center  rounded-2xl p-3">
                 <i class="bi bi-trophy bg-[#cf0068] rounded-full "
                     style="padding: 20px 35px; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body mt-3">
-                    <h5 class="card-title text-center fs-3 font-bold text-[#bf93ec]">Calidad</h5>
-                    <p class="text-gray-400 text-center fs-4">Vivimos en un mundo donde todos dicen que tienen los
+                    <h5 class="card-title text-center font-bold text-[#bf93ec]">Calidad</h5>
+                    <p class="text-center">Vivimos en un mundo donde todos dicen que tienen los
                         mejores
                         productos del mercado. Pero una cosa es afirmarlo y la otra es garantizarlo</p>
                 </div>
@@ -265,8 +220,8 @@
                 <i class="bi bi-hand-thumbs-up bg-[#cf0068] rounded-full"
                     style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body mt-3">
-                    <h5 class="card-title text-center fs-3 font-bold text-[#bf93ec]">Honestidad</h5>
-                    <p class="text-gray-400 text-center fs-4">La<strong class="bg-[#bf93ec] text-gray-900">
+                    <h5 class="card-title text-center font-bold text-[#bf93ec]">Honestidad</h5>
+                    <p class="text-center">La<strong class="bg-[#bf93ec] text-gray-900">
                             transparencia,
                             sinceridad y
                             franqueza,</strong> son
@@ -277,8 +232,8 @@
                 <i class="bi bi-heart-pulse bg-[#cf0068] rounded-full"
                     style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body mt-3">
-                    <h5 class="card-title text-center fs-3 font-bold text-[#bf93ec]">Pasión</h5>
-                    <p class="text-gray-400 text-center fs-4">Disfrutamos lo que hacemos Por ello, el tener la
+                    <h5 class="card-title text-center font-bold text-[#bf93ec]">Pasión</h5>
+                    <p class=" text-center">Disfrutamos lo que hacemos Por ello, el tener la
                         <strong class="bg-[#bf93ec] text-gray-900">pasión</strong> como uno de nuestro valor los
                         resulatos de
                         nuestro
@@ -305,8 +260,8 @@
                     <path fill="currentColor"
                         d="M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25m19.61 1.11l-4.25 4.25l-5.2-5.2l1.77-1.77l1 1l2.47-2.48l1.42 1.42L18.36 17l1.06 1l1.42-1.4l1.77 1.76m-16-7.53L1.39 5.64l4.25-4.25L7.4 3.16L4.93 5.64L6 6.7l2.46-2.48l1.42 1.42l-1.42 1.41l1 1l-2.85 2.78M20.71 7c.39-.39.39-1 0-1.41l-2.34-2.3c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75L20.71 7Z" />
                 </svg>
-                <h5 class="card-title text-center fs-3 font-bold text-[#bf93ec]"">Diseño e impresión de vanguardia</h5>
-                <p class="text-gray-400 text-center fs-4">En Graph Evolution, nos enorgullece ofrecer soluciones de diseño
+                <h5 class="card-title text-center font-bold text-[#bf93ec]"">Diseño e impresión de vanguardia</h5>
+                <p class=" text-center">En Graph Evolution, nos enorgullece ofrecer soluciones de diseño
                     e impresión de vanguardia que ayudan a nuestros clientes a destacar en un mercado competitivo.</p>
             </div>
             <div class="card_pref_blur flex flex-col items-center rounded-2xl p-3">

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@100;300;400;500&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/css/main.d7f96858.css" />
@@ -25,11 +25,9 @@
     <div class="notify_events">
         <p class="mesage_events">🎄🤶 ❄️🤶🎄</p>
     </div>
-    <header class="header content ">
-        <div class="logo">
-            <a href="{{ route('home') }}" class="text-decoration-none"><img src="{{ asset('img/logo.png') }}"
-                    alt="" width="100%"></a>
-        </div>
+    <header class="header content">
+            <a class="logo" href="{{ route('home') }}" class="text-decoration-none"><img
+                  class="logo_img"  src="{{ asset('img/logo.png') }}" alt="" width="100%"></a>
         <nav class="navigation">
             <button class="close_nav" style="border: none; background: transparent">
                 <i class="bi bi-x-lg"></i>
@@ -41,11 +39,13 @@
                 <li><a href="{{ route('help') }}" class="navigation-links">Soporte</a></li>
                 <li><a href="{{ route('contact') }}" class="navigation-links contact-button">Contacto</a></li>
             </ul>
-            <a href="{{ route('contact') }}"
-                class="button-lg inline-flex justify-center items-center py-2 px-5 text-base font-medium text-center text-white rounded-lg bg-[#cf0068] hover:bg-[#cf0068d8]">
-                Contacto
-            </a>
+            <div>
 
+                <a href="{{ route('contact') }}"
+                    class="section-button inline-flex justify-center items-center text-white rounded-lg bg-[#cf0068] hover:bg-[#cf0068d8] button-desk">
+                    Contacto
+                </a>
+            </div>
         </nav>
         <button class="open_navbar"><i class="bi bi-list"></i></button>
     </header>
