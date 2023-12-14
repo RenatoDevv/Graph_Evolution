@@ -43,7 +43,7 @@
                                             </label>
                                             <textarea type="text" name="description"
                                                 class="border-0 px-3 py-3 placeholder:text-slate-400 text-blueGray-600 bg-white text-gray-500 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                rows="2" placeholder="Descripcion de la pagina " disabled>{{ $service->description }}+</textarea>
+                                                rows="10" placeholder="Descripcion de la pagina " disabled>{{ $service->description }}+</textarea>
                                         </div>
                                     </div>
                                 </div>

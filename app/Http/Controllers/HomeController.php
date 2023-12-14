@@ -38,4 +38,8 @@ class HomeController extends Controller
     {
         return view('pages.soporte');
     }
+    public function detail ($id){
+        $service = Service::find($id);
+        return view('pages.details.details', compact('service'));
+    }
 }

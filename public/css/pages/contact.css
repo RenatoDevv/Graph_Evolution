@@ -35,34 +35,6 @@
     margin: 50px;
     padding: 150px 0 300px 0;
     height: auto;
-
-}
-
-.contact-socials .card-socials {
-    width: 300px;
-    height: auto;
-    padding: 20px;
-}
-
-.contact-socials .card-socials:hover {
-    cursor: pointer;
-    box-shadow: 0 0 0.9px 0.5px #cf00be;
-    border-radius: 10px;
-    transition: 0.2s all;
-}
-
-.contact-socials .card-socials i {
-    font-size: 70px;
-    padding: 18px 30px;
-}
-
-.card-socials .button-message {
-    border: 1px solid #cf00be;
-    color: #cf00be;
-}
-
-.card-socials .button-message:hover {
-    background: #cf00be;
 }
 
 .contact-form {
@@ -76,7 +48,6 @@
 }
 
 .contact-map {
-    overflow: hidden;
     width: 100%;
     padding: 200px 0px;
 }
@@ -86,7 +57,6 @@
     width: 100%;
 }
 
-@media only screen and (max-width: 1200px) {}
 
 @media only screen and (max-width: 700px) {
 
@@ -126,15 +96,4 @@
         width: 100%;
     }
 
-
-
-    .contact-form .imageForm {
-        display: none;
-    }
-
-    .contact-form form {}
-
-    .contact-map {
-        overflow: hidden;
-    }
 }

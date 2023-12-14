@@ -3,10 +3,10 @@
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .content-about .content-about-descripcion {
-    margin-right: 100px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -19,37 +19,21 @@
     line-height: 100px;
 }
 
-.content-about .content-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 20px;
-}
-
 .content-about .content-image {
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: end;
 }
+
 .about-biografi {
     margin: 150px 0;
-    gap: 200px;
+    gap: .625rem;
 }
 
-section .wathc-video {
-    background: #a71582;
-    border-radius: 20px;
-    padding: 15px 60px;
-    border: none;
-    transition: 0.3s ease;
-    font-size: 20px;
-}
-
-section .wathc-video:hover {
-    background: transparent;
-    border: 1px solid #a71582;
+.about-description {
+    max-width: 800px;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .graph-about {
@@ -62,38 +46,48 @@ section .wathc-video:hover {
 
 .graph-about .about-content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 200px;
+    align-items: center;
+    gap: 1.25rem
 }
 
-.graph-about .about-content .about-text .image-mision {
-    background-position: center;
-    background-size: cover;
-}
 
 .graph-about .about-content .about-text {
+    width: 100%;
+    background: #75757521;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 900px;
     display: flex;
+    justify-content: space-between;
+    align-content: center;
     gap: 50px;
-    margin-right: 70px;
 }
 
-.graph-about .about-content .about-text .about-title {
-    font-size: 30px;
-    font-weight: bold;
-    gap: 200px;
+
+
+.graph-about .about-content .about-text .about-icon {
+    padding: 20px 30px;
+    border-radius: 20px;
+    color: #c7c6c6;
+    margin: auto;
 }
 
-.graph-about .about-content .about-text .about-description {
-    /* font-size: 18px; */
+.yellow-icon {
+    background: #ff00ff28;
 }
 
-.graph-about .about-content img {
-    height: auto;
-    background-size: cover;
+.blue-icon {
+    background: #ff73008f;
 }
 
-.modal-content {
-    box-shadow: 0 1px 50px 1px #a715835e;
+.green-icon {
+    background: #0026ff21;
+}
+
+.blue-100-icon {
+    background: #73ff0079;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -133,11 +127,13 @@ section .wathc-video:hover {
         margin-right: 0px;
         gap: 10px;
     }
+
     .content-about .content-title {
         font-weight: 700;
         font-size: 50px;
         line-height: 50px;
     }
+
     .content-about .content-image {
         width: 100%;
         justify-content: center;
@@ -158,6 +154,7 @@ section .wathc-video:hover {
         align-items: center;
         gap: 0px;
     }
+
     .graph-about .about-content .about-text {
         flex-direction: column;
         gap: 10px;

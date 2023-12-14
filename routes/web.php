@@ -20,8 +20,9 @@ use App\Http\Controllers\admin\MessageController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/about', [HomeController::class, 'about'], 'about')->name('about');
-Route::get('/contact', [HomeController::class, 'contact'], 'contact')->name('contact');
-Route::get('/soporte', [HomeController::class, 'help'], 'help')->name('help');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/soporte', [HomeController::class, 'help'])->name('help');
+Route::get('/detail/{id}', [HomeController::class, 'detail'])->name('detail');
 
 
 Route::middleware([
@@ -55,18 +56,6 @@ Route::middleware([
     Route::get('/admin/Phome/edit/{id}', [SitioController::class, 'homeEdit'])->name('admin.home.edit');
     Route::post('/admin/Phome/update/{id}', [SitioController::class, 'homeUpdate'])->name('admin.home.update');
     Route::delete('/admin/Phome/delete/{id}', [SitioController::class, 'homeDelete'])->name('admin.home.delete');
-
-    // Route::get('/admin/Phome/profile', [PageController::class, 'profile'])->name('admin.profile');
-
-    //services page controller CRUD
-    // Route::get('/admin/Services/index', [SitioController::class, 'servicesIndex'])->name('admin.services.index');
-    // Route::get('/admin/Services/create', [SitioController::class, 'servicesCreate'])->name('admin.services.create');
-    // Route::post('/admin/Services/store', [SitioController::class, 'servicesStore'])->name('admin.services.store');
-    // // Route::get('/admin/Phome/show', [AdminController::class, 'pageshow'])->name('admin.home.show');
-    // Route::get('/admin/Services/edit/{id}', [SitioController::class, 'servicesEdit'])->name('admin.services.edit');
-    // Route::post('/admin/Services/update/{id}', [SitioController::class, 'servicesUpdate'])->name('admin.services.update');
-    // Route::delete('/admin/Services/delete/{id}', [SitioController::class, 'servicesDelete'])->name('admin.services.delete');
-
 
 
     //SERVOCE CONTROLLER

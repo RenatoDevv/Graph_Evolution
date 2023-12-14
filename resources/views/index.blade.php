@@ -9,16 +9,15 @@
         @foreach ($homes as $home)
             <div class="hero-text d-flex flex-column gap-2">
                 <div class="text-start max-w-3xl animate-hero-text-slide-up-fade sm:shrink-0 ">
-                    <h1 class="section-title text-gradient tracking-tight  lg:text-start
+                    <h1 class="section-title text-gradient tracking-tight text-start lg:text-start
                         ">
                         {{ $home->title }}
                     </h1>
-                    <p
-                        class="hero-description mb-6 mt-4 w-auto max-w-[36rem] text-center sm:text-center md:text-center  lg:text-start">
+                    <p class="hero-description mb-6 mt-4 w-auto max-w-[36rem] sm:text-center md:text-center  lg:text-start">
                         {{ $home->description }}
                     </p>
                     <div class="flex gap-3 md:justify-center lg:justify-start">
-                        <a href="{{ route('services') }}" class="section-button">
+                        <a href="{{ route('services') }}" class="section-button button-hero">
                             Conocer más
                             <svg class="w-4 h-3.5 ms-2 rtl:rotate-180" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor"
@@ -47,9 +46,9 @@
     </div>
 
     {{-- Segunda seccion --}}
-    <section class="w-full flex justify-evenly items-center gap-2 py-5 my-28 border-gray-800 overflow-hidden flex-wrap">
-        <div class="font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="px-1 py-1 rounded-xl gap-3 bg-[#75757521]">
+    <section class="w-full flex justify-evenly items-center gap-2 py-5 my-28  overflow-hidden flex-wrap">
+        <div class="box-1 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+            <div class="box-1 px-1 py-1 rounded-xl gap-3 bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068]">
                     <path fill="currentColor"
                         d="m8.8 10.95l2.15-2.175l-1.4-1.425l-1.1 1.1l-1.4-1.4l1.075-1.1L7 4.825L4.825 7L8.8 10.95Zm8.2 8.225L19.175 17l-1.125-1.125l-1.1 1.075l-1.4-1.4l1.075-1.1l-1.425-1.4l-2.15 2.15L17 19.175Zm-.775-12.75l1.4 1.4l1.4-1.4L17.6 5l-1.375 1.425ZM7.25 21H3v-4.25l4.375-4.375L2 7l5-5l5.4 5.4l3.775-3.8q.3-.3.675-.45t.775-.15q.4 0 .775.15t.675.45L20.4 4.95q.3.3.45.675T21 6.4q0 .4-.15.763t-.45.662l-3.775 3.8L22 17l-5 5l-5.375-5.375L7.25 21Z" />
@@ -57,11 +56,11 @@
             </div>
             <div class="flex flex-col">
                 <span class="print_icon text-3xl text-white">50+</span>
-                <span class="text-sm text-gray-500">Total Servicios</span>
+                <span class="box-1 text-sm text-gray-500">Total Servicios</span>
             </div>
         </div>
-        <div class=" font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="px-1 py-1 rounded-xl bg-[#75757521]">
+        <div class="box-2 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+            <div class="box-2 px-1 py-1 rounded-xl bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068]">
                     <path fill="currentColor"
                         d="m8.8 10.95l2.15-2.175l-1.4-1.425l-1.1 1.1l-1.4-1.4l1.075-1.1L7 4.825L4.825 7L8.8 10.95Zm8.2 8.225L19.175 17l-1.125-1.125l-1.1 1.075l-1.4-1.4l1.075-1.1l-1.425-1.4l-2.15 2.15L17 19.175Zm-.775-12.75l1.4 1.4l1.4-1.4L17.6 5l-1.375 1.425ZM7.25 21H3v-4.25l4.375-4.375L2 7l5-5l5.4 5.4l3.775-3.8q.3-.3.675-.45t.775-.15q.4 0 .775.15t.675.45L20.4 4.95q.3.3.45.675T21 6.4q0 .4-.15.763t-.45.662l-3.775 3.8L22 17l-5 5l-5.375-5.375L7.25 21Z" />
@@ -69,11 +68,11 @@
             </div>
             <div class="flex flex-col">
                 <span class="print_icon text-3xl text-white">100+</span>
-                <span class="text-sm text-gray-500">Total Servicios</span>
+                <span class="box-2 text-sm text-gray-500">Total Servicios</span>
             </div>
         </div>
-        <div class=" font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="px-1 py-1 rounded-xl bg-[#75757521]">
+        <div class="box-3 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+            <div class="box-3 px-1 py-1 rounded-xl bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 640 512" class="text-[#cf0068]">
                     <path fill="currentColor"
                         d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6c40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32S208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z" />
@@ -81,11 +80,11 @@
             </div>
             <div class="flex flex-col">
                 <span class="print_icon text-3xl text-white">5000+</span>
-                <span class="text-sm text-gray-500">Usuarios</span>
+                <span class="box-3 text-sm text-gray-500">Usuarios</span>
             </div>
         </div>
-        <div class=" font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="px-1 py-1 rounded-xl bg-[#75757521]">
+        <div class="box-4 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+            <div class="box-4 px-1 py-1 rounded-xl bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 640 512" class="text-[#cf0068]">
                     <path fill="currentColor"
                         d="M544 248v3.3l69.7-69.7c21.9-21.9 21.9-57.3 0-79.2l-78.1-78c-21.9-21.9-57.3-21.9-79.2 0l-40.1 40.1c-2.7-.3-5.5-.5-8.3-.5H296c-37.1 0-67.6 28-71.6 64h-.4v120c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h160c44.2 0 80 35.8 80 80v8zm-208-56v56c0 39.8-32.2 72-72 72s-72-32.2-72-72V129.4c-35.9 6.2-65.8 32.3-76 68.2l-16.5 57.6l-73.2 73.2c-21.9 21.9-21.9 57.3 0 79.2l78.1 78.1c21.9 21.9 57.3 21.9 79.2 0l37.7-37.7c.9 0 1.8.1 2.7.1h160c26.5 0 48-21.5 48-48c0-5.6-1-11-2.7-16h2.7c26.5 0 48-21.5 48-48c0-12.8-5-24.4-13.2-33c25.7-5 45.1-27.6 45.2-54.8v-.4c-.1-30.8-25.1-55.8-56-55.8H336z" />
@@ -93,7 +92,7 @@
             </div>
             <div class="flex flex-col">
                 <span class="print_icon text-3xl text-white">10+</span>
-                <span class="text-sm text-gray-500">Años de Servicio</span>
+                <span class="box-4 text-sm text-gray-500">Años de Servicio</span>
             </div>
         </div>
 
@@ -101,8 +100,8 @@
 
 
     <section class="flex flex-col items-center  bg-[#13111C] my-10  h-auto">
-        <p class="section-subtitle text-center py-2 px-4 m-4 rounded-xl bg-[#cf006846] border-5 border-[#cf0068]">1</p>
-        <span class="text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit</span>
+        <p class="section-subtitle text-center py-2 px-4 m-4 rounded-xl bg-[#cf006846] border-5 border-[#cf0068]" id="one">1</p>
+        <span class="text-center box-2">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit</span>
         <p class="section-subtitle m-0 text-[#cf0068]">Lorem ipsum dolor sit</p>
         <p class="mb-4 max-w-4xl text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit, nunc facilisis
             leo laoreet urna aptent mi, sem netus tellus donec sollicitudin torquent hendrerit.</p>
@@ -119,8 +118,7 @@
             <h2 class="font-bold text-5xl">El diseño es el arte de combinar la creatividad y la tecnología para comunicar
                 ideas.</h2>
             <p></p>
-            <a href="#services"
-                class="inline-flex justify-center items-center py-2 px-3 text-base font-medium text-center  rounded-lg bg-[#cf0068] hover:bg-[#cf0068c7] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            <a href="#services" class="section-button">
                 Conocer más
                 <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">
@@ -177,8 +175,7 @@
                             <p>{{ $service->price }}</p>
                         </div>
                         <div class="w-full flex items-center pt-3">
-                            <a href="{{ route('services') }}"
-                                class="text-xl text-center w-full  bg-[#cf0068] py-2 rounded-xl shadow-lg hover:bg-[#cf0068b7]">
+                            <a href="{{ route('services') }}" class="section-button w-full">
                                 Ver Ahora
                             </a>
                         </div>

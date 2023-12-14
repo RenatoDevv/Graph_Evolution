@@ -228,7 +228,9 @@ body::-webkit-scrollbar-thumb {
     transition: var(--animation-hover-buttom);
     display: none;
 }
-
+.contact-button {
+    display: none;
+}
 .header .navigation .open_navbar:hover {
     color: var(--color-pink);
 }

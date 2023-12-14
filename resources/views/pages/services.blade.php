@@ -20,7 +20,7 @@
                 @foreach ($services as $service)
                     <div
                         class="max-w-sm bg-[#75757521] px-6 pt-6 pb-2 rounded-xl transform hover:scale-105 transition duration-500 hover:bg-[#75757548]">
-                        <h3 class="mb-3 text-xl font-bold text-orange-500">{{ $service->title }}</h3>
+                        <h3 class="mb-3 font-bold text-orange-500">{{ $service->title }}</h3>
                         <div class="relative">
                             <img class="w-80 h-56 rounded-xl  overflow-hidden object-cover object-center"
                                 src="{{ asset('storage/' . $service->images_file) }}" alt="">
@@ -31,7 +31,7 @@
                                 </svg>
                             </p>
                         </div>
-                        <h1 class="mt-2 text-[#fff] text-xl font-semibold cursor-pointer">
+                        <h1 class="mt-2  font-semibold cursor-pointer">
                             {{ Str::limit($service->description, '70') }}</h1>
                         <div class="my-3">
                             <div class="flex space-x-1 items-center">
@@ -44,8 +44,7 @@
                                 <p>{{ $service->price }}</p>
                             </div>
                             <div class="w-full flex items-center pt-3">
-                                <a href="{{ route('services') }}"
-                                    class="text-xl text-center w-full text-white bg-[#cf0068] py-2 rounded-xl shadow-lg hover:bg-[#cf0068b7]">
+                                <a href="{{ route('detail', $service->id) }}" class="section-button w-full">
                                     Ver Ahora
                                 </a>
                             </div>
