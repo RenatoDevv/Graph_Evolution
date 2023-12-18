@@ -61,7 +61,7 @@
             @endif
 
             <div class="flex flex-col items-center justify-center mt-4">
-                <x-button class="ml-4 mb-5">
+                <x-button class="ml-4 mb-5 rounded-full bg-indigo-700 hover:bg-indigo-600 focus:bg-indigo-500 py-3">
                     {{ __('Registrame') }}
                 </x-button>
                 <div class="flex gap-5">

@@ -246,6 +246,7 @@
         </div>
     </div>
 
+
     <div class="flex justify-center pb-4 pt-2">
         <p class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</p>
     </div>

@@ -33,12 +33,7 @@
                         </div>
                     </div>
                     <div class="lg:ml-40 ml-10 space-x-8">
-                        <a href="{{ route('admin.users.create') }}"
-                            class="bg-indigo-500 px-12 py-3 rounded-full text-white font-semibold tracking-wide cursor-pointer">
-                            Añadir
-                        </a>
-                        <button
-                            class="bg-indigo-500 px-12 py-3 rounded-full text-white font-semibold tracking-wide cursor-pointer border-none">Create</button>
+                        <x-buttonP href="{{ route('admin.users.create') }}" class="w-full border-2 border-violet-600">Añadir</x-buttonP>
                     </div>
                 </div>
             </div>

@@ -22,12 +22,18 @@
 </head>
 
 <body class="mx-auto">
+    @inject('mesagges', 'App\Models\Mesagge')
+    @php
+        $messages = App\Models\Mesagge::take(1)->get();
+    @endphp
     <div class="notify_events">
-        <p class="mesage_events">🎄🤶 ❄️🤶🎄</p>
+        @foreach ($messages as $moot)
+            <p class="mesage_events">🎄🤶 {{ $moot->message }} ❄️🤶🎄</p>
+        @endforeach
     </div>
     <header class="header content">
-            <a class="logo" href="{{ route('home') }}" class="text-decoration-none"><img
-                  class="logo_img"  src="{{ asset('img/logo.png') }}" alt="" width="100%"></a>
+        <a class="logo" href="{{ route('home') }}" class="text-decoration-none"><img class="logo_img"
+                src="{{ asset('img/logo.png') }}" alt="" width="100%"></a>
         <nav class="navigation">
             <button class="close_nav" style="border: none; background: transparent">
                 <i class="bi bi-x-lg"></i>

@@ -117,6 +117,9 @@
                                 </table>
                             </div>
                         </div>
+                        <x-buttonP href="{{ route('admin.home.edit', $home->id) }}">Enviame ahora</x-buttonP>
+
+
                         <footer class="relative  pt-8 pb-6 mt-2">
                             <div class="container mx-auto px-4">
                                 <div class="flex flex-wrap items-center md:justify-between justify-center">

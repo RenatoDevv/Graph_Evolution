@@ -75,11 +75,7 @@
                                 <hr class="mt-6 border-b-1 border-blueGray-300">
 
                                 <div class="flex  gap-5 justify-center">
-                                    <a href="{{ route('admin.services.index') }}"
-                                        class="my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20  rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                        Cancelar
-                                    </a>
+                                    <x-buttonP href="{{ route('admin.services.index') }}" class="border-2 border-violet-600">Regresar</x-buttonP>
                                 </div>
                             </div>
                         </div>

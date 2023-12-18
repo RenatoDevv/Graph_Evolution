@@ -31,10 +31,10 @@
                             placeholder="Buscar....">
                     </div>
                     <div class="lg:ml-40 ml-10 space-x-8">
-                        <a href="{{ route('admin.pages.create') }}"
-                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
-                            Nueva Pagina
-                        </a>
+                        <x-buttonP href="{{ route('admin.pages.create') }}" class="border-2 border-violet-600 px-14">
+                            Añadir
+                        </x-buttonP>
+
                     </div>
                 </div>
             </div>
@@ -129,17 +129,7 @@
                             <span class="text-xs xs:text-sm text-gray-900">
                                 Mostrando datos
                             </span>
-                            <div class="inline-flex mt-2 xs:mt-0">
-                                <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
-                                    Anterior
-                                </button>
-                                &nbsp; &nbsp;
-                                <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
-                                    Siguiente
-                                </button>
-                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -1,118 +1,118 @@
 <div class="flex flex-col p-2 lg:p-8 dark:bg-[#313a46]  dark:via-transparent  gap-3 relative">
-    <button type="button" class="right-0 absolute top-0"> Open</button>
-    <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-300">👋 Bienvenido al panel de Administrador
+    {{-- <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-300">👋 Bienvenido al panel de Administrador
     </h1>
     <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas
         ullam,
         perferendis in enim at
         quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam commodi
-        alias?</p>
-    <div class="flex justify-between min-[400px]:flex-col lg:flex-row gap-5">
-        <!-- end: Social Network notification:light -->
-        <div class="w-auto h-auto relative">
-            <div
-                class="bg-white  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear dark:bg-[#ffffff12]  text-white">
-                <div class="w-full flex items-center justify-between">
-                    <span class="font-bold text-base text-slate-600 dark:text-gray-100">Usuarios</span>
-                </div>
-                <div class="flex items-center mt-2 rounded-lg px-1 py-1 cursor-pointer">
-                    <div class="relative flex flex-shrink-0 items-end">
-                        <img class="min-w-min h-24 w-24 rounded-full" src="{{ asset('img/admin/perfil.jpg') }}">
-                        <span
-                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
-                    </div>
-                    <div class="ml-3">
-                        <span class="font-semibold text-sm text-slate-600 dark:text-gray-100">Administradores del sitio
-                            web</span>
-                        <span class="text-sm leading-none opacity-100"></span>
+        alias?</p> --}}
 
-                        <p class="font-semibold text-sm text-slate-600 dark:text-gray-100">total: 3</p>
-                        <span
-                            class="text-xs text-blue-500 font-bold leading-4 opacity-75 hover:text-sm hover:text-blue-700 dark:text-blue-400">
-                            <a href="{{ route('admin.pages') }}">Ver mas</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
+    <div
+        class="w-full rounded-2xl  bg-gradient-to-r from-orange-500 to-pink-500 grid grid-cols-1 justify-between p-7 mb-10 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+        <div class="flex flex-col gap-2 items-start">
+            <h1 class="text-3xl font-bold text-start text-gray-800 dark:text-gray-300">👋 Bienvenido al panel de
+                Administrador
+            </h1>
+            <p class=" text-gray-800 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis
+                voluptas
+                ullam,
+                perferendis in enim at
+                quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
+                commodi
+                alias?</p>
+            <x-buttonP href="" class="bg-transparent border-gray-400 text-start">
+                Explorar Ahora
+            </x-buttonP>
         </div>
-        <div class="w-auto h-auto relative">
-            <div
-                class="bg-white  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear dark:bg-[#ffffff12] ">
-                <div class="w-full flex items-center justify-between">
-                    <span class="font-bold text-base text-slate-600 dark:text-white">Sitio web</span>
-                </div>
-                <div class="flex items-center mt-2 rounded-lg py-1 cursor-pointer">
-                    <div class="relative flex flex-shrink-0 items-end">
-                        <img class="h-24 w-24 rounded-full"
-                            src="https://assets-blog.hostgator.mx/wp-content/uploads/2017/12/blog-7-coisas-para-comecar.webp">
-                        <span
-                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
-                    </div>
-                    <div class="ml-3.5">
-                        <span class="font-semibold text-sm text-slate-600 dark:text-white">Paginas comformados del sitio
-                            web</span>
-                        <p class="font-semibold text-sm text-slate-600 dark:text-white">Total: 5</p>
-                        <span
-                            class="text-xs text-blue-500 font-bold leading-4 opacity-75 hover:text-sm hover:text-blue-700">
-                            <a href="{{ route('admin.pages') }}">Ver mas</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
+        <div class="relative flex items-end justify-end">
+            <img src="{{ asset('img/super-cat.png') }}" alt="Graph Evolution super admin cat" class="absolute -mb-16"
+                width="30%">
         </div>
+    </div>
 
-        <!-- start: Social Network notification:dark -->
-        <div class="w-auto h-auto relative  min-[400px]:hidden  sm:hidden lg:block">
-            <div
-                class="bg-white  px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear dark:bg-[#ffffff12]">
-                <div class="w-full flex items-center justify-between">
-                    <span class="font-bold text-base text-slate-600">Pagin Inicio</span>
+    <div class="flex flex-col justify-center items-center w-full">
+        <div
+            class="relative flex flex-col items-center rounded-[20px] w-full mx-auto bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:!shadow-none p-3">
+            <div class="mt-2 mb-8 w-full">
+                <h4 class="px-2 text-xl font-bold text-navy-700 dark:text-white">
+                    Informacion Genaral
+                </h4>
+                <p class="mt-2 px-2 text-base text-gray-600">
+                    Explore el contenido que tiene a su control
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 px-2 w-full">
+                <div
+                    class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    <p class="flex font-semibold text-navy-700 dark:text-white">
+                        Administradores
+                    </p>
+                    <p class=" text-gray-600">Navegue para realizar cambios o revisar el contenido.</p>
+                    <span
+                        class=" flex text-blue-700 font-bold leading-4 opacity-75  hover:text-blue-800 dark:text-blue-800">
+
+                        <a href="{{ route('admin.users') }}">Ver mas</a>
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-right"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>
                 </div>
-                <div class="flex items-center mt-2 rounded-lg py-1 cursor-pointer">
-                    <div class="relative flex flex-shrink-0 items-end">
-                        <img class="h-24 w-24 rounded-full"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxwgv7JU0r9ZrBdHmNAKo5mYRH85xP7qtQA&usqp=CAU">
-                        <span
-                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
-                    </div>
-                    <div class="ml-3.5">
-                        <span class="font-semibold text-sm text-slate-600 dark:text-white">Pagina de Inicio,
-                            Informacion</span>
-                        <p class="font-semibold text-sm text-slate-600 dark:text-white">.</p>
-                        <span
-                            class="text-xs text-blue-500 font-bold leading-4 opacity-75 hover:text-sm hover:text-blue-700">
-                            <a href="{{ route('admin.home.index') }}">Ver mas</a>
-                        </span>
-                    </div>
+                <div
+                    class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    <p class="flex font-semibold text-navy-700 dark:text-white">
+                        Pagina Inicio
+                    </p>
+                    <p class=" text-gray-600">Navegue para realizar cambios o revisar el contenido.</p>
+                    <span
+                        class=" flex text-blue-700 font-bold leading-4 opacity-75  hover:text-blue-800 dark:text-blue-800">
+
+                        <a href="{{ route('admin.home.index') }}">Ver mas</a>
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-right"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>
                 </div>
+                <div
+                    class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    <p class="flex font-semibold text-navy-700 dark:text-white">
+                        Servicios
+                    </p>
+                    <p class=" text-gray-600">Navegue para realizar cambios o revisar el contenido.</p>
+                    <span
+                        class=" flex text-blue-700 font-bold leading-4 opacity-75  hover:text-blue-800 dark:text-blue-800">
+
+                        <a href="{{ route('admin.services.index') }}">Ver mas</a>
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-right"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>
+                </div>
+                <div
+                    class="flex flex-col items-start justify-center rounded-2xl bg-white bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+                    <p class="flex font-semibold text-navy-700 dark:text-white">
+                        Mensaje
+                    </p>
+                    <p class=" text-gray-600">Navegue para realizar cambios o revisar el contenido.</p>
+                    <span
+                        class=" flex text-blue-700 font-bold leading-4 opacity-75  hover:text-blue-800 dark:text-blue-800">
+
+                        <a href="{{ route('admin.message') }}">Ver mas</a>
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-right"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                        </svg>
+                    </span>
+                </div>
+
             </div>
         </div>
-        {{-- <div class="w-auto h-auto relative min-[400px]:hidden sm:hidden md:hidden lg:block">
-            <div
-                class="bg-white   px-5 py-3.5 rounded-lg shadow hover:shadow-xl max-w-sm mx-auto transform hover:-translate-y-[0.125rem] transition duration-100 ease-linear ">
-                <div class="w-full flex items-center justify-between">
-                    <span class="font-bold text-base text-slate-600">Datos Vacios</span>
-                </div>
-                <div class="flex items-center mt-2 rounded-lg px-1 py-1 cursor-pointer">
-                    <div class="relative flex flex-shrink-0 items-end">
-                        <img class="h-24 w-24 rounded-full"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_y0Sae7U8L5bC09KUISBwq-b6T5ZMgIEfr7K6WuymE4wwIAQ5Pu1vTPUNKJsw6FyuGQ4&usqp=CAU">
-                        <span
-                            class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
-                    </div>
-                    <div class="ml-3.5">
-                        <span class="font-semibold text-sm text-slate-600 dark:text-white"><code>This is code
-                                text</code>
-                            web</span>
-                        <p class="font-semibold text-sm text-slate-600 dark:text-white">.</p>
-                        <span
-                            class="text-xs text-blue-500 font-bold leading-4 opacity-75 hover:text-sm hover:text-blue-700">
-                            <a href="">Ver mas</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
     </div>
 
     <!-- component -->
@@ -123,5 +123,4 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
-    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
 </div>

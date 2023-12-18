@@ -199,7 +199,7 @@
                         mejores
                         productos del mercado. Pero una cosa es afirmarlo y la otra es garantizarlo</p>
                 </div>
-            </div>
+            </div> 
             <div class="card_pref_blur flex flex-col justify-center items-center rounded-2xl p-3">
                 <p></p>
                 <svg width="80" height="80" viewBox="0 0 256 256" class="text-[#cf0068]">

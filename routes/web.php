@@ -52,6 +52,8 @@ Route::middleware([
     Route::get('/admin/Phome/index', [SitioController::class, 'homeIndex'])->name('admin.home.index');
     Route::get('/admin/Phome/create', [SitioController::class, 'homeCreate'])->name('admin.home.create');
     Route::post('/admin/Phome/store', [SitioController::class, 'homeStore'])->name('admin.home.store');
+
+    
     // Route::get('/admin/Phome/show', [AdminController::class, 'pageshow'])->name('admin.home.show');
     Route::get('/admin/Phome/edit/{id}', [SitioController::class, 'homeEdit'])->name('admin.home.edit');
     Route::post('/admin/Phome/update/{id}', [SitioController::class, 'homeUpdate'])->name('admin.home.update');

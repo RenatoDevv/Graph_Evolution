@@ -16,12 +16,8 @@
                                     <h6 class="text-gray-700 text-xl font-bold">
                                         Informacion
                                     </h6>
-                                    <a href="{{ route('admin.pages') }}"
-                                        class=" my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
-                                        font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300"
-                                        type="button">
-                                        Regresar
-                                    </a>
+                                    <x-buttonP href="{{ route('admin.pages') }}"
+                                        class="border-2 border-violet-600 px-14">Regrasar</x-buttonP>
                                 </div>
                             </div>
                             <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
@@ -41,17 +37,7 @@
                                                     {{ $page->name }}</p>
                                             </div>
                                         </div>
-                                        {{-- <div class="w-full lg:w-6/12 px-4">
-                                            <div class="relative w-full mb-3">
-                                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                    htmlfor="grid-password">
-                                                    Correo Electronico
-                                                </label>
-                                                <p
-                                                    class="border-0 px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear transition-all duration-150">
-                                                    {{ $page->description }}</p>
-                                            </div>
-                                        </div> --}}
+
                                     </div>
 
                                     <hr class="mt-6 border-b-1 border-blueGray-300">
@@ -72,20 +58,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- <div class="w-full px-4">
-                                        <div class="flex flex-col items-center w-full m-auto">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                htmlfor="grid-password">
-                                                Suba una imagen
-                                            </label>
-                                            <span class="text-xs pb-3">La imagen debe ser de formato png o jpg de tamaño
-                                                1300 </span>
-                                            <input
-                                                class="px-3 py-3 rounded text-sm shadow ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                type="file" name="imagen_logo" value=""
-                                                placeholder="Descripcion">
-                                        </div>
-                                    </div> --}}
                                 </form>
                             </div>
                         </div>
@@ -93,7 +65,8 @@
                             <div class="container mx-auto px-4">
                                 <div class="flex flex-wrap items-center md:justify-between justify-center">
                                     <div class="w-full md:w-6/12 px-4 mx-auto text-center">
-                                        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
+                                        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph
+                                            Evolution</a>
                                     </div>
                                 </div>
                             </div>

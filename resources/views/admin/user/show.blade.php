@@ -3,7 +3,6 @@
         <div class="w-auto mx-auto">
             <div class=overflow-hidden shadow-xl">
                 {{-- el contenido se mostrara dentro de este contenedor --}}
-
                 <section
                     class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
                     <h1 class="text-3xl font-bold text-center text-gray-800">Ver Detalles del Usuario 👤</h1>
@@ -12,16 +11,11 @@
                         <div
                             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">
                             <div class="rounded-t  mb-0 px-6 py-6">
-                                <div class="text-center flex justify-between p-4">
+                                <div class="text-center flex items-start justify-between p-4">
                                     <h6 class="text-gray-700 text-xl font-bold">
                                         Informacion
                                     </h6>
-                                    <a href="{{ route('admin.users') }}"
-                                        class=" my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
-                                        font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300"
-                                        type="button">
-                                        Regresar
-                                    </a>
+                                    <x-buttonP href="{{ route('admin.users') }}" class="text-center border-2 border-violet-600 w-auto float-right">Regresar</x-buttonP>
                                 </div>
                             </div>
                             <div class="flex-auto px-4 lg:px-10 py-10 pt-0">

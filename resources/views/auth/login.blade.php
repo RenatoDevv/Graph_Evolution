@@ -44,9 +44,10 @@
             </div>
 
             <div class="flex flex-col items-center justify-center mt-4 gap-4">
-                <x-button class="bg-gray-100">
+                <x-button class="rounded-full bg-indigo-700 hover:bg-indigo-600 focus:bg-indigo-500 py-3">
                     {{ __('Iniciar Sesión') }}
                 </x-button>
+
                 <hr class="bg-gray-300">
                 <div class=" flex gap-5">
                     <span class="text-gray-400">Aun no tienes cuenta?</span>

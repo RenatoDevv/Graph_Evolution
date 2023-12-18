@@ -72,11 +72,10 @@
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">
-                                        <a href="{{ route('admin.pages') }}"
-                                            class="my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20  rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Cancelar
-                                        </a>
+                                        <x-buttonP href="{{ route('admin.pages') }}" class="border-2 border-violet-600 text-black   hover:bg-violet-600  hover:text-white rounded-lg">Cancelar</x-buttonP>
+                                        <x-button type="submit" class="border-2 border-violet-600 px-14">
+                                            Actualizar
+                                        </x-button>
                                         <button type="submit"
                                             class="my-5 w-auto flex justify-center bg-blue-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
                                             font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">

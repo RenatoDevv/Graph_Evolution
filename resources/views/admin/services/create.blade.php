@@ -33,7 +33,7 @@
                                                 </label>
                                                 <input
                                                     class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="title" value="{{ old('title')}}"
+                                                    type="text" name="title" value="{{ old('title') }}"
                                                     placeholder="Titulo del Sitio" required>
                                                 @error('title')
                                                     <strong>{{ $message }}</strong>
@@ -91,23 +91,15 @@
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">
-                                        <a href="{{ route('admin.services.index') }}"
-                                            class="my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20  rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Cancelar
-                                        </a>
-                                        <button type="submit"
-                                            class="my-5 w-auto flex justify-center bg-blue-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Registrar
-                                        </button>
+                                        <x-buttonP href="{{ route('admin.services.index') }}">Cancelar</x-buttonP>
+                                        <x-button type="submit"
+                                            class="border-2 border-violet-600 text-black   hover:bg-violet-600  hover:text-white rounded-lg">Registrar</x-button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </section>
-
                 <div class="flex justify-center pb-4 pt-2">
                     <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
                 </div>
