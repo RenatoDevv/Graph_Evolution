@@ -31,7 +31,6 @@
 </head>
 
 <body class="font-sans antialiased bg-slate-100">
-    <x-banner />
 
     <div class="min-h-screen flex gap-5 dark:bg-[#343a40]">
 

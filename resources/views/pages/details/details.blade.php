@@ -25,9 +25,7 @@
                     </svg>
                 </div>
                 <div class="pl-3 w-full flex items-center justify-between">
-                    <p tabindex="0" class="focus:outline-none text-sm font-normal leading-none text-red-700">Aclarando que el precio
-                        puesto solo es una referencia y no es el seguro esto variara de los requerimientos que solicite el
-                        cliente.</p>
+                    <p tabindex="0" class="focus:outline-none text-sm font-normal leading-none text-red-700">El precio especificado no es el definido ya que variara de sus requerimientos del servicio.</p>
                 </div>
             </div>
 

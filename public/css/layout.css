@@ -249,9 +249,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
 }
 
-.footer .footer-contanier .footer-container-box {}
 
-.footer .footer-contanier .footer-container-box .footer-logo {}
 
 .footer .footer-contanier .footer-container-box .footer-description {
     margin-top: 10px;
@@ -279,11 +277,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1200px) {
-    body {
-        /* padding: ; */
-        /* 50px */
-    }
-
     .content {
         /* overflow: auto; */
         padding: 0 1.25rem;
@@ -308,7 +301,6 @@ body::-webkit-scrollbar-thumb {
         justify-content: space-between;
     }
 
-    .footer .footer-container .footer-container-box {}
 
     .footer .footer-contanier .footer-container-box .footer-title {
         font-size: 16px;
@@ -328,8 +320,6 @@ body::-webkit-scrollbar-thumb {
     body {
         width: 100%;
 
-        /* padding: ; */
-        /*30px*/
 
     }
 
@@ -364,6 +354,7 @@ body::-webkit-scrollbar-thumb {
 
     .header .navigation.show {
         width: 100%;
+        background: #13111ce3;
         margin-left: 0;
         z-index: 40;
     }
@@ -393,7 +384,7 @@ body::-webkit-scrollbar-thumb {
         width: 80%;
         height: 100vh;
         padding: 50px;
-        background: #2c2131;
+        background: linear-gradient(35deg, rgba(42, 13, 80, 0.651) 3.65%, rgba(136, 0, 79, 0.24) 40.32%), #13111C;
         flex-direction: column;
         align-items: flex-start;
     }

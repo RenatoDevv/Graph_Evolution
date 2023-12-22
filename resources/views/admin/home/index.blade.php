@@ -7,12 +7,9 @@
                     <h1 class="text-3xl font-bold text-center text-gray-800">Detalles de la Pagina de Inicio Graph
                         Evolution</h1>
                     <p class="text-center text-gray-500">Datos de la Pagina</p>
-                    {{-- This is metod of create home page --}}
+
                     <div>
-                        {{-- <a href="{{ route('admin.home.create') }}"
-                            class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">
-                            Nueva Pagina
-                        </a> --}}
+
                     </div>
                     <div class="bg-white p-8 rounded-md w-full">
                         <div
@@ -22,12 +19,7 @@
                                     <h6 class="text-gray-700 text-xl font-bold">
                                         Informacion
                                     </h6>
-                                    {{-- <a href=""
-                                        class=" my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
-                                        font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300"
-                                        type="button">
-                                        Crear
-                                    </a> --}}
+
                                 </div>
                             </div>
                             <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
@@ -117,19 +109,6 @@
                                 </table>
                             </div>
                         </div>
-                        <x-buttonP href="{{ route('admin.home.edit', $home->id) }}">Enviame ahora</x-buttonP>
-
-
-                        <footer class="relative  pt-8 pb-6 mt-2">
-                            <div class="container mx-auto px-4">
-                                <div class="flex flex-wrap items-center md:justify-between justify-center">
-                                    <div class="w-full md:w-6/12 px-4 mx-auto text-center">
-                                        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph
-                                            Evolution</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </footer>
                     </div>
                 </section>
             </div>

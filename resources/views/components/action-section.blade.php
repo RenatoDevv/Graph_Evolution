@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'flex flex-col']) }}>
+{{-- <div {{ $attributes->merge(['class' => 'flex flex-col']) }}>
     <x-section-title>
         <x-slot name="title">{{ $title }}</x-slot>
         <x-slot name="description">{{ $description }}</x-slot>
@@ -9,4 +9,4 @@
             {{ $content }}
         </div>
     </div>
-</div>
+</div> --}}

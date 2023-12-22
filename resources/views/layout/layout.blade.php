@@ -39,11 +39,11 @@
                 <i class="bi bi-x-lg"></i>
             </button>
             <ul class="navigarion_ham ">
-                <li><a href="{{ route('home') }}" class="navigation-links">Inicio</a></li>
-                <li><a href="{{ route('services') }}" class="navigation-links">Servicios</a></li>
-                <li><a href="{{ route('about') }}" class="navigation-links">Nosotros</a></li>
-                <li><a href="{{ route('help') }}" class="navigation-links">Soporte</a></li>
-                <li><a href="{{ route('contact') }}" class="navigation-links contact-button">Contacto</a></li>
+                <li><a href="{{ route('home') }}"  class="navigation-links" >Inicio</a></li>
+                <li><a href="{{ route('services') }}"  class="navigation-links">Servicios</a></li>
+                <li><a href="{{ route('about') }}"  class="navigation-links">Nosotros</a></li>
+                <li><a href="{{ route('help') }}"  class="navigation-links">Soporte</a></li>
+                <li><a href="{{ route('contact') }}"  class="navigation-links contact-button">Contacto</a></li>
             </ul>
             <div>
 

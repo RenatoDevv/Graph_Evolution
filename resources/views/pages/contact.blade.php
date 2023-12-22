@@ -10,6 +10,7 @@
             <h2 class=" contactP-title text-center">Contactanos</h2>
         </div>
     </div>
+
     <div class="contact-socials d-flex flex-wrap items-center justify-center gap-3 m-auto w-full">
         <div
             class="max-w-sm bg-[#75757521] px-6 pt-6 pb-2 rounded-xl transform hover:scale-105 transition duration-500 hover:bg-[#75757548] flex flex-col items-center">
@@ -131,8 +132,8 @@
             </div>
         </form>
     </div>
-    <div class="contact-map " id="location">
-        <h2 class="text-center">----</h2>
+    <div class="contact-map w-screen container" id="location">
+        <h2 class="text-center section-subtitle">Visitenos aqui</h2>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6819.718461320845!2d-71.53678592345307!3d-16.40258168360523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424bd345e6f8a7%3A0x767df0b4c65fbbb7!2sGraph%20Evolution%20S.R.L.!5e0!3m2!1ses!2spe!4v1695750069185!5m2!1ses!2spe"
             width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"

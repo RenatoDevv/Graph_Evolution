@@ -2,19 +2,13 @@
 const effect = ScrollReveal({
     delay: 375,
     duration: 500,
-    reset: true
+    reset: false,
 });
 const effectE = ScrollReveal({
-    distance: "200px",
+    distance: "100px",
     duration: 1000,
     delay: 100,
-    reset: true,
-});
-const effectM = ScrollReveal({
-    distance: "20px",
-    duration: 2000,
-    delay: 300,
-    reset: true,
+    reset: false,
 });
 
 effectE.reveal(".section-title");
@@ -24,7 +18,7 @@ effect.reveal(".hero-description", {
     origin: "bottom",
 });
 
-effectE.reveal(".button-hero", {
+effectE.reveal(".section-button", {
     delay: 200,
     origin: "bottom",
 });
@@ -35,7 +29,7 @@ effect.reveal(".section-buttonT", {
 });
 
 effectE.reveal(".hero-image", {
-    delay: 200,
+    delay: 100,
     origin: "right",
 });
 
@@ -44,30 +38,25 @@ effectE.reveal(".ArrowFloat", {
     origin: "bottom",
 });
 
+effect.reveal(".print_icon", {
+    delay: 200,
+    origin: "bottom",
+})
 
-
-effect.reveal(".box-1 ", {
+effect.reveal(".pres-intro", {
+    delay: 100,
+    origin: "left",
+});
+effect.reveal(".pres-description", {
     delay: 200,
     origin: "bottom",
 });
-effect.reveal(".box-2", {
-    delay: 500,
-    origin: "bottom",
-});
-effect.reveal(".box-3", {
-    delay: 800,
-    origin: "bottom",
-});
-effect.reveal(".box-4", {
-    delay: 1200,
+
+effect.reveal(".img-gr-evolution ", {
+    delay: 400,
     origin: "bottom",
 });
 
-
-effect.reveal("#one", {
-    delay: 200,
-    origin: "bottom",
-});
 var slideUp = {
     distance: '150%',
     origin: 'bottom',
@@ -76,18 +65,10 @@ var slideUp = {
 };
 
 ScrollReveal().reveal('.home-about-text', slideUp);
-
-// ----------------------
-// effect.reveal(".home-about-text", {
-//     delay: 200,
-//     origin: "left",
-// });
-
 effect.reveal(".card-one", {
     delay: 100,
     origin: "top",
 });
-
 effect.reveal(".card-two", {
     delay: 100,
     origin: "right",
@@ -102,47 +83,68 @@ effect.reveal(".card-four", {
     delay: 100,
     origin: "left",
 });
-//-----------------------------------
-// Services
 
 effect.reveal(".services-title", {
     delay: 100,
-    origin: "top",
+    origin: "bottom",
 });
 
 effect.reveal(".services-description", {
-    delay: 100,
-    origin: "top",
+    delay: 200,
+    origin: "bottom",
 });
 
-effect.reveal(".card-services-one", {
-    delay: 100,
-    origin: "left",
-});
-
-effect.reveal(".card-services-two", {
+effect.reveal(".services-image", {
     delay: 100,
     origin: "left",
 });
-
-effect.reveal(".card-services-three", {
+effect.reveal(".services-info", {
     delay: 100,
     origin: "left",
 });
-
-effect.reveal(".card-services-four", {
-    delay: 100,
-    origin: "left",
-});
-
-// //---------------------------------
-
 effect.reveal(".pref-title", {
     delay: 200,
-    origin: "left",
+    origin: "bottom",
 });
 
-effect.reveal(".pref-content", {
+effect.reveal(".blur-f1", {
+    delay: 100,
+    origin: "right",
+});
+effect.reveal(".blur-f2", {
     delay: 200,
     origin: "right",
 });
+effect.reveal(".blur-f3", {
+    delay: 300,
+    origin: "right",
+});
+effect.reveal(".blur-f4", {
+    delay: 400,
+    origin: "right",
+});
+effect.reveal(".blur-f5", {
+    delay: 500,
+    origin: "right",
+});
+effect.reveal(".blur-f6", {
+    delay: 600,
+    origin: "right",
+});
+effect.reveal(".blur-f7", {
+    delay: 700,
+    origin: "right",
+});
+effect.reveal(".blur-f8", {
+    delay: 700,
+    origin: "right",
+});
+effect.reveal(".blur-f9", {
+    delay: 700,
+    origin: "right",
+});
+effect.reveal(".text-desig", {
+    delay: 700,
+    origin: "bottom",
+});
+

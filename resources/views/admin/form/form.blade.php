@@ -6,7 +6,7 @@
 
                 <section
                     class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
-                    <h1 class="text-3xl font-bold text-center text-gray-800">Actualizar Datos de Usuario👤</h1>
+                    <h1 class="text-3xl font-bold text-center text-gray-800">Registrar nuevo Administrador 👤</h1>
                     <p class="text-center text-gray-500">Datos del usuario</p>
                     <div class="bg-white p-8 rounded-md w-full">
                         <div
@@ -83,16 +83,9 @@
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">
-                                        <a href="{{ route('admin.users') }}"
-                                            class="my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20  rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Cancelar
-                                        </a>
-                                        <button type="submit"
-                                            class="my-5 w-auto flex justify-center bg-blue-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Registrar
-                                        </button>
+                                        <x-buttonP href="{{ route('admin.users') }}">Cancelar</x-buttonP>
+                                        <x-button type="submit"
+                                            class="border-2 border-violet-600 text-gray-700  hover:bg-violet-600  hover:text-white rounded-lg">Registrar</x-button>
                                     </div>
                                 </form>
                             </div>

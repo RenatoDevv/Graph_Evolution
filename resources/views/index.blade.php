@@ -37,7 +37,7 @@
             </div>
         @endforeach
         <div class="hero-image flex rounded-xl mr-5 md:mr-0">
-            <img src="{{ asset('storage/' . $home->image_file) }}" alt="Imagen"
+            <img src="{{ asset('storage/' . $home->image_file) }}" alt="{{ $home->title }} graph evolution"
                 class="hero_img object-cover object-center m-auto rounded-3xl" loading="lazy">
         </div>
     </section>
@@ -47,7 +47,8 @@
 
     {{-- Segunda seccion --}}
     <section class="w-full flex justify-evenly items-center gap-2 py-5 my-28  overflow-hidden flex-wrap">
-        <div class="box-1 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+        <div
+            class="box-1 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
             <div class="box-1 px-1 py-1 rounded-xl gap-3 bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068]">
                     <path fill="currentColor"
@@ -59,7 +60,8 @@
                 <span class="box-1 text-sm text-gray-500">Total Servicios</span>
             </div>
         </div>
-        <div class="box-2 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+        <div
+            class="box-2 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
             <div class="box-2 px-1 py-1 rounded-xl bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068]">
                     <path fill="currentColor"
@@ -71,7 +73,8 @@
                 <span class="box-2 text-sm text-gray-500">Total Servicios</span>
             </div>
         </div>
-        <div class="box-3 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+        <div
+            class="box-3 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
             <div class="box-3 px-1 py-1 rounded-xl bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 640 512" class="text-[#cf0068]">
                     <path fill="currentColor"
@@ -83,7 +86,8 @@
                 <span class="box-3 text-sm text-gray-500">Usuarios</span>
             </div>
         </div>
-        <div class="box-4 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
+        <div
+            class="box-4 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
             <div class="box-4 px-1 py-1 rounded-xl bg-[#75757521]">
                 <svg width="50" height="50" viewBox="0 0 640 512" class="text-[#cf0068]">
                     <path fill="currentColor"
@@ -95,19 +99,21 @@
                 <span class="box-4 text-sm text-gray-500">Años de Servicio</span>
             </div>
         </div>
-
     </section>
 
 
     <section class="flex flex-col items-center  bg-[#13111C] my-10  h-auto">
-        <p class="section-subtitle text-center py-2 px-4 m-4 rounded-xl bg-[#cf006846] border-5 border-[#cf0068]" id="one">1</p>
-        <span class="text-center box-2">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit</span>
-        <p class="section-subtitle m-0 text-[#cf0068]">Lorem ipsum dolor sit</p>
-        <p class="mb-4 max-w-4xl text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit, nunc facilisis
+        <p class="section-subtitle text-center py-2 px-4 m-4 rounded-xl bg-[#cf006846] border-5 border-[#cf0068]"
+            id="one">1</p>
+        <span class="text-center pres-subtitle">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit</span>
+        <p class="section-subtitle m-0 text-[#cf0068] pres-intro">Lorem ipsum dolor sit</p>
+        <p class="mb-4 max-w-4xl text-center pres-description">Lorem ipsum dolor sit amet consectetur adipiscing elit
+            blandit, nunc
+            facilisis
             leo laoreet urna aptent mi, sem netus tellus donec sollicitudin torquent hendrerit.</p>
-        <div class="max-w-2xl bg-gray-600 rounded-lg p-3 mx-auto">
+        <div class="max-w-2xl bg-gray-600 rounded-lg p-3 mx-auto img-gr-evolution">
             <img src="https://img.freepik.com/fotos-premium/pantalla-computadora-pintura-colorida-ai-generativa_97167-1066.jpg?w=1380"
-                alt="">
+                alt="graph evolution" loading="lazy">
         </div>
     </section>
 
@@ -130,31 +136,36 @@
         <article class="home-about-cards w-1/2">
             <div class="card-one cards-home p-5 rounded-lg w-auto">
                 <img src="{{ asset('img/about/camara.jpg') }}" alt="" width="100%">
-                <img class="img_fest_home" src="{{ asset('img/vector_fest.png') }}" alt="">
+                <img class="img_fest_home" src="{{ asset('img/vector_fest.png') }}" alt="graph evolution"
+                    loading="lazy">
             </div>
             <div class="card-two cards-home p-5 rounded-lg  w-auto h-auto">
-                <img src="{{ asset('img/services/card_design.jpg') }}" alt="" width="100%">
+                <img src="{{ asset('img/services/card_design.jpg') }}" alt="graph evolution" loading="lazy"
+                    width="100%">
             </div>
             <div class="card-three cards-home p-5 rounded-lg w-auto">
-                <img src="{{ asset('img/services/banner_design.jpg') }}" alt="" width="100%">
+                <img src="{{ asset('img/services/banner_design.jpg') }}" alt="graph evolution" loading="lazy"
+                    width="100%">
             </div>
             <div class="card-four cards-home p-5 rounded-lg w-auto">
-                <img src="{{ asset('img/services/home_design.jpg') }}" alt="" width="100%">
+                <img src="{{ asset('img/services/home_design.jpg') }}" alt="graph evolution" loading="lazy"
+                    width="100%">
             </div>
         </article>
     </section>
     {{-- Cuarta seccion Servicios --}}
     <section class="content home-services  d-flex flex-column align-items-center mt-20 pt-10" id="services">
-        <h2 class="section-subtitle">Servicios</h2>
+        <h2 class="section-subtitle services-title">Servicios</h2>
         <p class="services-description text-center">Servicios mas destacados</p>
         <div class="services_container md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
             @foreach ($services as $service)
                 <div
-                    class="max-w-sm bg-[#75757521] px-6 pt-6 pb-2 rounded-xl transform hover:scale-105 transition duration-500 hover:bg-[#75757548]">
+                    class="max-w-sm bg-[#75757521] px-6 pt-6 pb-2 rounded-xl transform hover:scale-105 transition duration-500 hover:bg-[#75757548] services-card">
                     <h3 class="mb-3 text-xl font-bold text-orange-500">{{ $service->title }}</h3>
                     <div class="relative">
-                        <img class="w-full h-56 rounded-xl  overflow-hidden object-cover object-center"
-                            src="{{ asset('storage/' . $service->images_file) }}" alt="">
+                        <img class="w-full h-56 rounded-xl  overflow-hidden object-cover object-center services-image"
+                            src="{{ asset('storage/' . $service->images_file) }}"
+                            alt="{{ $service->title }} graph evolution" loading="lazy">
                         <p class="absolute top-0 bg-[#cf0068] py-1 px-3 rounded-br-lg rounded-tl-lg">
                             <svg width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor"
@@ -162,7 +173,7 @@
                             </svg>
                         </p>
                     </div>
-                    <h1 class="mt-2  text-xl font-semibold cursor-pointer">
+                    <h1 class="mt-2  text-xl font-semibold cursor-pointer services-info">
                         {{ Str::limit($service->description, '70') }}</h1>
                     <div class="my-3">
                         <div class="flex space-x-1 items-center">
@@ -188,9 +199,9 @@
 
     {{-- Quinta seccion --}}
     <section class="content home-preference  d-flex flex-column items-center">
-        <h2 class="section-subtitle text-center mb-5 mt-5 text-[#cf0068]">¿Por qué confiar en nosotros?</h2>
+        <h2 class="section-subtitle text-center mb-5 mt-5 text-[#cf0068] pref-title">¿Por qué confiar en nosotros?</h2>
         <div class="pref-content flex justify-center gap-3 w-full flex-wrap mt-5 max-w-6xl ">
-            <div class="card_pref_blur flex flex-col items-center  rounded-2xl p-3">
+            <div class="card_pref_blur blur-f1 flex flex-col items-center  rounded-2xl p-3">
                 <i class="bi bi-trophy bg-[#cf0068] rounded-full "
                     style="padding: 20px 35px; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body mt-3">
@@ -199,21 +210,21 @@
                         mejores
                         productos del mercado. Pero una cosa es afirmarlo y la otra es garantizarlo</p>
                 </div>
-            </div> 
-            <div class="card_pref_blur flex flex-col justify-center items-center rounded-2xl p-3">
+            </div>
+            <div class="card_pref_blur blur-f2 flex flex-col justify-center items-center rounded-2xl p-3">
                 <p></p>
                 <svg width="80" height="80" viewBox="0 0 256 256" class="text-[#cf0068]">
                     <path fill="currentColor"
                         d="m235.39 84.07l-28.15 24l8.43 35.73a13.09 13.09 0 0 1-5 13.58a13.25 13.25 0 0 1-14.63.7l-32-19l-32 19a13.25 13.25 0 0 1-14.63-.7a13.1 13.1 0 0 1-5-13.58l8.43-35.73l-28.16-24A13.13 13.13 0 0 1 100.1 61l37.23-3.15L151.85 24a13.24 13.24 0 0 1 24.31 0l14.52 33.87L227.9 61a13.12 13.12 0 0 1 7.49 23.06ZM85.66 114.34a8 8 0 0 0-11.32 0l-56 56a8 8 0 0 0 11.32 11.32l56-56a8 8 0 0 0 0-11.32Zm16 56a8 8 0 0 0-11.32 0l-56 56a8 8 0 0 0 11.32 11.32l56-56a8 8 0 0 0 0-11.32Zm60.69 0l-56 56a8 8 0 0 0 11.32 11.32l56-56a8 8 0 0 0-11.31-11.32Z" />
                 </svg>
             </div>
-            <div class="card_pref_blur flex flex-col justify-center items-center rounded-2xl p-3">
+            <div class="card_pref_blur blur-f3 flex flex-col justify-center items-center rounded-2xl p-3">
                 <svg width="80" height="90" viewBox="0 0 32 32" class="text-[#cf0068]">
                     <path fill="currentColor"
                         d="M28 30h-6a2.002 2.002 0 0 1-2-2v-6a2.002 2.002 0 0 1 2-2h6a2.002 2.002 0 0 1 2 2v6a2.002 2.002 0 0 1-2 2zm-6-8h-.001L22 28h6v-6zm-4 4h-6a3.003 3.003 0 0 1-3-3v-4h2v4a1.001 1.001 0 0 0 1 1h6zm8-8h-2v-3a1.001 1.001 0 0 0-1-1h-5v-2h5a3.003 3.003 0 0 1 3 3zm-11 0a.999.999 0 0 1-.497-.132L10 15.288l-4.503 2.58a1 1 0 0 1-1.471-1.094l1.061-4.572l-2.818-3.02a1 1 0 0 1 .566-1.668l4.2-.702l2.066-4.25a1 1 0 0 1 1.788-.02l2.204 4.27l4.077.702a1 1 0 0 1 .561 1.668l-2.818 3.02l1.06 4.572A1 1 0 0 1 15 18zm-5-5s.343.18.497.269l3.01 1.724l-.784-3.377l2.282-2.445l-3.233-.557l-1.745-3.382l-1.644 3.382l-3.381.565l2.274 2.437l-.784 3.377l3.01-1.724C9.658 13.18 10 13 10 13z" />
                 </svg>
             </div>
-            <div class="card_pref_blur flex flex-col items-center  rounded-2xl p-3">
+            <div class="card_pref_blur blur-f4 flex flex-col items-center  rounded-2xl p-3">
                 <i class="bi bi-hand-thumbs-up bg-[#cf0068] rounded-full"
                     style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body mt-3">
@@ -225,7 +236,7 @@
                         valores con las que cuenta Graph Evolutión</p>
                 </div>
             </div>
-            <div class="card_pref_blur flex flex-col items-center  rounded-2xl p-3">
+            <div class="card_pref_blur blur-f5 flex flex-col items-center  rounded-2xl p-3">
                 <i class="bi bi-heart-pulse bg-[#cf0068] rounded-full"
                     style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
                 <div class="card-body mt-3">
@@ -240,7 +251,7 @@
                 </div>
             </div>
 
-            <div class="card_pref_blur flex flex-col justify-center items-center rounded-2xl p-3">
+            <div class="card_pref_blur blur-f6 flex flex-col justify-center items-center rounded-2xl p-3">
                 <p></p>
                 <svg width="80" height="80" viewBox="0 0 24 24" class="text-[#cf0068]">
                     <g fill="none" fill-rule="evenodd">
@@ -251,7 +262,7 @@
                     </g>
                 </svg>
             </div>
-            <div class="card_pref_blur flex flex-col items-center rounded-2xl p-3">
+            <div class="card_pref_blur blur-f7 flex flex-col items-center rounded-2xl p-3">
 
                 <svg width="80" height="80" viewBox="0 0 24 24" class="text-[#cf0068]">
                     <path fill="currentColor"
@@ -261,13 +272,13 @@
                 <p class=" text-center">En Graph Evolution, nos enorgullece ofrecer soluciones de diseño
                     e impresión de vanguardia que ayudan a nuestros clientes a destacar en un mercado competitivo.</p>
             </div>
-            <div class="card_pref_blur flex flex-col items-center rounded-2xl p-3">
+            <div class="card_pref_blur blur-f8 flex flex-col items-center rounded-2xl p-3">
                 <svg width="80" height="80" viewBox="0 0 512 512" class="text-[#cf0068]">
                     <path fill="currentColor"
                         d="M96 256h32v256H0V352h32v-32h32v-32h32v-32zm416 96v160H384V256h32v32h32v32h32v32h32zM320 64h32v384h-32v-32H192v32h-32V64h32V32h32V0h64v32h32v32zm-32 64h-64v64h64v-64z" />
                 </svg>
             </div>
-            <div class="card_pref_blur flex flex-col items-center rounded-2xl p-3">
+            <div class="card_pref_blur blur-f9 flex flex-col items-center rounded-2xl p-3">
                 <svg width="80" height="80" viewBox="0 0 640 512" class="text-[#cf0068]">
                     <path fill="currentColor"
                         d="M544 248v3.3l69.7-69.7c21.9-21.9 21.9-57.3 0-79.2l-78.1-78c-21.9-21.9-57.3-21.9-79.2 0l-40.1 40.1c-2.7-.3-5.5-.5-8.3-.5H296c-37.1 0-67.6 28-71.6 64h-.4v120c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h160c44.2 0 80 35.8 80 80v8zm-208-56v56c0 39.8-32.2 72-72 72s-72-32.2-72-72V129.4c-35.9 6.2-65.8 32.3-76 68.2l-16.5 57.6l-73.2 73.2c-21.9 21.9-21.9 57.3 0 79.2l78.1 78.1c21.9 21.9 57.3 21.9 79.2 0l37.7-37.7c.9 0 1.8.1 2.7.1h160c26.5 0 48-21.5 48-48c0-5.6-1-11-2.7-16h2.7c26.5 0 48-21.5 48-48c0-12.8-5-24.4-13.2-33c25.7-5 45.1-27.6 45.2-54.8v-.4c-.1-30.8-25.1-55.8-56-55.8H336z" />
@@ -282,41 +293,10 @@
         <img src="{{ asset('img/graph_evolution_h_i.jpg') }}" alt="" class="object-cover w-full delay_image">
     </section>
 
-    {{-- <section class="content">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner w-full">
-                <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-on.jpg') }}" class="d-block w-auto"
-                        alt="Graph Evolution">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-tw.jpg') }}" class="d-block w-full"
-                        alt="Graph Evolution">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-tr.jpg') }}" class="d-block w-full"
-                        alt="Graph Evolution">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="{{ asset('img/carrusel/pr-banner-fr.jpg') }}" class="d-block w-full"
-                        alt="Graph Evolution">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-    </section> --}}
-
     <section class="text-content bg-[#13111C] my-10  h-auto">
-        <p class="text-desig text-[100px]  font-bold text-center my-auto">Creative Desing Works</p>
+        <p class="text-desig text-3xl md:text-[70px] lg:text-[70px]  font-bold text-center leading-normal ">El diseño es
+            una oportunidad de seguir contando
+            una historia, no de resumirlas</p>
     </section>
 @endsection
 @section('scripts')

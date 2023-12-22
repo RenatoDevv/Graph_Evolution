@@ -20,7 +20,7 @@
                 quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
                 commodi
                 alias?</p>
-            <x-buttonP href="" class="bg-transparent border-gray-400 text-start">
+            <x-buttonP href="{{ route('admin.services.index')}}" class="bg-transparent border-gray-400 text-start">
                 Explorar Ahora
             </x-buttonP>
         </div>

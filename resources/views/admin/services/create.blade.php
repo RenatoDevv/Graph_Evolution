@@ -93,7 +93,7 @@
                                     <div class="flex  gap-5 justify-center">
                                         <x-buttonP href="{{ route('admin.services.index') }}">Cancelar</x-buttonP>
                                         <x-button type="submit"
-                                            class="border-2 border-violet-600 text-black   hover:bg-violet-600  hover:text-white rounded-lg">Registrar</x-button>
+                                            class="border-2 border-violet-600 text-gray-700  hover:bg-violet-600  hover:text-white rounded-lg">Registrar</x-button>
                                     </div>
                                 </form>
                             </div>
