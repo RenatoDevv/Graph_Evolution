@@ -8,7 +8,7 @@ use App\Models\Service;
 use Illuminate\Support\Facades\Storage;
 
 
- 
+
 class ServiceController extends Controller
 {
     public function index() {
@@ -25,7 +25,7 @@ class ServiceController extends Controller
             'title' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'images_file' => 'image|mimes:jpg,png|max:1200',
+            'images_file' => 'image|mimes:jpg,png,webp|max:1200',
         ]);
         if ($request->hasFile('images_file')) {
             $images_file = $request->file('images_file')->store('services', 'public');

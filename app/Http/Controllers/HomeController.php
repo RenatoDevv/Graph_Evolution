@@ -7,11 +7,11 @@ use Illuminate\View\View;
 use App\Models\Home;
 use App\Models\Service;
 use App\Models\Mesagge;
-
+use App\Models\Support;
 
 class HomeController extends Controller
 {
-    // 
+    //
     public function index (): View
     {
         // Renderizando datos desde la base de datos
@@ -36,7 +36,8 @@ class HomeController extends Controller
     }
     public function help ():View
     {
-        return view('pages.soporte');
+        $supports = Support::all();
+        return view('pages.soporte', compact('supports'));
     }
     public function detail ($id){
         $service = Service::find($id);

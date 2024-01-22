@@ -9,8 +9,6 @@
                     </h1>
                     <p class="text-center text-gray-500">Modifique los campos que quiera cambiar</p>
                     <div class="bg-white p-8 rounded-md w-full">
-                        <div
-                            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">
                             <div class="rounded-t  mb-0 px-6 py-6">
                                 <div class="text-center flex justify-between">
                                     <h6 class="text-gray-700 text-xl font-bold">
@@ -33,7 +31,7 @@
                                                     Titulo
                                                 </label>
                                                 <input
-                                                    class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
+                                                    class=" px-3 py-3 bg-gray-50 rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="text" name="title" value="{{ $service->title }}"
                                                     placeholder="Titulo del Sitio" required>
                                                     @error('title')
@@ -48,7 +46,7 @@
                                                     Descripciòn
                                                 </label>
                                                 <textarea type="text" name="description"
-                                                    class="border-0 px-3 py-3 placeholder:text-slate-400 text-blueGray-600 bg-white text-gray-500 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    class="border-0 px-3 py-3 placeholder:text-slate-400 text-blueGray-600 bg-gray-50 text-gray-500 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                     rows="2" placeholder="Descripcion de la pagina">{{ $service->description }}+</textarea>
                                                     @error('description')
                                                         <strong>{{$$message}}</strong>
@@ -70,7 +68,7 @@
                                                     Precio Aproximado
                                                 </label>
                                                 <input
-                                                    class="px-3 py-3 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
+                                                    class="px-3 py-3 rounded bg-gray-50 text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="text" name="price" value="{{ $service->price }}"
                                                     placeholder="Precio" required>
                                             </div>
@@ -88,32 +86,28 @@
                                                         d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                                                 </svg>
 
-                                                <h2 class="mt-4 text-xl font-medium text-gray-700 tracking-wide">Suba
+                                                <h2 class="mt-4 text-sm font-medium text-gray-700 tracking-wide">Suba
                                                     una imagen</h2>
 
-                                                <p class="mt-2 text-gray-500 tracking-wide">los tamaños recomendades
+                                                <p class="mt-2 text-gray-500 text-sm tracking-wide">los tamaños recomendades
                                                     1300x800, formatos aceptados.
                                                     PNG, JPG. </p>
                                                 <img src="{{ asset('storage/' . $service->images_file) }}"
-                                                    alt="">
+                                                    alt="" class="w-44 rounded">
                                                 <input id="dropzone-file" name="images_file" type="file"
-                                                    class="" value="" />
+                                                    class="hidden" value="" />
                                         </div>
                                     </div>
                                     <div class="flex  gap-5 justify-center">
                                         <x-buttonP href="{{ route('admin.services.index') }}">Cancelar</x-buttonP>
-                                        <x-button type="submit" class="border-2 border-violet-600 text-black   hover:bg-violet-600  hover:text-white rounded-lg">Actualizar</x-button>
+                                        <x-button type="submit" class="border-2 border-violet-600 text-black   hover:bg-violet-600  hover:text-white rounded-lg">Actualizar
+                                        </x-button>
 
                                     </div>
                                 </form>
                             </div>
-                        </div>
                     </div>
                 </section>
-
-                <div class="flex justify-center pb-4 pt-2">
-                    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
-                </div>
             </div>
         </div>
     </div>

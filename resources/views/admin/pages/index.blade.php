@@ -1,6 +1,5 @@
 <x-app-layout>
-    <div
-        class="flex  flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
+    <x-container--admin>
         <h1 class="text-3xl font-bold text-center text-gray-800">👋 Bienvenido al panel de Paginas</h1>
         <p class="text-center text-gray-500">En esta seccion se muestra toda la informacion de las paginas existentes
             dentro del sitio web</p>
@@ -103,11 +102,11 @@
                                             <div class="flex justify-start gap-4">
                                                 <a href="{{ route('admin.pages.show', $page) }}"
                                                     class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded-md flex items-center">
-                                                    <i class="material-icons-outlined text-base">visibility</i>
+                                                    <i class="material-icons-outlined text-lg">visibility</i>
                                                 </a>
                                                 <a href="{{ route('admin.home.index') }}"
                                                     class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded-md flex items-center">
-                                                    <i class="material-icons-outlined text-base">edit</i>
+                                                    <i class="material-icons-outlined text-lg">edit</i>
                                                 </a>
                                                 {{-- <form action="{{ route('admin.pages.eliminar', $page->id) }}"
                                                     method="post">
@@ -135,7 +134,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </x-container--admin>
 
     <div class="flex justify-center pb-4 pt-2">
         <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>

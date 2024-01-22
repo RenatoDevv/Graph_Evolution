@@ -1,26 +1,12 @@
 <div class="flex flex-col p-2 lg:p-8 dark:bg-[#313a46]  dark:via-transparent  gap-3 relative">
-    {{-- <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-300">👋 Bienvenido al panel de Administrador
-    </h1>
-    <p class="text-center text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis voluptas
-        ullam,
-        perferendis in enim at
-        quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam commodi
-        alias?</p> --}}
-
     <div
-        class="w-full rounded-2xl  bg-gradient-to-r from-orange-500 to-pink-500 grid grid-cols-1 justify-between p-7 mb-10 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+        class="w-full rounded-2xl  bg-gradient-to-r from-orange-500 to-pink-500 grid grid-cols-1 justify-between p-7 mb-10 lg:grid-cols-2">
         <div class="flex flex-col gap-2 items-start">
-            <h1 class="text-3xl font-bold text-start text-gray-800 dark:text-gray-300">👋 Bienvenido al panel de
+            <h1 class="text-2xl font-bold text-start text-gray-800 dark:text-gray-300 2xl:text-3xl">👋 Bienvenido al panel de
                 Administrador
             </h1>
-            <p class=" text-gray-800 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nobis
-                voluptas
-                ullam,
-                perferendis in enim at
-                quaerat maxime placeat! Cumque libero aliquid omnis cupiditate necessitatibus voluptatem iure laboriosam
-                commodi
-                alias?</p>
-            <x-buttonP href="{{ route('admin.services.index')}}" class="bg-transparent border-gray-400 text-start">
+            <p class=" text-gray-800 text-lg 2xl:text-xl">Explore todas las opciones que desee porque ahora tiene el poder de controlar</p>
+            <x-buttonP href="{{ route('admin.services.index') }}" class="border-none">
                 Explorar Ahora
             </x-buttonP>
         </div>

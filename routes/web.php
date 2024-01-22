@@ -4,16 +4,26 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\SitioController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\MessageContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\admin\MessageController;
+use App\Http\Controllers\admin\SupportController;
 
+ Route::get('/', [HomeController::class, 'index'])->name('home');
+ Route::get('/services', [HomeController::class, 'services'])->name('services');
+ Route::get('/about', [HomeController::class, 'about'])->name('about');
+ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+ Route::get('/soporte', [HomeController::class, 'help'])->name('help');
+ Route::get('/detail/{id}', [HomeController::class, 'detail'])->name('detail');
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/services', [HomeController::class, 'services'])->name('services');
-Route::get('/about', [HomeController::class, 'about'], 'about')->name('about');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/soporte', [HomeController::class, 'help'])->name('help');
-Route::get('/detail/{id}', [HomeController::class, 'detail'])->name('detail');
+Route::get('/combi', function() {
+    return view('welcome');
+});
+// Route::get('/inicio', function() {
+//     return view('option');
+// });
+
+Route::post('/contact/store', [MessageContactController::class, 'store'])->name('contact.store');
 
 
 Route::middleware([
@@ -30,6 +40,11 @@ Route::middleware([
     Route::post('/admin/users/update/{id}', [AdminController::class, 'update'])->name('admin.users.update');
     Route::delete('/admin/users/delete/{id}', [AdminController::class, 'delete'])->name('admin.users.eliminar');
 
+    // Rutas de PF y Mensajes Contacto
+    Route::get('/admin/m-contact', [MessageContactController::class, 'index'])->name('question');
+    Route::get('/admin/m-contact/show/{id}', [MessageContactController::class, 'show'])->name('admin.question.show');
+    Route::delete('/admin/m-contact/delete', [MessageContactController::class, 'delete'])->name('admin.question.delete');
+
     // page routes
     Route::get('/admin/paginas', [SitioController::class, 'index'])->name('admin.pages');
     Route::get('/admin/pages/create', [SitioController::class, 'create'])->name('admin.pages.create');
@@ -44,14 +59,14 @@ Route::middleware([
     Route::get('/admin/Phome/create', [SitioController::class, 'homeCreate'])->name('admin.home.create');
     Route::post('/admin/Phome/store', [SitioController::class, 'homeStore'])->name('admin.home.store');
 
-    
+
     // Route::get('/admin/Phome/show', [AdminController::class, 'pageshow'])->name('admin.home.show');
     Route::get('/admin/Phome/edit/{id}', [SitioController::class, 'homeEdit'])->name('admin.home.edit');
     Route::post('/admin/Phome/update/{id}', [SitioController::class, 'homeUpdate'])->name('admin.home.update');
     Route::delete('/admin/Phome/delete/{id}', [SitioController::class, 'homeDelete'])->name('admin.home.delete');
 
 
-    //SERVOCE CONTROLLER
+    //SERVICE CONTROLLER
 
     Route::get('/admin/services/index', [ServiceController::class, 'index'])->name('admin.services.index');
     Route::get('/admin/services/create', [ServiceController::class, 'create'])->name('admin.services.create');
@@ -66,8 +81,21 @@ Route::middleware([
 
     Route::get('/admin/message', [MessageController::class, 'index'])->name('admin.message');
     Route::post('admin/message/store', [MessageController::class, 'store'])->name('admin.message.store');
-    Route::get('admin/message/show', [MessageController::class, 'show'])->name('admin.message.show');
-    Route::post('/admin/message/edit/{id}', [MessageController::class, 'edit'])->name('admin.message.edit');
+    Route::get('admin/message/show/{id}', [MessageController::class, 'show'])->name('admin.message.show');
+    Route::get('/admin/message/edit/{id}', [MessageController::class, 'edit'])->name('admin.message.edit');
+    Route::post('/admin/message/update/{id}', [MessageController::class, 'update'])->name('admin.message.update');
     Route::delete('/admin/message/delete/{id}', [MessageController::class, 'destroy'])->name('admin.message.delete');
+
+
+    //SOPORTE CONTROLLER
+    Route::get('/admin/support', [SupportController::class, 'index'])->name('admin.support');
+    Route::get('/admin/support/create', [SupportController::class, 'create'])->name('admin.support.create');
+    Route::post('/admin/support/store', [SupportController::class, 'store'])->name('admin.support.store');
+    Route::get('/admin/support/show/{id}', [SupportController::class, 'show'])->name('admin.support.show');
+    Route::get('/admin/support/edit/{id}', [SupportController::class, 'edit'])->name('admin.support.edit');
+    Route::post('/admin/support/update/{id}', [SupportController::class, 'update'])->name('admin.support.update');
+    Route::delete('/admin/support/delete/{id}', [SupportController::class , 'destroy'])->name('admin.support.delete');
 });
+
+
 

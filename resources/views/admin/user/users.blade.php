@@ -1,6 +1,5 @@
 <x-app-layout>
-    <div
-        class="flex flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
+    <x-container--admin>
         <h1 class="text-3xl font-bold text-center text-gray-800">👋 Bienvenido al panel de Usuarios</h1>
         <p class="text-center text-gray-500">En esta seccion se mostraran todos los usuarios registrados dentro del
             sistema</p>
@@ -39,28 +38,25 @@
             </div>
             <div>
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                    <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
-                        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
-                            <thead>
+                    <div class="inline-block min-w-full shadow rounded-md  overflow-hidden">
+                        <table class="w-full border-collapse  text-left text-sm text-gray-500">
+                            <thead class="bg-gray-100 border-b-2 border-gray-200">
                                 <tr>
                                     <th scope="col"
-                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        class="px-5 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                         ID
                                     </th>
                                     <th scope="col"
-                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        class="px-5 py-3  text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                         NOMBRES
                                     </th>
                                     <th scope="col"
-                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        class="px-5 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                         ESTADO
                                     </th>
+
                                     <th scope="col"
-                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                        HABILIDADES
-                                    </th>
-                                    <th scope="col"
-                                        class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                        class="px-5 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                         ACCIONES
                                     </th>
                                 </tr>
@@ -92,39 +88,24 @@
                                                 Active
                                             </span>
                                         </td>
-                                        <td class="px-5 py-4">
-                                            <div class="flex gap-2">
-                                                <span
-                                                    class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600">
-                                                    Design
-                                                </span>
-                                                <span
-                                                    class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-600">
-                                                    Product
-                                                </span>
-                                                <span
-                                                    class="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-600">
-                                                    Develop
-                                                </span>
-                                            </div>
-                                        </td>
+                                        
                                         <td class="px-5 py-4">
                                             <div class="flex justify-start gap-4">
                                                 <a href="{{ route('admin.users.show', $user) }}"
-                                                    class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-2 rounded-md flex items-center">
-                                                    <i class="material-icons-outlined text-base">visibility</i>
+                                                    class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded-md flex items-center">
+                                                    <i class="material-icons-outlined text-lg">visibility</i>
                                                 </a>
                                                 <a href="{{ route('admin.users.edit', $user->id) }}"
-                                                    class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-2 rounded-md flex items-center">
-                                                    <i class="material-icons-outlined text-base">edit</i>
+                                                    class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded-md flex items-center">
+                                                    <i class="material-icons-outlined text-lg">edit</i>
                                                 </a>
                                                 <form action="{{ route('admin.users.eliminar', $user->id) }}"
                                                     method="post">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit"
-                                                        class="bg-red-100 text-red-400 hover:text-red-600 hover:bg-red-100 px-2 py-2 rounded-md flex items-center"><i
-                                                            class="material-icons-round text-base">delete_outline</i></button>
+                                                        class="bg-red-100 text-red-400 hover:text-red-600 hover:bg-red-100 px-2 py-1 rounded-md flex items-center"><i
+                                                            class="material-icons-round text-lg">delete_outline</i></button>
                                                 </form>
                                             </div>
                                         </td>
@@ -132,31 +113,11 @@
                                 </tbody>
                             @endforeach
                         </table>
-                        {{-- <div
-                            class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
-                            <span class="text-xs xs:text-sm text-gray-900">
-                                Mostrando 5 de 20 registros
-                            </span>
-                            <div class="inline-flex mt-2 xs:mt-0">
-                                <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-500 font-semibold py-2 px-4 rounded-l">
-                                    Antes
-                                </button>
-                                &nbsp; &nbsp;
-                                <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-500 font-semibold py-2 px-4 rounded-r">
-                                    Siguiente
-                                </button>
-                            </div>
-                        </div> --}}
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class=" flex justify-center pb-4 pt-2">
-        <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
-    </div>
+    </x-container--admin>
 
 </x-app-layout>

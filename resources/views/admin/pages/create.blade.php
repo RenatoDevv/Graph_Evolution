@@ -8,8 +8,7 @@
                     <h1 class="text-3xl font-bold text-center text-gray-800">Registrar Nueva Pagina</h1>
                     <p class="text-center text-gray-500">Datos de nueva pagina</p>
                     <div class="bg-white p-8 rounded-md w-full">
-                        <div
-                            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">
+
                             <div class="rounded-t  mb-0 px-6 py-6">
                                 <div class="text-center flex justify-between">
                                     <h6 class="text-gray-700 text-xl font-bold">
@@ -31,23 +30,12 @@
                                                     Nombre
                                                 </label>
                                                 <input
-                                                    class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
+                                                    class=" px-3 py-3 bg-gray-50 rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="text" name="name" value=""
                                                     placeholder="Titulo del Sitio" required>
                                             </div>
                                         </div>
-                                        {{-- <div class="w-full lg:w-6/12 px-4">
-                                            <div class="relative w-full mb-3">
-                                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                    htmlfor="grid-password">
-                                                    Correo Electronico
-                                                </label>
-                                                <input
-                                                    class="px-3 py-3 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                    type="text" name="description" value=""
-                                                    placeholder="Descripcion" required>
-                                            </div>
-                                        </div> --}}
+
                                     </div>
 
                                     <hr class="mt-6 border-b-1 border-blueGray-300">
@@ -63,40 +51,19 @@
                                                     Descripcion
                                                 </label>
                                                 <textarea type="text" name="description"
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-gray-50 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                     rows="4" placeholder="Descripcion de la pagina"></textarea>
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- <div class="w-full px-4">
-                                        <div class="flex flex-col items-center w-full m-auto">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                htmlfor="grid-password">
-                                                Suba una imagen
-                                            </label>
-                                            <span class="text-xs pb-3">La imagen debe ser de formato png o jpg de tamaño
-                                                1300 </span>
-                                            <input
-                                                class="px-3 py-3 rounded text-sm shadow ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
-                                                type="file" name="imagen_logo" value=""
-                                                placeholder="Descripcion">
-                                        </div>
-                                    </div> --}}
                                     <div class="flex  gap-5 justify-center">
-                                        <a href="{{ route('admin.pages') }}"
-                                            class="my-5 w-auto flex justify-center bg-indigo-500 text-gray-100 py-2 px-20  rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Cancelar
-                                        </a>
-                                        <button type="submit"
-                                            class="my-5 w-auto flex justify-center bg-blue-500 text-gray-100 py-2 px-20 rounded-full tracking-wide
-                                            font-semibold  focus:outline-none focus:shadow-outline hover:bg-blue-600 shadow-lg cursor-pointer transition ease-in duration-300">
-                                            Registrar
-                                        </button>
+                                        <x-buttonP href="{{ route('admin.pages') }}">Cancelar</x-buttonP>
+                                        <x-button type="submit"
+                                            class="border-2 border-violet-600 text-gray-700  hover:bg-violet-600  hover:text-white rounded-lg">Registrar</x-button>
                                     </div>
                                 </form>
                             </div>
-                        </div>
+
                     </div>
                 </section>
 

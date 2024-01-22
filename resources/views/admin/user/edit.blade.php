@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="py-0 w-auto">
         <div class="w-auto mx-auto">
-            <div class=overflow-hidden shadow-xl">
+            <div class="overflow-hidden shadow-xl">
                 {{-- contenido dentro del contenedor padre --}}
 
                 <section
@@ -9,8 +9,7 @@
                     <h1 class="text-3xl font-bold text-center text-gray-800">Actualizar Datos de Usuario👤</h1>
                     <p class="text-center text-gray-500">Datos del usuario</p>
                     <div class="bg-white p-8 rounded-md w-full">
-                        <div
-                            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-50 border-0">
+
                             <div class="rounded-t  mb-0 px-6 py-6">
                                 <div class="text-center flex justify-between">
                                     <h6 class="text-gray-700 text-xl font-bold">
@@ -33,7 +32,7 @@
                                                     Nombre
                                                 </label>
                                                 <input
-                                                    class=" px-3 py-3 bg-white rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
+                                                    class=" px-3 py-3 bg-gray-50 rounded text-sm shadow w-full ease-linear p-2 border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="text" name="name" value="{{ $user->name }}"
                                                     placeholder="Nombre">
                                             </div>
@@ -45,7 +44,7 @@
                                                     Correo Electronico
                                                 </label>
                                                 <input
-                                                    class="px-3 py-3 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
+                                                    class="px-3 py-3 bg-gray-50 rounded text-sm shadow w-full ease-linear border border-gray-300  focus:outline-none focus:border-indigo-500 text-gray-500 placeholder:text-slate-400"
                                                     type="email" name="email" value="{{ $user->email }}"
                                                     placeholder="Correo electronico">
                                             </div>
@@ -66,7 +65,7 @@
                                                     ACERCA DE
                                                 </label>
                                                 <textarea type="text"
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-gray-50 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                                                     rows="4" placeholder="En este campo se muestra los datos del administrador"></textarea>
                                             </div>
                                         </div>
@@ -78,12 +77,9 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
+
                     </div>
                 </section>
-                <div class="flex justify-center pb-4 pt-2">
-                    <a href="#" class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</a>
-                </div>
             </div>
         </div>
     </div>

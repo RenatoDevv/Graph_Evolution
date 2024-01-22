@@ -5,299 +5,185 @@
 @endsection
 @section('content')
     {{-- Primera seccion --}}
-    <section class="content hero-content  w-100 flex justify-between items-end">
-        @foreach ($homes as $home)
-            <div class="hero-text d-flex flex-column gap-2">
-                <div class="text-start max-w-3xl animate-hero-text-slide-up-fade sm:shrink-0 ">
-                    <h1 class="section-title text-gradient tracking-tight text-start lg:text-start
-                        ">
-                        {{ $home->title }}
-                    </h1>
-                    <p class="hero-description mb-6 mt-4 w-auto max-w-[36rem] sm:text-center md:text-center  lg:text-start">
-                        {{ $home->description }}
-                    </p>
-                    <div class="flex gap-3 md:justify-center lg:justify-start">
-                        <a href="{{ route('services') }}" class="section-button button-hero">
-                            Conocer más
-                            <svg class="w-4 h-3.5 ms-2 rtl:rotate-180" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z" />
-                            </svg>
-                        </a>
-                        <a href="{{ route('services') }}" class="section-buttonT ">
-                            Ver Servicios
-                            <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M1 5h12m0 0L9 1m4 4L9 9" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-        <div class="hero-image flex rounded-xl mr-5 md:mr-0">
-            <img src="{{ asset('storage/' . $home->image_file) }}" alt="{{ $home->title }} graph evolution"
-                class="hero_img object-cover object-center m-auto rounded-3xl" loading="lazy">
-        </div>
-    </section>
-    <div class="ArrowFloat">
-        <a href="#services"><i class="bi bi-arrow-down"></i></a>
+    <div class="app app-hero">
+        <section class="hero-section">
+            @foreach ($homes as $item)
+                <article class="hero-text">
+                    <h1 class="section-title text-gradient">{{ $item->title }}</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Cras id purus tellus. Sed mi sapien, tempus eget mollis quis,
+                        aliquam sit amet quam.</p>
+                    <a href="{{ route('services') }}" class="btn-select">Conocer más</a>
+                </article>
+                <article class="hero-img">
+                    <img src="{{ asset('img/services/banner_design.jpg') }}" alt="">
+                    <img class="img-center" src="{{ asset('storage/' . $item->image_file) }}" alt="">
+                    <img src="{{ asset('img/services/card_design.jpg') }}" alt="">
+                </article>
+            @endforeach
+        </section>
     </div>
 
-    {{-- Segunda seccion --}}
-    <section class="w-full flex justify-evenly items-center gap-2 py-5 my-28  overflow-hidden flex-wrap">
-        <div
-            class="box-1 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="box-1 px-1 py-1 rounded-xl gap-3 bg-[#75757521]">
-                <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="m8.8 10.95l2.15-2.175l-1.4-1.425l-1.1 1.1l-1.4-1.4l1.075-1.1L7 4.825L4.825 7L8.8 10.95Zm8.2 8.225L19.175 17l-1.125-1.125l-1.1 1.075l-1.4-1.4l1.075-1.1l-1.425-1.4l-2.15 2.15L17 19.175Zm-.775-12.75l1.4 1.4l1.4-1.4L17.6 5l-1.375 1.425ZM7.25 21H3v-4.25l4.375-4.375L2 7l5-5l5.4 5.4l3.775-3.8q.3-.3.675-.45t.775-.15q.4 0 .775.15t.675.45L20.4 4.95q.3.3.45.675T21 6.4q0 .4-.15.763t-.45.662l-3.775 3.8L22 17l-5 5l-5.375-5.375L7.25 21Z" />
-                </svg>
+    <x-app>
+        <section class="section diseño-section">
+            <div class="img-container">
+                <img class="diseño-img" src="{{ asset('img/capture.webp') }}" alt="">
             </div>
-            <div class="flex flex-col">
-                <span class="print_icon text-3xl text-white">50+</span>
-                <span class="box-1 text-sm text-gray-500">Total Servicios</span>
-            </div>
-        </div>
-        <div
-            class="box-2 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="box-2 px-1 py-1 rounded-xl bg-[#75757521]">
-                <svg width="50" height="50" viewBox="0 0 24 24" class=" text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="m8.8 10.95l2.15-2.175l-1.4-1.425l-1.1 1.1l-1.4-1.4l1.075-1.1L7 4.825L4.825 7L8.8 10.95Zm8.2 8.225L19.175 17l-1.125-1.125l-1.1 1.075l-1.4-1.4l1.075-1.1l-1.425-1.4l-2.15 2.15L17 19.175Zm-.775-12.75l1.4 1.4l1.4-1.4L17.6 5l-1.375 1.425ZM7.25 21H3v-4.25l4.375-4.375L2 7l5-5l5.4 5.4l3.775-3.8q.3-.3.675-.45t.775-.15q.4 0 .775.15t.675.45L20.4 4.95q.3.3.45.675T21 6.4q0 .4-.15.763t-.45.662l-3.775 3.8L22 17l-5 5l-5.375-5.375L7.25 21Z" />
-                </svg>
-            </div>
-            <div class="flex flex-col">
-                <span class="print_icon text-3xl text-white">100+</span>
-                <span class="box-2 text-sm text-gray-500">Total Servicios</span>
-            </div>
-        </div>
-        <div
-            class="box-3 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="box-3 px-1 py-1 rounded-xl bg-[#75757521]">
-                <svg width="50" height="50" viewBox="0 0 640 512" class="text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6c40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32S208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z" />
-                </svg>
-            </div>
-            <div class="flex flex-col">
-                <span class="print_icon text-3xl text-white">5000+</span>
-                <span class="box-3 text-sm text-gray-500">Usuarios</span>
-            </div>
-        </div>
-        <div
-            class="box-4 font-medium text-3xl text-yellow- flex items-center gap-3 bg-[#75757521] pl-5 pr-20 py-3 rounded-xl">
-            <div class="box-4 px-1 py-1 rounded-xl bg-[#75757521]">
-                <svg width="50" height="50" viewBox="0 0 640 512" class="text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="M544 248v3.3l69.7-69.7c21.9-21.9 21.9-57.3 0-79.2l-78.1-78c-21.9-21.9-57.3-21.9-79.2 0l-40.1 40.1c-2.7-.3-5.5-.5-8.3-.5H296c-37.1 0-67.6 28-71.6 64h-.4v120c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h160c44.2 0 80 35.8 80 80v8zm-208-56v56c0 39.8-32.2 72-72 72s-72-32.2-72-72V129.4c-35.9 6.2-65.8 32.3-76 68.2l-16.5 57.6l-73.2 73.2c-21.9 21.9-21.9 57.3 0 79.2l78.1 78.1c21.9 21.9 57.3 21.9 79.2 0l37.7-37.7c.9 0 1.8.1 2.7.1h160c26.5 0 48-21.5 48-48c0-5.6-1-11-2.7-16h2.7c26.5 0 48-21.5 48-48c0-12.8-5-24.4-13.2-33c25.7-5 45.1-27.6 45.2-54.8v-.4c-.1-30.8-25.1-55.8-56-55.8H336z" />
-                </svg>
-            </div>
-            <div class="flex flex-col">
-                <span class="print_icon text-3xl text-white">10+</span>
-                <span class="box-4 text-sm text-gray-500">Años de Servicio</span>
-            </div>
-        </div>
-    </section>
+        </section>
+    </x-app>
 
+    <x-app class="app app-experience">
+        <section class="section experience-section">
+            <article class="experience-cards">
+                <div class="card-experience">
+                    <h2 class=" experience-title">+10 años</h2>
+                    <span>Experiencia</span>
+                </div>
+                <div class="card-experience">
+                    <h2 class=" experience-title">+1000</h2>
+                    <span>Clientes</span>
+                </div>
+                <div class="card-experience">
+                    <h2 class="experience-title">+30</h2>
+                    <span>Servicios</span>
+                </div>
+                <div class="card-experience">
+                    <h2 class="experience-title">+10000</h2>
+                    <span>Trabajos</span>
+                </div>
+            </article>
+        </section>
+    </x-app>
 
-    <section class="flex flex-col items-center  bg-[#13111C] my-10  h-auto">
-        <p class="section-subtitle text-center py-2 px-4 m-4 rounded-xl bg-[#cf006846] border-5 border-[#cf0068]"
-            id="one">1</p>
-        <span class="text-center pres-subtitle">Lorem ipsum dolor sit amet consectetur adipiscing elit blandit</span>
-        <p class="section-subtitle m-0 text-[#cf0068] pres-intro">Lorem ipsum dolor sit</p>
-        <p class="mb-4 max-w-4xl text-center pres-description">Lorem ipsum dolor sit amet consectetur adipiscing elit
-            blandit, nunc
-            facilisis
-            leo laoreet urna aptent mi, sem netus tellus donec sollicitudin torquent hendrerit.</p>
-        <div class="max-w-2xl bg-gray-600 rounded-lg p-3 mx-auto img-gr-evolution">
-            <img src="https://img.freepik.com/fotos-premium/pantalla-computadora-pintura-colorida-ai-generativa_97167-1066.jpg?w=1380"
-                alt="graph evolution" loading="lazy">
-        </div>
-    </section>
-
-
-    {{-- Tercera seccin --}}
-    <section class="content home-about mt-14 py-20 ">
-        <article class="home-about-text w-2/5">
-            <h2 class="font-bold text-5xl">El diseño es el arte de combinar la creatividad y la tecnología para comunicar
-                ideas.</h2>
-            <p></p>
-            <a href="#services" class="section-button">
-                Conocer más
-                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9" />
-                </svg>
-            </a>
-        </article>
-        <article class="home-about-cards w-1/2">
-            <div class="card-one cards-home p-5 rounded-lg w-auto">
-                <img src="{{ asset('img/about/camara.jpg') }}" alt="" width="100%">
-                <img class="img_fest_home" src="{{ asset('img/vector_fest.png') }}" alt="graph evolution"
-                    loading="lazy">
-            </div>
-            <div class="card-two cards-home p-5 rounded-lg  w-auto h-auto">
-                <img src="{{ asset('img/services/card_design.jpg') }}" alt="graph evolution" loading="lazy"
-                    width="100%">
-            </div>
-            <div class="card-three cards-home p-5 rounded-lg w-auto">
-                <img src="{{ asset('img/services/banner_design.jpg') }}" alt="graph evolution" loading="lazy"
-                    width="100%">
-            </div>
-            <div class="card-four cards-home p-5 rounded-lg w-auto">
-                <img src="{{ asset('img/services/home_design.jpg') }}" alt="graph evolution" loading="lazy"
-                    width="100%">
-            </div>
-        </article>
-    </section>
-    {{-- Cuarta seccion Servicios --}}
-    <section class="content home-services  d-flex flex-column align-items-center mt-20 pt-10" id="services">
-        <h2 class="section-subtitle services-title">Servicios</h2>
-        <p class="services-description text-center">Servicios mas destacados</p>
-        <div class="services_container md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
-            @foreach ($services as $service)
-                <div
-                    class="max-w-sm bg-[#75757521] px-6 pt-6 pb-2 rounded-xl transform hover:scale-105 transition duration-500 hover:bg-[#75757548] services-card">
-                    <h3 class="mb-3 text-xl font-bold text-orange-500">{{ $service->title }}</h3>
-                    <div class="relative">
-                        <img class="w-full h-56 rounded-xl  overflow-hidden object-cover object-center services-image"
-                            src="{{ asset('storage/' . $service->images_file) }}"
-                            alt="{{ $service->title }} graph evolution" loading="lazy">
-                        <p class="absolute top-0 bg-[#cf0068] py-1 px-3 rounded-br-lg rounded-tl-lg">
-                            <svg width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="m5.8 21l1.6-7L2 9.2l7.2-.6L12 2l2.8 6.6l7.2.6l-3.2 2.8H18c-.7 0-1.4.1-2.1.4l2.2-1.9l-4.4-.4l-1.7-4l-1.7 4l-4.4.4l3.3 2.9l-1 4.3l3.8-2.3l.5.3c-.2.5-.4 1.1-.4 1.6L5.8 21M17 14v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z" />
-                            </svg>
-                        </p>
-                    </div>
-                    <h1 class="mt-2  text-xl font-semibold cursor-pointer services-info">
-                        {{ Str::limit($service->description, '70') }}</h1>
-                    <div class="my-3">
-                        <div class="flex space-x-1 items-center">
-                            <span>
-                                <svg class="h-6 w-6 text-orange-500 mb-1.5" viewBox="0 0 16 16">
-                                    <path fill="currentColor"
-                                        d="M12.32 8a3 3 0 0 0-2-.7H5.63A1.59 1.59 0 0 1 4 5.69a2 2 0 0 1 0-.25a1.59 1.59 0 0 1 1.63-1.33h4.62a1.59 1.59 0 0 1 1.57 1.33h1.5a3.08 3.08 0 0 0-3.07-2.83H8.67V.31H7.42v2.3H5.63a3.08 3.08 0 0 0-3.07 2.83a2.09 2.09 0 0 0 0 .25a3.07 3.07 0 0 0 3.07 3.07h4.74A1.59 1.59 0 0 1 12 10.35a1.86 1.86 0 0 1 0 .34a1.59 1.59 0 0 1-1.55 1.24h-4.7a1.59 1.59 0 0 1-1.55-1.24H2.69a3.08 3.08 0 0 0 3.06 2.73h1.67v2.27h1.25v-2.27h1.7a3.08 3.08 0 0 0 3.06-2.73v-.34A3.06 3.06 0 0 0 12.32 8z" />
+    <x-app class="app-services">
+        <section class="section services-section">
+            <h2 class="section-subtitle">Servicios</h2>
+            <p class="services-info">Los servicios que elija estan a disposición</p>
+            <article class="services-cards">
+                @foreach ($services as $item)
+                    <div class="services-card">
+                        <img class="card-img" src="{{ asset('storage/' . $item->images_file) }}" alt="">
+                        <div class="card-info">
+                            <div>
+                                <h2 class="card-title">{{ $item->title }}</h2>
+                                <p class="card-description">
+                                    {{ Str::limit($item->description, '41') }}
+                                </p>
+                            </div>
+                            <a href="" class="btn-unselect">
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.7 0L0.300003 1.5L7.7 9L0.300003 16.5L1.7 18L10.7 9L1.7 0Z"
+                                        fill="currentColor" />
                                 </svg>
-                            </span>
-                            <p>{{ $service->price }}</p>
-                        </div>
-                        <div class="w-full flex items-center pt-3">
-                            <a href="{{ route('services') }}" class="section-button w-full">
-                                Ver Ahora
+
                             </a>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+
+            </article>
+        </section>
+    </x-app>
+
+
+
+    <x-app>
+        <div class="app app-design">
+            <section class="section design-section">
+                <h2 class="section-subtitle">Diseños</h2>
+                <p class="design-info">Algunos de nuestros trabajos realizados</p>
+                <article class="design-container">
+                    @foreach ($services as $item)
+                        <img class="design-img" src="{{ asset('storage/' . $item->images_file) }}"" alt="">
+                    @endforeach
+
+                    {{-- <img class="design-img" src="{{ asset('storage/' . $item->images_file) }}"" alt="">
+                    <img class="design-img" src="{{ asset('storage/' . $item->images_file) }}"" alt="">
+                    <img class="design-img" src="{{ asset('img/services/card_services.jpg') }}" alt="">
+                    <img class="design-img" src="{{ asset('img/services/card_services.jpg') }}" alt="">
+                    <img class="design-img" src="{{ asset('img/services/card_services.jpg') }}" alt="">
+                    <img class="design-img" src="{{ asset('img/services/card_services.jpg') }}" alt=""> --}}
+
+                </article>
+            </section>
         </div>
-    </section>
+    </x-app>
 
 
-    {{-- Quinta seccion --}}
-    <section class="content home-preference  d-flex flex-column items-center">
-        <h2 class="section-subtitle text-center mb-5 mt-5 text-[#cf0068] pref-title">¿Por qué confiar en nosotros?</h2>
-        <div class="pref-content flex justify-center gap-3 w-full flex-wrap mt-5 max-w-6xl ">
-            <div class="card_pref_blur blur-f1 flex flex-col items-center  rounded-2xl p-3">
-                <i class="bi bi-trophy bg-[#cf0068] rounded-full "
-                    style="padding: 20px 35px; box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
-                <div class="card-body mt-3">
-                    <h5 class="card-title text-center font-bold text-[#bf93ec]">Calidad</h5>
-                    <p class="text-center">Vivimos en un mundo donde todos dicen que tienen los
-                        mejores
-                        productos del mercado. Pero una cosa es afirmarlo y la otra es garantizarlo</p>
+
+    <div class="app app-motive">
+        <section class="section motive-section">
+            <h2 class="section-subtitle">Porque elegirnos?</h2>
+            <p class="motive-info">3 motivos por las que debe confiar en Graph Evolution al contratar un servicio</p>
+            <article class="motive-cards">
+                <div class="motive-card">
+                    <svg width="76" height="76" viewBox="0 0 76 76" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M74.85 4.34005C74.7374 3.55074 74.3761 2.81787 73.8187 2.24783C73.2612 1.67779 72.5366 1.30026 71.75 1.17005C64.6862 -0.00761949 57.4341 0.796529 50.7999 3.49312C44.1656 6.18972 38.4091 10.6731 34.17 16.4451L33.39 17.5051L20.44 18.0651C19.6522 18.0975 18.8946 18.3774 18.275 18.8651L1.48 32.1351C0.957472 32.5484 0.554482 33.0934 0.312485 33.7141C0.0704879 34.3348 -0.00177833 35.0088 0.10312 35.6667C0.208019 36.3246 0.486295 36.9427 0.909323 37.4574C1.33235 37.9721 1.88485 38.3648 2.51 38.5951L19.25 44.7601C22.615 46.1251 24.9 47.5601 26.67 49.3251C28.43 51.0901 29.87 53.3801 31.235 56.7451L37.405 73.4951C37.6359 74.1198 38.029 74.6719 38.5439 75.0944C39.0589 75.5169 39.677 75.7946 40.3349 75.899C40.9927 76.0034 41.6665 75.9306 42.287 75.6883C42.9074 75.4459 43.4521 75.0427 43.865 74.5201L57.125 57.7201C57.6107 57.1032 57.8905 56.3494 57.925 55.5651L58.49 42.6101L59.55 41.8301C65.3095 37.6002 69.7862 31.8592 72.4848 25.2425C75.1834 18.6257 75.9985 11.3914 74.84 4.34005H74.85ZM21.97 25.5051L27.69 25.2551L19.24 36.7651L11.38 33.8651L21.97 25.5051ZM42.13 64.6151L39.23 56.7551L50.74 48.3051L50.49 54.0301L42.13 64.6151ZM67.765 8.23005C62.4753 7.82533 57.1696 8.77482 52.3486 10.989C47.5275 13.2031 43.35 16.6089 40.21 20.8851L26.31 39.8151C28.435 41.0001 30.31 42.3651 31.97 44.0251C33.63 45.6851 35 47.5601 36.18 49.6901L55.11 35.7901C59.386 32.6491 62.7913 28.4705 65.0046 23.6485C67.2179 18.8265 68.1662 13.5201 67.76 8.23005H67.765ZM9.89 67.7601C9.265 67.8707 8.63627 67.9591 8.005 68.0251C8.06789 67.4124 8.15127 66.8021 8.255 66.1951C8.775 63.2451 9.725 61.1251 10.89 59.9601C12.11 58.7401 14.36 58.5901 15.91 60.1401C17.46 61.6901 17.315 63.9401 16.09 65.1651C14.975 66.2801 12.87 67.2301 9.89 67.7601ZM0.4 73.3451C0.292523 71.3781 0.334309 69.4057 0.525 67.4451C0.935 63.2551 2.175 58.0651 5.585 54.6601C9.85 50.3901 16.85 50.4701 21.215 54.8351C25.58 59.2051 25.665 66.2001 21.395 70.4651C15.985 75.8751 5.835 75.8051 2.72 75.6451C2.1168 75.6097 1.5483 75.3512 1.125 74.9201C0.696771 74.5008 0.438568 73.9381 0.4 73.3401V73.3451Z"
+                            fill="#5605E7" />
+                    </svg>
+
+                    <h2 class="card-motive-title">Experiencia y Profesionalismo</h2>
+                    <p class="card-motive-info">Tenemos 10 años de experiencia en el mercado manteniendonos entre los primeros en nuestra región.</p>
                 </div>
-            </div>
-            <div class="card_pref_blur blur-f2 flex flex-col justify-center items-center rounded-2xl p-3">
-                <p></p>
-                <svg width="80" height="80" viewBox="0 0 256 256" class="text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="m235.39 84.07l-28.15 24l8.43 35.73a13.09 13.09 0 0 1-5 13.58a13.25 13.25 0 0 1-14.63.7l-32-19l-32 19a13.25 13.25 0 0 1-14.63-.7a13.1 13.1 0 0 1-5-13.58l8.43-35.73l-28.16-24A13.13 13.13 0 0 1 100.1 61l37.23-3.15L151.85 24a13.24 13.24 0 0 1 24.31 0l14.52 33.87L227.9 61a13.12 13.12 0 0 1 7.49 23.06ZM85.66 114.34a8 8 0 0 0-11.32 0l-56 56a8 8 0 0 0 11.32 11.32l56-56a8 8 0 0 0 0-11.32Zm16 56a8 8 0 0 0-11.32 0l-56 56a8 8 0 0 0 11.32 11.32l56-56a8 8 0 0 0 0-11.32Zm60.69 0l-56 56a8 8 0 0 0 11.32 11.32l56-56a8 8 0 0 0-11.31-11.32Z" />
-                </svg>
-            </div>
-            <div class="card_pref_blur blur-f3 flex flex-col justify-center items-center rounded-2xl p-3">
-                <svg width="80" height="90" viewBox="0 0 32 32" class="text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="M28 30h-6a2.002 2.002 0 0 1-2-2v-6a2.002 2.002 0 0 1 2-2h6a2.002 2.002 0 0 1 2 2v6a2.002 2.002 0 0 1-2 2zm-6-8h-.001L22 28h6v-6zm-4 4h-6a3.003 3.003 0 0 1-3-3v-4h2v4a1.001 1.001 0 0 0 1 1h6zm8-8h-2v-3a1.001 1.001 0 0 0-1-1h-5v-2h5a3.003 3.003 0 0 1 3 3zm-11 0a.999.999 0 0 1-.497-.132L10 15.288l-4.503 2.58a1 1 0 0 1-1.471-1.094l1.061-4.572l-2.818-3.02a1 1 0 0 1 .566-1.668l4.2-.702l2.066-4.25a1 1 0 0 1 1.788-.02l2.204 4.27l4.077.702a1 1 0 0 1 .561 1.668l-2.818 3.02l1.06 4.572A1 1 0 0 1 15 18zm-5-5s.343.18.497.269l3.01 1.724l-.784-3.377l2.282-2.445l-3.233-.557l-1.745-3.382l-1.644 3.382l-3.381.565l2.274 2.437l-.784 3.377l3.01-1.724C9.658 13.18 10 13 10 13z" />
-                </svg>
-            </div>
-            <div class="card_pref_blur blur-f4 flex flex-col items-center  rounded-2xl p-3">
-                <i class="bi bi-hand-thumbs-up bg-[#cf0068] rounded-full"
-                    style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
-                <div class="card-body mt-3">
-                    <h5 class="card-title text-center font-bold text-[#bf93ec]">Honestidad</h5>
-                    <p class="text-center">La<strong class="bg-[#bf93ec] text-gray-900">
-                            transparencia,
-                            sinceridad y
-                            franqueza,</strong> son
-                        valores con las que cuenta Graph Evolutión</p>
-                </div>
-            </div>
-            <div class="card_pref_blur blur-f5 flex flex-col items-center  rounded-2xl p-3">
-                <i class="bi bi-heart-pulse bg-[#cf0068] rounded-full"
-                    style="padding: 20px 35px;  box-shadow: 0 0 0 10px #cf00be21, 0 0 50px #cf00be83, 0 0 100px #cf00be83; font-size: 50px;"></i>
-                <div class="card-body mt-3">
-                    <h5 class="card-title text-center font-bold text-[#bf93ec]">Pasión</h5>
-                    <p class=" text-center">Disfrutamos lo que hacemos Por ello, el tener la
-                        <strong class="bg-[#bf93ec] text-gray-900">pasión</strong> como uno de nuestro valor los
-                        resulatos de
-                        nuestro
-                        trabajo son
-                        satisfactorios para nuestros clientes.
+                <div class="motive-card">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M72.9111 22.8765C73.2563 22.532 73.5301 22.1229 73.717 21.6724C73.9038 21.222 74 20.7391 74 20.2514C74 19.7638 73.9038 19.2809 73.717 18.8305C73.5301 18.38 73.2563 17.9709 72.9111 17.6264L62.3736 7.08891C62.0291 6.74373 61.62 6.46988 61.1695 6.28303C60.7191 6.09618 60.2362 6 59.7486 6C59.2609 6 58.778 6.09618 58.3276 6.28303C57.8771 6.46988 57.468 6.74373 57.1235 7.08891L40.405 23.8074L25.9207 9.32301C23.0163 6.41868 18.2875 6.41868 15.3832 9.32301L8.30856 16.3976C5.40424 19.302 5.40424 24.0308 8.30856 26.9351L22.7929 41.4195L6 58.2124V74H21.7876L38.6178 57.1698L53.1021 71.6542C56.6394 75.1915 61.4055 73.8883 63.6396 71.6542L70.7142 64.5796C73.6185 61.6753 73.6185 56.9464 70.7142 54.0421L56.2299 39.5577L72.9111 22.8765ZM13.5959 21.6478L20.6333 14.5731L25.3621 19.302L20.9684 23.7329L26.2185 28.983L30.6495 24.5521L35.1177 29.0203L28.0431 36.0949L13.5959 21.6478ZM55.4107 49.3505L50.9797 53.7815L56.2299 59.0316L60.6608 54.6006L65.3896 59.3295L58.315 66.4041L43.8306 51.9197L50.9053 44.8451L55.4107 49.3505ZM18.6971 66.553H13.447V61.3029L49.2297 25.5202L54.0702 30.3607L54.4798 30.7703L18.6971 66.553ZM54.4798 20.2328L59.7299 14.9827L64.9801 20.2328L59.7299 25.4829L54.4798 20.2328Z"
+                            fill="#5605E7" />
+                    </svg>
+
+
+
+                    <h2 class="card-motive-title">Variedad de Servicios y Soluciones Personalizadas</h2>
+                    <p class="card-motive-info">Ofrecemos variedad de servicios a su disposición personalizadas acorde a sus requerimientos.
                     </p>
                 </div>
+                <div class="motive-card">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M59.4444 18.6471C59.4444 15.5581 58.2153 12.5956 56.0274 10.4113C53.8394 8.2271 50.872 7 47.7778 7H32.2222C29.128 7 26.1606 8.2271 23.9726 10.4113C21.7847 12.5956 20.5556 15.5581 20.5556 18.6471H16.6667C13.5725 18.6471 10.605 19.8742 8.41709 22.0584C6.22916 24.2427 5 27.2051 5 30.2941V61.3529C5 64.4419 6.22916 67.4044 8.41709 69.5887C10.605 71.7729 13.5725 73 16.6667 73H63.3333C66.4275 73 69.395 71.7729 71.5829 69.5887C73.7708 67.4044 75 64.4419 75 61.3529V30.2941C75 27.2051 73.7708 24.2427 71.5829 22.0584C69.395 19.8742 66.4275 18.6471 63.3333 18.6471H59.4444ZM47.7778 14.7647H32.2222C31.1908 14.7647 30.2017 15.1737 29.4724 15.9018C28.7431 16.6299 28.3333 17.6174 28.3333 18.6471H51.6667C51.6667 17.6174 51.2569 16.6299 50.5276 15.9018C49.7983 15.1737 48.8092 14.7647 47.7778 14.7647ZM16.6667 26.4118H63.3333C64.3647 26.4118 65.3539 26.8208 66.0832 27.5489C66.8125 28.277 67.2222 29.2645 67.2222 30.2941V61.3529C67.2222 62.3826 66.8125 63.3701 66.0832 64.0982C65.3539 64.8263 64.3647 65.2353 63.3333 65.2353H16.6667C15.6353 65.2353 14.6461 64.8263 13.9168 64.0982C13.1875 63.3701 12.7778 62.3826 12.7778 61.3529V30.2941C12.7778 29.2645 13.1875 28.277 13.9168 27.5489C14.6461 26.8208 15.6353 26.4118 16.6667 26.4118Z"
+                            fill="#5605E7" />
+                    </svg>
+
+
+
+
+                    <h2 class="card-motive-title">Calidad y Tecnología moderna</h2>
+                    <p class="card-motive-info">Nuestros trabajos de calidad hacen de nosotros una empresa lider, ofreciendo el mejor servicio posible con la tecnologia actual.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+    <div class="app app-contact">
+        <section class="section contact-section">
+            <h2 class="">Envie sus consulta para obtener mas información</h2>
+            <p class="contact-info">No dude en enviarnos un mensaje para cotizar algun servicio de su interes o interactue con nuestro asistente incluida en nuestro Sitio</p>
+            <a href="{{route('contact')}}" class="btn-select" style="display: block">Contactar</a>
+        </section>
+    </div>
+
+
+
+    {{-- Tercera seccin --}}
+    {{-- <x-app class="home-gradient mt-16">
+        <x-section-container class="py-20 grid grid-cols-1 lg:grid-cols-2 gap-7">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                @foreach ($services as $image)
+                    <div
+                        class="image-item relative overflow-hidden rounded-lg hover:scale-110 transition-all @if (count($services) === 1) full-width @endif">
+                        <img src="{{ asset('storage/' . $image->images_file) }}" alt="{{ $image->alt }}">
+                    </div>
+                @endforeach
             </div>
-
-            <div class="card_pref_blur blur-f6 flex flex-col justify-center items-center rounded-2xl p-3">
-                <p></p>
-                <svg width="80" height="80" viewBox="0 0 24 24" class="text-[#cf0068]">
-                    <g fill="none" fill-rule="evenodd">
-                        <path
-                            d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
-                        <path fill="currentColor"
-                            d="M9 13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h4Zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h4ZM9 3a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4Zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4Z" />
-                    </g>
-                </svg>
-            </div>
-            <div class="card_pref_blur blur-f7 flex flex-col items-center rounded-2xl p-3">
-
-                <svg width="80" height="80" viewBox="0 0 24 24" class="text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25m19.61 1.11l-4.25 4.25l-5.2-5.2l1.77-1.77l1 1l2.47-2.48l1.42 1.42L18.36 17l1.06 1l1.42-1.4l1.77 1.76m-16-7.53L1.39 5.64l4.25-4.25L7.4 3.16L4.93 5.64L6 6.7l2.46-2.48l1.42 1.42l-1.42 1.41l1 1l-2.85 2.78M20.71 7c.39-.39.39-1 0-1.41l-2.34-2.3c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75L20.71 7Z" />
-                </svg>
-                <h5 class="card-title text-center font-bold text-[#bf93ec]"">Diseño e impresión de vanguardia</h5>
-                <p class=" text-center">En Graph Evolution, nos enorgullece ofrecer soluciones de diseño
-                    e impresión de vanguardia que ayudan a nuestros clientes a destacar en un mercado competitivo.</p>
-            </div>
-            <div class="card_pref_blur blur-f8 flex flex-col items-center rounded-2xl p-3">
-                <svg width="80" height="80" viewBox="0 0 512 512" class="text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="M96 256h32v256H0V352h32v-32h32v-32h32v-32zm416 96v160H384V256h32v32h32v32h32v32h32zM320 64h32v384h-32v-32H192v32h-32V64h32V32h32V0h64v32h32v32zm-32 64h-64v64h64v-64z" />
-                </svg>
-            </div>
-            <div class="card_pref_blur blur-f9 flex flex-col items-center rounded-2xl p-3">
-                <svg width="80" height="80" viewBox="0 0 640 512" class="text-[#cf0068]">
-                    <path fill="currentColor"
-                        d="M544 248v3.3l69.7-69.7c21.9-21.9 21.9-57.3 0-79.2l-78.1-78c-21.9-21.9-57.3-21.9-79.2 0l-40.1 40.1c-2.7-.3-5.5-.5-8.3-.5H296c-37.1 0-67.6 28-71.6 64h-.4v120c0 22.1 17.9 40 40 40s40-17.9 40-40v-88h160c44.2 0 80 35.8 80 80v8zm-208-56v56c0 39.8-32.2 72-72 72s-72-32.2-72-72V129.4c-35.9 6.2-65.8 32.3-76 68.2l-16.5 57.6l-73.2 73.2c-21.9 21.9-21.9 57.3 0 79.2l78.1 78.1c21.9 21.9 57.3 21.9 79.2 0l37.7-37.7c.9 0 1.8.1 2.7.1h160c26.5 0 48-21.5 48-48c0-5.6-1-11-2.7-16h2.7c26.5 0 48-21.5 48-48c0-12.8-5-24.4-13.2-33c25.7-5 45.1-27.6 45.2-54.8v-.4c-.1-30.8-25.1-55.8-56-55.8H336z" />
-                </svg>
-            </div>
-
-        </div>
-    </section>
+        </x-section-container>
+    </x-app> --}}
 
 
-    <section class="delay_section">
-        <img src="{{ asset('img/graph_evolution_h_i.jpg') }}" alt="" class="object-cover w-full delay_image">
-    </section>
-
-    <section class="text-content bg-[#13111C] my-10  h-auto">
-        <p class="text-desig text-3xl md:text-[70px] lg:text-[70px]  font-bold text-center leading-normal ">El diseño es
-            una oportunidad de seguir contando
-            una historia, no de resumirlas</p>
-    </section>
 @endsection
 @section('scripts')
     <script src="{{ asset('js/hm-reveal.js') }}"></script>

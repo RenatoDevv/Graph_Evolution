@@ -1,10 +1,8 @@
-const open_navbar = document.querySelector(".open_navbar");
-const navbar = document.querySelector(".navigation");
-const close_button = document.querySelector(".close_nav");
+const menu = document.querySelector(".menu");
+const nav = document.querySelector(".nav");
 
-open_navbar.addEventListener("click", function () {
-    navbar.classList.toggle("show");
-});
-close_button.addEventListener("click", function () {
-    navbar.classList.toggle("show");
+
+
+menu.addEventListener("click", function () {
+    nav.classList.toggle("active");
 });

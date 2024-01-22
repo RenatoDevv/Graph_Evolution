@@ -29,6 +29,14 @@
         border-color: transparent;
     }
 }
+.contact-title {
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    text-align: center;
+}
 
 .contact-socials {
     width: 100%;

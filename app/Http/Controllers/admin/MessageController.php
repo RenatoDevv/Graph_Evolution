@@ -37,15 +37,16 @@ class MessageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show( $id)
     {
-        $mesagge = Mesagge::find($id);
-        return view('admin.message.index', compact('mesagge'));
+        $message = Mesagge::find($id);
+        return view('admin.message.show', compact('message'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    public function edit($id) {
+        $message = Mesagge::find($id);
+        return  view('admin.message.edit' , compact('message'));
+    }
     public function update(Request $request, string $id)
     {
         $mesagge = Mesagge::find($id);

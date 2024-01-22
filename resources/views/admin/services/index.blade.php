@@ -1,6 +1,5 @@
 <x-app-layout>
-    <div
-        class="flex  flex-col p-2 lg:p-8 dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700 gap-3">
+    <x-container--admin>
         <h1 class="text-3xl font-bold text-center text-gray-800">👋 Bienvenido al panel de Servicios</h1>
         <p class="text-center text-gray-500">En esta seccion se muestra toda la informacion de las paginas existentes
             dentro del sitio web</p>
@@ -14,11 +13,11 @@
                     <div class="relative mt-2 rounded-md shadow-sm">
                         <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3">
                             <span class="text-gray-500 sm:text-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 512 512">
+                                <svg fill="currentColor" height="1.2em" viewBox="0 0 512 512">
                                     <style>
-                                        svg {
-                                            fill: #d1d1d1
-                                        }
+                                        {{-- svg {
+                                            fill: #09f
+                                        } --}}
                                     </style>
                                     <path
                                         d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
@@ -38,7 +37,7 @@
             </div>
             <div>
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                    <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+                    <div class="inline-block min-w-full shadow rounded-md overflow-hidden">
                         <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                             <thead>
                                 <tr>
@@ -111,11 +110,11 @@
                                             <div class="flex justify-start gap-4">
                                                 <a href="{{ route('admin.services.show', $service->id) }}"
                                                     class="bg-blue-100 text-blue-500 hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded-md flex items-center">
-                                                    <i class="material-icons-outlined text-base">visibility</i>
+                                                    <i class="material-icons-outlined text-lg">visibility</i>
                                                 </a>
                                                 <a href="{{ route('admin.services.edit', $service->id) }}"
                                                     class="bg-yellow-100 text-yellow-400 hover:text-yellow-600 hover:bg-yellow-100 px-2 py-1 rounded-md flex items-center">
-                                                    <i class="material-icons-outlined text-base">edit</i>
+                                                    <i class="material-icons-outlined text-lg">edit</i>
                                                 </a>
                                                 <form action="{{ route('admin.services.delete', $service->id) }}"
                                                     method="post">
@@ -123,7 +122,7 @@
                                                     @method('DELETE')
                                                     <button type="submit"
                                                         class="bg-red-100 text-red-400 hover:text-red-600 hover:bg-red-100 px-2 py-1 rounded-md flex items-center">
-                                                        <i class="material-icons-round text-base">delete_outline</i>
+                                                        <i class="material-icons-round text-lg">delete_outline</i>
                                                     </button>
                                                 </form>
                                             </div>
@@ -137,27 +136,13 @@
                             <span class="text-xs xs:text-sm text-gray-900">
                                 Mostrando todos los servicios
                             </span>
-                            {{-- <div class="inline-flex mt-2 xs:mt-0">
-                                <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
-                                    Anterior
-                                </button>
-                                &nbsp; &nbsp;
-                                <button
-                                    class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
-                                    Siguiente
-                                </button>
-                            </div> --}}
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="flex justify-center pb-4 pt-2">
-        <p class="text-brand-500 font-bold pt-3 text-center m-auto">Graph Evolution</p>
-    </div>
+    </x-container--admin>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
